@@ -1,0 +1,118 @@
+{
+  "issuer": "Oracle Corporation",
+  "periodEnd": "2026-05-31",
+  "filedAt": "2026-06-22",
+  "units": "USD millions",
+  "source": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+  "retrievedMirror": "https://d1f19qmytqk9eo.cloudfront.net/edgar0105/2026/06/22/1341439/000119312526277521/document/orcl-20260531.htm",
+  "localHtmlSha256": "6cd094af28aa16098cad795bf785be1866d69e59605aed1d6aef75a911a5766b",
+  "cashAndEquivalents": 31289,
+  "marketableSecurities": 605,
+  "principalTotal": 130105,
+  "balanceSheetDebtCarryingValue": 129541,
+  "debtDiscountIssuanceCosts": 564,
+  "operatingLeasePaymentsTotal": 41867,
+  "financeLeasePaymentsTotal": 11460,
+  "operatingLeaseLiabilityPV": 30190,
+  "financeLeaseLiabilityPV": 7701,
+  "unconditionalPurchaseObligationsTotal": 13309,
+  "rows": [
+    {
+      "fiscalPeriod": "2027",
+      "principal": 7210,
+      "operatingLeasePayments": 3712,
+      "financeLeasePayments": 656,
+      "unconditionalPurchaseAndOtherObligations": 1841
+    },
+    {
+      "fiscalPeriod": "2028",
+      "principal": 10145,
+      "operatingLeasePayments": 3603,
+      "financeLeasePayments": 676,
+      "unconditionalPurchaseAndOtherObligations": 1034
+    },
+    {
+      "fiscalPeriod": "2029",
+      "principal": 5500,
+      "operatingLeasePayments": 3550,
+      "financeLeasePayments": 697,
+      "unconditionalPurchaseAndOtherObligations": 1053
+    },
+    {
+      "fiscalPeriod": "2030",
+      "principal": 7250,
+      "operatingLeasePayments": 3550,
+      "financeLeasePayments": 718,
+      "unconditionalPurchaseAndOtherObligations": 952
+    },
+    {
+      "fiscalPeriod": "2031",
+      "principal": 9750,
+      "operatingLeasePayments": 3519,
+      "financeLeasePayments": 740,
+      "unconditionalPurchaseAndOtherObligations": 896
+    },
+    {
+      "fiscalPeriod": "thereafter",
+      "principal": 90250,
+      "operatingLeasePayments": 23933,
+      "financeLeasePayments": 7973,
+      "unconditionalPurchaseAndOtherObligations": 7533
+    }
+  ],
+  "uncommencedLeases": {
+    "commitments": 260000,
+    "expectedCommencement": "FY2027 Q1 through FY2029",
+    "termsYears": [
+      15,
+      19
+    ],
+    "annualPaymentSchedule": null,
+    "excludedFromMaturityTable": true
+  },
+  "lessorBorrowingGuarantee": {
+    "maximum": 3300,
+    "underlyingBorrowingMaturity": "2026-09",
+    "contingent": true,
+    "associatedLeaseIncludedInUncommencedCommitments": true
+  },
+  "subsequentInfrastructurePurchaseCommitments": {
+    "amount": 19000,
+    "enteredAfter": "2026-05-31",
+    "commenceFiscalYear": 2027,
+    "termYears": 5,
+    "annualPaymentSchedule": null
+  },
+  "revolver": {
+    "capacity": 10000,
+    "drawn": 0,
+    "maturity": "2031-03-06",
+    "notCash": true
+  },
+  "caveats": [
+    "Principal excludes interest and is not total cash obligations.",
+    "Lease payment amounts are undiscounted; do not add both payments and present-value liabilities.",
+    "Uncommenced leases have no annual payout schedule; no straight-line allocation inferred.",
+    "Operating lease payments are already included in operating cash flow, so subtracting them from reported OCF again double-counts.",
+    "Current cash is a stock, not forecast free cash flow. RPO recognition is revenue timing, not customer collection timing or profit.",
+    "New capital spending, interest, taxes, dividends, working capital and subsequent obligations prevent interpreting scheduled buckets as total liquidity needs.",
+    "Fiscal years end May31. Thereafter is an aggregate, not one year."
+  ],
+  "rpo": {
+    "total": 638000,
+    "recognitionShares": [
+      0.12,
+      0.34,
+      0.34,
+      0.2
+    ],
+    "periodLabels": [
+      "FY2027",
+      "FY2028\u201329",
+      "FY2030\u201331",
+      "After FY2031"
+    ],
+    "basis": "Expected revenue recognition as of May31 2026, not cash receipts; approximate shares, last bucket derived remainder",
+    "locator": "Note1 printed72"
+  }
+}

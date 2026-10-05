@@ -1,0 +1,123 @@
+{
+  "date": "2026-09-03",
+  "universe": "SPY holdings, ETF proxy for float-adjusted S&P 500; not exact index weights",
+  "source": "https://www.ssga.com/library-content/products/fund-data/etfs/us/holdings-daily-us-en-spy.xlsx",
+  "groups": [
+    {
+      "name": "Magnificent Seven",
+      "rows": [
+        {
+          "name": "NVIDIA CORP",
+          "ticker": "NVDA",
+          "weight_pct": 8.287016
+        },
+        {
+          "name": "APPLE INC",
+          "ticker": "AAPL",
+          "weight_pct": 7.219673
+        },
+        {
+          "name": "MICROSOFT CORP",
+          "ticker": "MSFT",
+          "weight_pct": 5.675282
+        },
+        {
+          "name": "AMAZON.COM INC",
+          "ticker": "AMZN",
+          "weight_pct": 3.795875
+        },
+        {
+          "name": "ALPHABET INC CL A",
+          "ticker": "GOOGL",
+          "weight_pct": 3.005809
+        },
+        {
+          "name": "ALPHABET INC CL C",
+          "ticker": "GOOG",
+          "weight_pct": 2.398731
+        },
+        {
+          "name": "META PLATFORMS INC CLASS A",
+          "ticker": "META",
+          "weight_pct": 2.008534
+        },
+        {
+          "name": "TESLA INC",
+          "ticker": "TSLA",
+          "weight_pct": 1.586859
+        }
+      ],
+      "weight_pct": 33.977779
+    },
+    {
+      "name": "Selected AI-adjacent companies",
+      "rows": [
+        {
+          "name": "BROADCOM INC",
+          "ticker": "AVGO",
+          "weight_pct": 2.532711
+        },
+        {
+          "name": "MICRON TECHNOLOGY INC",
+          "ticker": "MU",
+          "weight_pct": 1.618284
+        },
+        {
+          "name": "ADVANCED MICRO DEVICES",
+          "ticker": "AMD",
+          "weight_pct": 1.113936
+        },
+        {
+          "name": "INTEL CORP",
+          "ticker": "INTC",
+          "weight_pct": 0.677954
+        },
+        {
+          "name": "PALANTIR TECHNOLOGIES INC A",
+          "ticker": "PLTR",
+          "weight_pct": 0.627491
+        },
+        {
+          "name": "LAM RESEARCH CORP",
+          "ticker": "LRCX",
+          "weight_pct": 0.548202
+        },
+        {
+          "name": "APPLIED MATERIALS INC",
+          "ticker": "AMAT",
+          "weight_pct": 0.518201
+        },
+        {
+          "name": "ORACLE CORP",
+          "ticker": "ORCL",
+          "weight_pct": 0.391608
+        },
+        {
+          "name": "KLA CORP",
+          "ticker": "KLAC",
+          "weight_pct": 0.338323
+        },
+        {
+          "name": "ARISTA NETWORKS INC",
+          "ticker": "ANET",
+          "weight_pct": 0.295989
+        },
+        {
+          "name": "DELL TECHNOLOGIES  C",
+          "ticker": "DELL",
+          "weight_pct": 0.223606
+        },
+        {
+          "name": "SUPER MICRO COMPUTER INC",
+          "ticker": "SMCI",
+          "weight_pct": 0.03195
+        }
+      ],
+      "weight_pct": 8.918255000000002
+    }
+  ],
+  "other_weight_pct": 57.103966,
+  "all_holdings_weight_sum": 99.93616800000002,
+  "earnings_share": null,
+  "aggregate_pe": null
+}

@@ -1,0 +1,11 @@
+{
+  "source": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm",
+  "filed": "2026-08-04",
+  "verified": "2026-09-07",
+  "unit": "USD millions",
+  "scope": "SpaceX AI segment: Grok, X and AI infrastructure; not a standalone model business",
+  "periods": [
+    {"label":"Q2 2026","end":"2026-06-30","revenue":2561,"costOfRevenue":1106,"research":2178,"sellingGeneralAdmin":532,"restructuring":2,"operatingIncome":-1257,"depreciationAmortization":1885,"shareCompensation":516,"adjustedEbitda":1146},
+    {"label":"Q2 2025","end":"2025-06-30","revenue":737,"costOfRevenue":551,"research":1122,"sellingGeneralAdmin":398,"restructuring":190,"operatingIncome":-1524}
+  ]
+}

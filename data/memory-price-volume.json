@@ -1,0 +1,11 @@
+{
+  "checked": "2026-09-07",
+  "period": "Nine months ended May 28, 2026 vs May 29, 2025",
+  "source": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000015/mu-20260528.htm",
+  "sourceSection": "MD&A, total revenue, printed page 29",
+  "rows": [
+    {"product":"DRAM","salesGrowth":"+211%","averagePriceGrowth":"≈+140%","bitShipmentGrowth":"≈+30%"},
+    {"product":"NAND","salesGrowth":"+183%","averagePriceGrowth":"≈+130%","bitShipmentGrowth":"Low-20% range increase"}
+  ],
+  "basis": "Reported whole-product-category changes. Rounded price/volume estimates are not an exact additive decomposition, and memory bit shipments are not end-user AI usage."
+}

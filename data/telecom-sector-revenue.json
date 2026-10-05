@@ -1,0 +1,57 @@
+{
+  "source": "https://docs.fcc.gov/public/attachments/DOC-301407A1.pdf",
+  "table": "Table1, PDF page15",
+  "unit": "USD millions",
+  "checked": "2026-09-07",
+  "scope": "FCC telecom end-user billing; excludes reported carrier-to-carrier resale, but includes de minimis/non-contributing resellers and international-to-international traffic. Not pure domestic final consumption or cash profit.",
+  "rows": [
+    {
+      "year": 1999,
+      "local": 78608,
+      "wireless": 43843,
+      "toll": 93311,
+      "endUser": 215763,
+      "wholesale": 52742
+    },
+    {
+      "year": 2000,
+      "local": 84526,
+      "wireless": 56857,
+      "toll": 87767,
+      "endUser": 229149,
+      "wholesale": 63613
+    },
+    {
+      "year": 2001,
+      "local": 87704,
+      "wireless": 68507,
+      "toll": 79302,
+      "endUser": 235513,
+      "wholesale": 66287
+    },
+    {
+      "year": 2002,
+      "local": 88712,
+      "wireless": 76501,
+      "toll": 67222,
+      "endUser": 232434,
+      "wholesale": 59907
+    },
+    {
+      "year": 2003,
+      "local": 86474,
+      "wireless": 85254,
+      "toll": 58983,
+      "endUser": 230711,
+      "wholesale": 60412
+    },
+    {
+      "year": 2004,
+      "local": 83407,
+      "wireless": 94404,
+      "toll": 55511,
+      "endUser": 233322,
+      "wholesale": 58413
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "checked": "2026-09-07",
+  "unit": "USD millions",
+  "cisco": {
+    "name": "Cisco \u00b7 equipment supplier",
+    "rows": [
+      {
+        "label": "FY1998",
+        "year": 1998,
+        "revenue": 8489.0,
+        "operatingIncome": 2070.0,
+        "costs": 6419.0,
+        "source": "https://www.cisco.com/c/dam/en_us/about/ac49/ac20/downloads/annualreport/ar2000/pdf/Cisco_00_AR.pdf"
+      },
+      {
+        "label": "FY1999",
+        "year": 1999,
+        "revenue": 12173.0,
+        "operatingIncome": 2873.0,
+        "costs": 9300.0,
+        "source": "https://www.cisco.com/c/dam/en_us/about/ac49/ac20/downloads/annualreport/ar2000/pdf/Cisco_00_AR.pdf"
+      },
+      {
+        "label": "FY2000",
+        "year": 2000,
+        "revenue": 18928.0,
+        "operatingIncome": 3235.0,
+        "costs": 15693.0,
+        "source": "https://www.cisco.com/c/dam/en_us/about/ac49/ac20/downloads/annualreport/ar2000/pdf/Cisco_00_AR.pdf"
+      },
+      {
+        "label": "FY2001",
+        "year": 2001,
+        "revenue": 22293.0,
+        "operatingIncome": -2004.0,
+        "costs": 24297.0,
+        "source": "https://www.cisco.com/c/dam/en_us/about/ac49/ac20/downloads/annualreport/ar2003/pdf/AR.pdf"
+      },
+      {
+        "label": "FY2002",
+        "year": 2002,
+        "revenue": 18915.0,
+        "operatingIncome": 2919.0,
+        "costs": 15996.0,
+        "source": "https://www.cisco.com/c/dam/en_us/about/ac49/ac20/downloads/annualreport/ar2003/pdf/AR.pdf"
+      },
+      {
+        "label": "FY2003",
+        "year": 2003,
+        "revenue": 18878.0,
+        "operatingIncome": 4882.0,
+        "costs": 13996.0,
+        "source": "https://www.cisco.com/c/dam/en_us/about/ac49/ac20/downloads/annualreport/ar2003/pdf/AR.pdf"
+      }
+    ],
+    "notes": [
+      "FY2001 initial additional excess inventory charge $2.249B; same-year subsequent benefit $187M; FY2002 benefit $525M. AR2003 printed pp26-27, PDF indexes27-28.",
+      "FY2001 restructuring and special charge $1.170B, including $501M noncash. Further liabilities/expenses $93M FY2002 and $45M FY2003 included across normal expense lines rather than separate restructuring line. AR2003 printed p46, PDF index47.",
+      "Goodwill amortization $690M FY2001 ceased beginning FY2002 with SFAS142 adoption. AR2003 printed p27, PDF index28. Therefore recovery is not entirely comparable accounting policy.",
+      "FY1998-2000 acquisition pooling restatements are not real-time publication vintages. Whole Cisco supplier, not a telecom industry aggregate or operator; do not sum its revenue with customer revenue as end demand."
+    ]
+  },
+  "globalCrossing": {
+    "source": "https://www.sec.gov/Archives/edgar/data/1061322/000119312503090817/d10k.txt",
+    "locators": "F-6 statements; MD&A pp70\u201371 depreciation/impairment",
+    "unit": "USD millions",
+    "scope": "Continuing operations, restated FY2000; FY2002 in bankruptcy, below-operating reorganization excluded",
+    "rows": [
+      {
+        "year": 2000,
+        "revenue": 3505,
+        "operatingIncome": -1318,
+        "costs": 4823,
+        "impairment": 0,
+        "restructuring": 0,
+        "depreciationAmortization": 1280
+      },
+      {
+        "year": 2001,
+        "revenue": 3659,
+        "operatingIncome": -19712,
+        "costs": 23371,
+        "impairment": 17181,
+        "restructuring": 410,
+        "depreciationAmortization": 1548
+      },
+      {
+        "year": 2002,
+        "revenue": 3116,
+        "operatingIncome": -434,
+        "costs": 3550,
+        "impairment": 0,
+        "restructuring": 0,
+        "depreciationAmortization": 137
+      }
+    ]
+  }
+}

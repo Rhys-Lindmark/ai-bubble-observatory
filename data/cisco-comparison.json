@@ -1,0 +1,139 @@
+{
+  "id": "cisco-dotcom",
+  "name": "Cisco \u00b7 equipment supplier",
+  "checkedAt": "2026-09-07",
+  "currency": "USD",
+  "units": "USD (converted from source USD millions)",
+  "population": "Cisco Systems consolidated accounts; equipment supplier, not fiber network operator",
+  "cadence": "Annual fiscal years ended July",
+  "rows": [
+    {
+      "fiscalYear": 1998,
+      "fiscalEnd": "1998-07-25",
+      "revenue": 8489000000,
+      "ocf": 2865000000,
+      "capex": 429000000,
+      "capexToOCF": 0.14973821989528796,
+      "capexToRevenue": 0.05053598774885146,
+      "source": "https://www.cisco.com/c/dam/en_us/about/ac49/ac20/downloads/annualreport/ar2000/pdf/Cisco_00_AR.pdf",
+      "sourceReportYear": 2000,
+      "sourceCashFlowPrintedPage": 27,
+      "sourceCashFlowPdfPageIndex": 28,
+      "sourceRevenuePrintedPage": 25,
+      "sourceRevenuePdfPageIndex": 26,
+      "publicationDate": null,
+      "notes": []
+    },
+    {
+      "fiscalYear": 1999,
+      "fiscalEnd": "1999-07-31",
+      "revenue": 12173000000,
+      "ocf": 4325000000,
+      "capex": 602000000,
+      "capexToOCF": 0.13919075144508672,
+      "capexToRevenue": 0.04945370902817711,
+      "source": "https://www.cisco.com/c/dam/en_us/about/ac49/ac20/downloads/annualreport/ar2000/pdf/Cisco_00_AR.pdf",
+      "sourceReportYear": 2000,
+      "sourceCashFlowPrintedPage": 27,
+      "sourceCashFlowPdfPageIndex": 28,
+      "sourceRevenuePrintedPage": 25,
+      "sourceRevenuePdfPageIndex": 26,
+      "publicationDate": null,
+      "notes": []
+    },
+    {
+      "fiscalYear": 2000,
+      "fiscalEnd": "2000-07-29",
+      "revenue": 18928000000,
+      "ocf": 6141000000,
+      "capex": 1086000000,
+      "capexToOCF": 0.17684416218856863,
+      "capexToRevenue": 0.05737531699070161,
+      "source": "https://www.cisco.com/c/dam/en_us/about/ac49/ac20/downloads/annualreport/ar2000/pdf/Cisco_00_AR.pdf",
+      "sourceReportYear": 2000,
+      "sourceCashFlowPrintedPage": 27,
+      "sourceCashFlowPdfPageIndex": 28,
+      "sourceRevenuePrintedPage": 25,
+      "sourceRevenuePdfPageIndex": 26,
+      "publicationDate": null,
+      "notes": []
+    },
+    {
+      "fiscalYear": 2001,
+      "fiscalEnd": "2001-07-28",
+      "revenue": 22293000000,
+      "ocf": 6392000000,
+      "capex": 2271000000,
+      "capexToOCF": 0.35528785982478095,
+      "capexToRevenue": 0.10187054232270219,
+      "source": "https://www.cisco.com/c/dam/en_us/about/ac49/ac20/downloads/annualreport/ar2003/pdf/AR.pdf",
+      "sourceReportYear": 2003,
+      "sourceCashFlowPrintedPage": 37,
+      "sourceCashFlowPdfPageIndex": 38,
+      "sourceRevenuePrintedPage": 35,
+      "sourceRevenuePdfPageIndex": 36,
+      "publicationDate": null,
+      "notes": []
+    },
+    {
+      "fiscalYear": 2002,
+      "fiscalEnd": "2002-07-27",
+      "revenue": 18915000000,
+      "ocf": 6587000000,
+      "capex": 2641000000,
+      "capexToOCF": 0.40094124791255503,
+      "capexToRevenue": 0.13962463653185303,
+      "source": "https://www.cisco.com/c/dam/en_us/about/ac49/ac20/downloads/annualreport/ar2003/pdf/AR.pdf",
+      "sourceReportYear": 2003,
+      "sourceCashFlowPrintedPage": 37,
+      "sourceCashFlowPdfPageIndex": 38,
+      "sourceRevenuePrintedPage": 35,
+      "sourceRevenuePdfPageIndex": 36,
+      "publicationDate": null,
+      "notes": [
+        "Cash acquisition of PP&E includes approximately $1.9B buyout of previously leased land, buildings and construction sites."
+      ]
+    },
+    {
+      "fiscalYear": 2003,
+      "fiscalEnd": "2003-07-26",
+      "revenue": 18878000000,
+      "ocf": 5240000000,
+      "capex": 717000000,
+      "capexToOCF": 0.1368320610687023,
+      "capexToRevenue": 0.037980718296429704,
+      "source": "https://www.cisco.com/c/dam/en_us/about/ac49/ac20/downloads/annualreport/ar2003/pdf/AR.pdf",
+      "sourceReportYear": 2003,
+      "sourceCashFlowPrintedPage": 37,
+      "sourceCashFlowPdfPageIndex": 38,
+      "sourceRevenuePrintedPage": 35,
+      "sourceRevenuePdfPageIndex": 36,
+      "publicationDate": null,
+      "notes": []
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.cisco.com/c/dam/en_us/about/ac49/ac20/downloads/annualreport/ar2000/pdf/Cisco_00_AR.pdf",
+      "reportYear": 2000,
+      "cashFlow": "Consolidated Statements of Cash Flows, printed p27, PDF index28",
+      "revenue": "Consolidated Statements of Operations, printed p25, PDF index26",
+      "vintage": "FY1998\u20132000 as retrospectively restated in AR2000 for pooling acquisitions; not original year reporting vintages"
+    },
+    {
+      "url": "https://www.cisco.com/c/dam/en_us/about/ac49/ac20/downloads/annualreport/ar2003/pdf/AR.pdf",
+      "reportYear": 2003,
+      "cashFlow": "Consolidated Statements of Cash Flows, printed p37, PDF index38",
+      "revenue": "Consolidated Statements of Operations, printed p35, PDF index36",
+      "vintage": "FY2001\u20132003 as presented in AR2003; prior-year reclassifications noted printed p42"
+    }
+  ],
+  "caveats": [
+    "Supplier capex is its own PP&E, not customer fiber investment. Do not aggregate supplier revenue with operator revenue as independent end demand.",
+    "FY2002 PP&E acquisition includes approximately $1.9B previously leased real estate purchase; not all new capacity.",
+    "Cash capex excludes separately classified acquisitions, technology licenses and investments; revenue is not project cash profit.",
+    "AR2000 restates prior years for pooling acquisitions; acquisition-driven growth is not purely organic.",
+    "Fiscal reporting dates are not release dates. Publication dates not acquired; retrospective comparison only.",
+    "No market valuation/price claim or no-lookahead prediction established."
+  ]
+}

@@ -1,0 +1,5786 @@
+{
+  "protocol": {
+    "version": "price-exuberance-research-v1",
+    "frozen_before_detector_results": true,
+    "as_of": "2026-09-06",
+    "method": "Rolling backward-supremum right-tailed Dickey-Fuller statistic, a price-only adaptation of Phillips-Shi-Yu",
+    "frequency": "monthly, only completed months",
+    "input": "positive nominal price/index levels; published series cadence retained, no interpolation; AI proxy is monthly rebalanced equal-weight total returns of French Chips, Hardw, Softw",
+    "window_points": 60,
+    "minimum_points": 14,
+    "lags": 0,
+    "intercept": true,
+    "null": "Additive random walk with drift estimated as mean price change; wild bootstrap centered price changes with independent Rademacher signs",
+    "bootstrap_draws": 1999,
+    "seed": 20260906,
+    "percentile": "100*(1-(1+count(bootstrap_stat>=observed_stat))/(B+1))",
+    "warning_rule": "At least three consecutive completed months with percentile >=95; signal begins on third month, never backdated",
+    "event_hit": "At least one active warning in 12 months ending at the last completed month strictly before the historical peak month",
+    "controls": "Predeclared 12-month contrast windows; absence of named event is not proof of fundamental fair value. Compare the same any-active-warning criterion as event windows",
+    "sensitivity": "120 points/minimum20 with all other rules unchanged where enough data exists; not used to choose primary result",
+    "statistical_caution": "Pointwise bootstrap reference rank is not a probability of a bubble or crash and does not control familywise repeated-monitoring false alarms. Wild bootstrap is a transparent research implementation, not an exact replication of published composite-bootstrap procedures. Price levels omit dividends/fundamentals; test ordinary geometric growth controls.",
+    "selection_caution": "Famous episodes and available data were chosen retrospectively, with dependent episodes. This is diagnostic replication/stress testing, not an untouched out-of-sample trial or calibrated bubble-probability model. Report every case, failure and excluded series."
+  },
+  "protocolSha256": "0f1e3805030927e7f339dbef0a3b4a5494627ac37098e07e1106b7b85e85a52a",
+  "caseSha256": "b4c3cde68135ea065e2ecccdc6910f6b0c7fca5a88d445446a8e73336c048e2e",
+  "generatedAt": "2026-09-06T21:11:01.364357+00:00",
+  "events": [
+    {
+      "id": "us1929",
+      "name": "US stocks, 1929",
+      "series": "SHILLER_SP",
+      "peak": "1929-09",
+      "source": "https://www.federalreservehistory.org/essays/stock-market-crash-of-1929",
+      "note": "Broad-market reconstruction; famous boom/crash, not a fundamental-value label.",
+      "windowStart": "1928-09",
+      "windowEnd": "1929-08",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "1929-01",
+      "maxPercentile": 99.4,
+      "points": [
+        {
+          "date": "1928-09",
+          "statistic": 1.8593839866668265,
+          "percentile": 86.6,
+          "critical95": 2.7084351446086328,
+          "warning": false
+        },
+        {
+          "date": "1928-10",
+          "statistic": 1.9442493428392866,
+          "percentile": 92.10000000000001,
+          "critical95": 2.2236511647098016,
+          "warning": false
+        },
+        {
+          "date": "1928-11",
+          "statistic": 2.6852575272306223,
+          "percentile": 95.7,
+          "critical95": 2.5662639650119514,
+          "warning": false
+        },
+        {
+          "date": "1928-12",
+          "statistic": 2.395692578467975,
+          "percentile": 96.15,
+          "critical95": 2.24172564679423,
+          "warning": false
+        },
+        {
+          "date": "1929-01",
+          "statistic": 3.1492435877270104,
+          "percentile": 98.05,
+          "critical95": 2.5172251996395936,
+          "warning": true
+        },
+        {
+          "date": "1929-02",
+          "statistic": 2.6862716589737037,
+          "percentile": 97.65,
+          "critical95": 2.243374422755813,
+          "warning": true
+        },
+        {
+          "date": "1929-03",
+          "statistic": 2.5184239567529274,
+          "percentile": 97.35000000000001,
+          "critical95": 2.120801197810067,
+          "warning": true
+        },
+        {
+          "date": "1929-04",
+          "statistic": 2.014814939815016,
+          "percentile": 95.89999999999999,
+          "critical95": 1.8959768133026362,
+          "warning": true
+        },
+        {
+          "date": "1929-05",
+          "statistic": 1.9909724772321606,
+          "percentile": 96.65,
+          "critical95": 1.8256929674718867,
+          "warning": true
+        },
+        {
+          "date": "1929-06",
+          "statistic": 2.0430195944225487,
+          "percentile": 97.2,
+          "critical95": 1.770004447500229,
+          "warning": true
+        },
+        {
+          "date": "1929-07",
+          "statistic": 2.9232464596470495,
+          "percentile": 98.25,
+          "critical95": 2.312826759760862,
+          "warning": true
+        },
+        {
+          "date": "1929-08",
+          "statistic": 3.541186099041253,
+          "percentile": 99.4,
+          "critical95": 2.526356055158458,
+          "warning": true
+        }
+      ],
+      "leadMonths": 8
+    },
+    {
+      "id": "gold1980",
+      "name": "Gold, 1980",
+      "series": "GOLD_WB",
+      "peak": "1980-01",
+      "source": "https://www.clevelandfed.org/publications/economic-commentary/1980/ec-19800505-after-silver-and-gold-some-sober-thoughts-on-speculative-bubbles",
+      "note": "World Bank London afternoon fixing monthly mean. A commodity, not a cash-flow-producing equity.",
+      "windowStart": "1979-01",
+      "windowEnd": "1979-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "1979-08",
+      "maxPercentile": 99.9,
+      "points": [
+        {
+          "date": "1979-01",
+          "statistic": 0.915961623015723,
+          "percentile": 84.25,
+          "critical95": 1.9521822432937448,
+          "warning": false
+        },
+        {
+          "date": "1979-02",
+          "statistic": 1.5634927299264998,
+          "percentile": 91.60000000000001,
+          "critical95": 2.017773845083994,
+          "warning": false
+        },
+        {
+          "date": "1979-03",
+          "statistic": 1.1150768549323447,
+          "percentile": 90.7,
+          "critical95": 1.5485684500553791,
+          "warning": false
+        },
+        {
+          "date": "1979-04",
+          "statistic": 0.8145837811713761,
+          "percentile": 89.14999999999999,
+          "critical95": 1.3183172620377392,
+          "warning": false
+        },
+        {
+          "date": "1979-05",
+          "statistic": 1.37531807421539,
+          "percentile": 92.7,
+          "critical95": 1.651542799057338,
+          "warning": false
+        },
+        {
+          "date": "1979-06",
+          "statistic": 2.056393464638771,
+          "percentile": 95.45,
+          "critical95": 2.006174690809545,
+          "warning": false
+        },
+        {
+          "date": "1979-07",
+          "statistic": 2.4976990586431036,
+          "percentile": 97.3,
+          "critical95": 1.9169511258430043,
+          "warning": false
+        },
+        {
+          "date": "1979-08",
+          "statistic": 2.4334649024491513,
+          "percentile": 97.75,
+          "critical95": 1.8501037978488921,
+          "warning": true
+        },
+        {
+          "date": "1979-09",
+          "statistic": 3.8421279155217833,
+          "percentile": 99.15,
+          "critical95": 2.8536595923026384,
+          "warning": true
+        },
+        {
+          "date": "1979-10",
+          "statistic": 4.943069255980777,
+          "percentile": 99.4,
+          "critical95": 3.2487723997020614,
+          "warning": true
+        },
+        {
+          "date": "1979-11",
+          "statistic": 3.9394064020548796,
+          "percentile": 99.4,
+          "critical95": 2.6276561862563894,
+          "warning": true
+        },
+        {
+          "date": "1979-12",
+          "statistic": 5.493273560796699,
+          "percentile": 99.9,
+          "critical95": 3.2482846849396845,
+          "warning": true
+        }
+      ],
+      "leadMonths": 5
+    },
+    {
+      "id": "us1987",
+      "name": "US stocks, 1987",
+      "series": "SHILLER_SP",
+      "peak": "1987-08",
+      "source": "https://www.federalreservehistory.org/essays/stock-market-crash-of-1987",
+      "note": "Pre-crash run-up. Whether this was a fundamental bubble is disputed.",
+      "windowStart": "1986-08",
+      "windowEnd": "1987-07",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 97.85000000000001,
+      "points": [
+        {
+          "date": "1986-08",
+          "statistic": 1.3646808285784584,
+          "percentile": 92.15,
+          "critical95": 1.6040840926586184,
+          "warning": false
+        },
+        {
+          "date": "1986-09",
+          "statistic": 0.6768998181823455,
+          "percentile": 75.4,
+          "critical95": 1.755900595896137,
+          "warning": false
+        },
+        {
+          "date": "1986-10",
+          "statistic": 0.5092537176610201,
+          "percentile": 71.05,
+          "critical95": 1.6881255998492333,
+          "warning": false
+        },
+        {
+          "date": "1986-11",
+          "statistic": 0.7793104210877985,
+          "percentile": 78.9,
+          "critical95": 1.602864120136498,
+          "warning": false
+        },
+        {
+          "date": "1986-12",
+          "statistic": 0.8395806762269256,
+          "percentile": 82.60000000000001,
+          "critical95": 1.577593613229583,
+          "warning": false
+        },
+        {
+          "date": "1987-01",
+          "statistic": 1.4751174357790624,
+          "percentile": 87.4,
+          "critical95": 1.9459105462267696,
+          "warning": false
+        },
+        {
+          "date": "1987-02",
+          "statistic": 2.168453351815207,
+          "percentile": 92.10000000000001,
+          "critical95": 2.4862755959257363,
+          "warning": false
+        },
+        {
+          "date": "1987-03",
+          "statistic": 2.6099267824433667,
+          "percentile": 95.95,
+          "critical95": 2.4876340081965744,
+          "warning": false
+        },
+        {
+          "date": "1987-04",
+          "statistic": 1.9556563320140938,
+          "percentile": 93.15,
+          "critical95": 2.1441906261793644,
+          "warning": false
+        },
+        {
+          "date": "1987-05",
+          "statistic": 1.6712754917173083,
+          "percentile": 91.5,
+          "critical95": 1.9627779586588143,
+          "warning": false
+        },
+        {
+          "date": "1987-06",
+          "statistic": 2.0995968626078962,
+          "percentile": 95.1,
+          "critical95": 2.044186638610852,
+          "warning": false
+        },
+        {
+          "date": "1987-07",
+          "statistic": 2.333325692699844,
+          "percentile": 97.85000000000001,
+          "critical95": 1.8806335260519191,
+          "warning": false
+        }
+      ]
+    },
+    {
+      "id": "japan1989",
+      "name": "Japan equities, 1989",
+      "series": "NIKKEI225",
+      "peak": "1989-12",
+      "source": "https://indexes.nikkei.co.jp/nkave/archives/file/nikkei_indexes_newsletter_vol51.pdf",
+      "note": "Nikkei225 equity-price proxy; not Japanese land prices.",
+      "windowStart": "1988-12",
+      "windowEnd": "1989-11",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 91.35,
+      "points": [
+        {
+          "date": "1988-12",
+          "statistic": 0.714111804364776,
+          "percentile": 81.35,
+          "critical95": 1.3862414240851975,
+          "warning": false
+        },
+        {
+          "date": "1989-01",
+          "statistic": 1.0111872053802764,
+          "percentile": 85.7,
+          "critical95": 1.592736835918452,
+          "warning": false
+        },
+        {
+          "date": "1989-02",
+          "statistic": 1.161048505636872,
+          "percentile": 91.35,
+          "critical95": 1.433543116451506,
+          "warning": false
+        },
+        {
+          "date": "1989-03",
+          "statistic": 0.9776725093363517,
+          "percentile": 87.7,
+          "critical95": 1.3384442839111026,
+          "warning": false
+        },
+        {
+          "date": "1989-04",
+          "statistic": 1.107050031106941,
+          "percentile": 88.55,
+          "critical95": 1.506487517927703,
+          "warning": false
+        },
+        {
+          "date": "1989-05",
+          "statistic": 1.0592770706330508,
+          "percentile": 88.2,
+          "critical95": 1.4158627857651866,
+          "warning": false
+        },
+        {
+          "date": "1989-06",
+          "statistic": 0.5491462294808304,
+          "percentile": 67.6,
+          "critical95": 1.652588778429884,
+          "warning": false
+        },
+        {
+          "date": "1989-07",
+          "statistic": 0.5328821563704603,
+          "percentile": 70.0,
+          "critical95": 1.375024405020258,
+          "warning": false
+        },
+        {
+          "date": "1989-08",
+          "statistic": 0.6426442356337134,
+          "percentile": 71.50000000000001,
+          "critical95": 1.4116257633541365,
+          "warning": false
+        },
+        {
+          "date": "1989-09",
+          "statistic": 0.41899140394159706,
+          "percentile": 61.8,
+          "critical95": 1.4240119901213593,
+          "warning": false
+        },
+        {
+          "date": "1989-10",
+          "statistic": 0.49412378352391,
+          "percentile": 63.14999999999999,
+          "critical95": 1.3732162278312559,
+          "warning": false
+        },
+        {
+          "date": "1989-11",
+          "statistic": 0.5349422131223368,
+          "percentile": 64.7,
+          "critical95": 1.310246907713927,
+          "warning": false
+        }
+      ]
+    },
+    {
+      "id": "dotcom2000",
+      "name": "Dot-com, 2000",
+      "series": "NASDAQCOM",
+      "peak": "2000-03",
+      "source": "https://www.goldmansachs.com/our-firm/history/moments/2000-dot-com-bubble",
+      "note": "Nasdaq Composite; broad tech-heavy index, not failed internet firms alone.",
+      "windowStart": "1999-03",
+      "windowEnd": "2000-02",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "2000-02",
+      "maxPercentile": 99.45,
+      "points": [
+        {
+          "date": "1999-03",
+          "statistic": 1.046830424539313,
+          "percentile": 83.05,
+          "critical95": 2.222908575967157,
+          "warning": false
+        },
+        {
+          "date": "1999-04",
+          "statistic": 1.403965422242145,
+          "percentile": 90.10000000000001,
+          "critical95": 2.0177702580076393,
+          "warning": false
+        },
+        {
+          "date": "1999-05",
+          "statistic": 1.0158669697335785,
+          "percentile": 86.3,
+          "critical95": 1.9111984919479854,
+          "warning": false
+        },
+        {
+          "date": "1999-06",
+          "statistic": 0.8060750731713657,
+          "percentile": 83.2,
+          "critical95": 1.7072634227315766,
+          "warning": false
+        },
+        {
+          "date": "1999-07",
+          "statistic": 1.420149938630748,
+          "percentile": 91.85,
+          "critical95": 1.834005688635273,
+          "warning": false
+        },
+        {
+          "date": "1999-08",
+          "statistic": 0.787280343513111,
+          "percentile": 82.5,
+          "critical95": 1.7167379100257127,
+          "warning": false
+        },
+        {
+          "date": "1999-09",
+          "statistic": 1.1327111015204683,
+          "percentile": 88.4,
+          "critical95": 1.717791248165358,
+          "warning": false
+        },
+        {
+          "date": "1999-10",
+          "statistic": 0.9192326919707088,
+          "percentile": 85.35000000000001,
+          "critical95": 1.6879370030834404,
+          "warning": false
+        },
+        {
+          "date": "1999-11",
+          "statistic": 1.826174745864067,
+          "percentile": 93.19999999999999,
+          "critical95": 1.984508979864509,
+          "warning": false
+        },
+        {
+          "date": "1999-12",
+          "statistic": 3.0673679371334273,
+          "percentile": 95.45,
+          "critical95": 2.9965232543106457,
+          "warning": false
+        },
+        {
+          "date": "2000-01",
+          "statistic": 3.63525602580865,
+          "percentile": 98.8,
+          "critical95": 2.798905010195459,
+          "warning": false
+        },
+        {
+          "date": "2000-02",
+          "statistic": 4.577563307546213,
+          "percentile": 99.45,
+          "critical95": 2.8727206297635153,
+          "warning": true
+        }
+      ],
+      "leadMonths": 1
+    },
+    {
+      "id": "housing2006",
+      "name": "US housing, 2006",
+      "series": "CSUSHPINSA",
+      "peak": "2006-07",
+      "source": "https://press.spglobal.com/2016-11-29-The-S-P-CoreLogic-Case-Shiller-National-Index-Reaches-New-High-As-Home-Price-Gains-Continue",
+      "note": "Revised/backfilled national index; launched Dec2006. Prelaunch replay was not actually tradable or observable then.",
+      "windowStart": "2005-07",
+      "windowEnd": "2006-06",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "2005-07",
+      "maxPercentile": 99.95,
+      "points": [
+        {
+          "date": "2005-07",
+          "statistic": 9.224903477949844,
+          "percentile": 99.95,
+          "critical95": 2.9592539119669796,
+          "warning": true
+        },
+        {
+          "date": "2005-08",
+          "statistic": 9.149136457357619,
+          "percentile": 99.95,
+          "critical95": 2.828779736738296,
+          "warning": true
+        },
+        {
+          "date": "2005-09",
+          "statistic": 8.886414042155673,
+          "percentile": 99.95,
+          "critical95": 2.682299614507275,
+          "warning": true
+        },
+        {
+          "date": "2005-10",
+          "statistic": 7.932252713017601,
+          "percentile": 99.95,
+          "critical95": 2.5485204833725588,
+          "warning": true
+        },
+        {
+          "date": "2005-11",
+          "statistic": 6.870629401295832,
+          "percentile": 99.95,
+          "critical95": 2.395142294175631,
+          "warning": true
+        },
+        {
+          "date": "2005-12",
+          "statistic": 5.486229378082353,
+          "percentile": 99.95,
+          "critical95": 2.3504273870864014,
+          "warning": true
+        },
+        {
+          "date": "2006-01",
+          "statistic": 4.678311636023901,
+          "percentile": 99.95,
+          "critical95": 2.2443608886141466,
+          "warning": true
+        },
+        {
+          "date": "2006-02",
+          "statistic": 4.044153759652551,
+          "percentile": 99.9,
+          "critical95": 2.3094141758917828,
+          "warning": true
+        },
+        {
+          "date": "2006-03",
+          "statistic": 3.864381142883327,
+          "percentile": 99.85000000000001,
+          "critical95": 2.371591215901948,
+          "warning": true
+        },
+        {
+          "date": "2006-04",
+          "statistic": 3.5316492253039313,
+          "percentile": 99.35000000000001,
+          "critical95": 2.3454319734989544,
+          "warning": true
+        },
+        {
+          "date": "2006-05",
+          "statistic": 3.1762722109406827,
+          "percentile": 98.7,
+          "critical95": 2.4659188822318256,
+          "warning": true
+        },
+        {
+          "date": "2006-06",
+          "statistic": 2.525007960326151,
+          "percentile": 92.2,
+          "critical95": 2.869304604721239,
+          "warning": false
+        }
+      ],
+      "leadMonths": 12
+    },
+    {
+      "id": "china2007",
+      "name": "China equities, 2007",
+      "series": "SPASTT01CNM661N",
+      "peak": "2007-10",
+      "source": "https://fred.stlouisfed.org/series/SPASTT01CNM661N",
+      "note": "OECD monthly share-price proxy; peak month checked in the price series.",
+      "windowStart": "2006-10",
+      "windowEnd": "2007-09",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "2007-01",
+      "maxPercentile": 99.95,
+      "points": [
+        {
+          "date": "2006-10",
+          "statistic": 0.799707648497949,
+          "percentile": 93.30000000000001,
+          "critical95": 0.9633775991568199,
+          "warning": false
+        },
+        {
+          "date": "2006-11",
+          "statistic": 1.5643601402906104,
+          "percentile": 96.3,
+          "critical95": 1.4159760221087718,
+          "warning": false
+        },
+        {
+          "date": "2006-12",
+          "statistic": 3.135547128657449,
+          "percentile": 98.0,
+          "critical95": 2.497342935829535,
+          "warning": false
+        },
+        {
+          "date": "2007-01",
+          "statistic": 5.345581947990025,
+          "percentile": 98.2,
+          "critical95": 4.355323243491289,
+          "warning": true
+        },
+        {
+          "date": "2007-02",
+          "statistic": 3.3929456615626896,
+          "percentile": 98.75,
+          "critical95": 2.628373069571567,
+          "warning": true
+        },
+        {
+          "date": "2007-03",
+          "statistic": 3.2451411463705306,
+          "percentile": 98.95,
+          "critical95": 2.364255223207474,
+          "warning": true
+        },
+        {
+          "date": "2007-04",
+          "statistic": 5.0544575592349155,
+          "percentile": 99.6,
+          "critical95": 3.3162817014388075,
+          "warning": true
+        },
+        {
+          "date": "2007-05",
+          "statistic": 6.611110317384299,
+          "percentile": 99.95,
+          "critical95": 3.2840570013154604,
+          "warning": true
+        },
+        {
+          "date": "2007-06",
+          "statistic": 4.451838474092191,
+          "percentile": 99.4,
+          "critical95": 2.877088891126769,
+          "warning": true
+        },
+        {
+          "date": "2007-07",
+          "statistic": 3.5964356207348507,
+          "percentile": 99.05000000000001,
+          "critical95": 2.560124390751594,
+          "warning": true
+        },
+        {
+          "date": "2007-08",
+          "statistic": 5.235698821713023,
+          "percentile": 99.95,
+          "critical95": 2.895089573442248,
+          "warning": true
+        },
+        {
+          "date": "2007-09",
+          "statistic": 6.15107365250237,
+          "percentile": 99.9,
+          "critical95": 3.113479667228248,
+          "warning": true
+        }
+      ],
+      "leadMonths": 9
+    },
+    {
+      "id": "china2015",
+      "name": "China equities, 2015",
+      "series": "SPASTT01CNM661N",
+      "peak": "2015-06",
+      "source": "https://www.nber.org/system/files/working_papers/w24586/revisions/w24586.rev1.pdf",
+      "note": "Same country as2007, not an independent market.",
+      "windowStart": "2014-06",
+      "windowEnd": "2015-05",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 98.7,
+      "points": [
+        {
+          "date": "2014-06",
+          "statistic": -0.8873988360717217,
+          "percentile": 24.099999999999998,
+          "critical95": 0.5684717615296586,
+          "warning": false
+        },
+        {
+          "date": "2014-07",
+          "statistic": -0.9698770739104668,
+          "percentile": 23.550000000000004,
+          "critical95": 0.4187402492988311,
+          "warning": false
+        },
+        {
+          "date": "2014-08",
+          "statistic": -1.1453468981359918,
+          "percentile": 21.950000000000003,
+          "critical95": 0.6722674035319745,
+          "warning": false
+        },
+        {
+          "date": "2014-09",
+          "statistic": -0.6169668601473303,
+          "percentile": 53.05,
+          "critical95": 0.9440490831321321,
+          "warning": false
+        },
+        {
+          "date": "2014-10",
+          "statistic": -0.08199384144222867,
+          "percentile": 69.0,
+          "critical95": 1.2230534586390838,
+          "warning": false
+        },
+        {
+          "date": "2014-11",
+          "statistic": 0.9400617511712027,
+          "percentile": 89.1,
+          "critical95": 1.58478244500171,
+          "warning": false
+        },
+        {
+          "date": "2014-12",
+          "statistic": 3.325374607892402,
+          "percentile": 96.39999999999999,
+          "critical95": 3.036853317356244,
+          "warning": false
+        },
+        {
+          "date": "2015-01",
+          "statistic": 3.3941221791586926,
+          "percentile": 98.7,
+          "critical95": 2.6376319827549404,
+          "warning": false
+        },
+        {
+          "date": "2015-02",
+          "statistic": 1.0801502427123133,
+          "percentile": 87.6,
+          "critical95": 1.595528092723008,
+          "warning": false
+        },
+        {
+          "date": "2015-03",
+          "statistic": 1.8957864629638348,
+          "percentile": 93.55,
+          "critical95": 2.102958755315778,
+          "warning": false
+        },
+        {
+          "date": "2015-04",
+          "statistic": 3.937809872964564,
+          "percentile": 97.15,
+          "critical95": 3.257030636807904,
+          "warning": false
+        },
+        {
+          "date": "2015-05",
+          "statistic": 4.102461824006627,
+          "percentile": 98.5,
+          "critical95": 2.7679879754272214,
+          "warning": false
+        }
+      ]
+    },
+    {
+      "id": "bitcoin2017",
+      "name": "Bitcoin, 2017",
+      "series": "BTC",
+      "peak": "2017-12",
+      "source": "https://coinmetrics.substack.com/p/coin-metrics-state-of-the-network-6e8",
+      "note": "CoinMetrics reference rate; venue-specific highs vary.",
+      "windowStart": "2016-12",
+      "windowEnd": "2017-11",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "2017-03",
+      "maxPercentile": 99.95,
+      "points": [
+        {
+          "date": "2016-12",
+          "statistic": 1.0615213056843087,
+          "percentile": 94.35,
+          "critical95": 1.2927586732082355,
+          "warning": false
+        },
+        {
+          "date": "2017-01",
+          "statistic": 1.5288387605326732,
+          "percentile": 97.2,
+          "critical95": 1.1805579495996388,
+          "warning": false
+        },
+        {
+          "date": "2017-02",
+          "statistic": 2.4415355504119143,
+          "percentile": 98.2,
+          "critical95": 1.7482507923018522,
+          "warning": false
+        },
+        {
+          "date": "2017-03",
+          "statistic": 2.441360468335139,
+          "percentile": 99.4,
+          "critical95": 1.5752969266586934,
+          "warning": true
+        },
+        {
+          "date": "2017-04",
+          "statistic": 2.7315649533224766,
+          "percentile": 99.7,
+          "critical95": 1.529828396695045,
+          "warning": true
+        },
+        {
+          "date": "2017-05",
+          "statistic": 4.136499213213137,
+          "percentile": 99.85000000000001,
+          "critical95": 2.9099151533933214,
+          "warning": true
+        },
+        {
+          "date": "2017-06",
+          "statistic": 6.98607035187021,
+          "percentile": 99.9,
+          "critical95": 4.824246569250796,
+          "warning": true
+        },
+        {
+          "date": "2017-07",
+          "statistic": 2.7945039003229577,
+          "percentile": 88.7,
+          "critical95": 3.3924065202427087,
+          "warning": false
+        },
+        {
+          "date": "2017-08",
+          "statistic": 5.236799425823642,
+          "percentile": 97.25,
+          "critical95": 4.630549551297235,
+          "warning": false
+        },
+        {
+          "date": "2017-09",
+          "statistic": 4.213233577651547,
+          "percentile": 99.3,
+          "critical95": 3.1692857238631547,
+          "warning": false
+        },
+        {
+          "date": "2017-10",
+          "statistic": 6.4004900656335595,
+          "percentile": 99.9,
+          "critical95": 3.77975229729654,
+          "warning": true
+        },
+        {
+          "date": "2017-11",
+          "statistic": 9.823184870171767,
+          "percentile": 99.95,
+          "critical95": 4.606376991353829,
+          "warning": true
+        }
+      ],
+      "leadMonths": 9
+    },
+    {
+      "id": "bitcoin2021",
+      "name": "Bitcoin, 2021",
+      "series": "BTC",
+      "peak": "2021-11",
+      "source": "https://github.com/coinmetrics/data",
+      "note": "Same asset as2017; final2021 peak, not the earlier April peak. Peak month checked against reference-rate data.",
+      "windowStart": "2020-11",
+      "windowEnd": "2021-10",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "2021-03",
+      "maxPercentile": 99.75,
+      "points": [
+        {
+          "date": "2020-11",
+          "statistic": 0.511734294862199,
+          "percentile": 78.64999999999999,
+          "critical95": 1.6092922405920382,
+          "warning": false
+        },
+        {
+          "date": "2020-12",
+          "statistic": 2.1989408017444574,
+          "percentile": 90.3,
+          "critical95": 2.569157599097128,
+          "warning": false
+        },
+        {
+          "date": "2021-01",
+          "statistic": 5.651230061418802,
+          "percentile": 97.89999999999999,
+          "critical95": 4.9697244461027585,
+          "warning": false
+        },
+        {
+          "date": "2021-02",
+          "statistic": 7.36268852412013,
+          "percentile": 99.4,
+          "critical95": 5.295672997038471,
+          "warning": false
+        },
+        {
+          "date": "2021-03",
+          "statistic": 6.975365978683966,
+          "percentile": 99.75,
+          "critical95": 3.928713291001352,
+          "warning": true
+        },
+        {
+          "date": "2021-04",
+          "statistic": 4.576921848869384,
+          "percentile": 99.6,
+          "critical95": 2.945977760639122,
+          "warning": true
+        },
+        {
+          "date": "2021-05",
+          "statistic": 1.0726946913567508,
+          "percentile": 80.5,
+          "critical95": 3.1486486430333267,
+          "warning": false
+        },
+        {
+          "date": "2021-06",
+          "statistic": -0.2885728773294191,
+          "percentile": 57.05,
+          "critical95": 3.3347571550016832,
+          "warning": false
+        },
+        {
+          "date": "2021-07",
+          "statistic": -0.3969061222877856,
+          "percentile": 56.699999999999996,
+          "critical95": 2.5902455984660375,
+          "warning": false
+        },
+        {
+          "date": "2021-08",
+          "statistic": 0.1917342179055859,
+          "percentile": 69.39999999999999,
+          "critical95": 2.4459008432701923,
+          "warning": false
+        },
+        {
+          "date": "2021-09",
+          "statistic": 0.11647991686901114,
+          "percentile": 68.8,
+          "critical95": 2.1869613823053915,
+          "warning": false
+        },
+        {
+          "date": "2021-10",
+          "statistic": 0.8935935752413643,
+          "percentile": 82.85,
+          "critical95": 2.447635801650551,
+          "warning": false
+        }
+      ],
+      "leadMonths": 8
+    }
+  ],
+  "controls": [
+    {
+      "id": "sp1954",
+      "name": "US stocks, 1954",
+      "series": "SHILLER_SP",
+      "start": "1954-01",
+      "end": "1954-12",
+      "windowStart": "1954-01",
+      "windowEnd": "1954-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "1954-09",
+      "maxPercentile": 99.6,
+      "points": [
+        {
+          "date": "1954-01",
+          "statistic": -1.3079695187193727,
+          "percentile": 7.299999999999995,
+          "critical95": 1.301845254751159,
+          "warning": false
+        },
+        {
+          "date": "1954-02",
+          "statistic": -1.2147180713366563,
+          "percentile": 8.350000000000001,
+          "critical95": 1.180060003669345,
+          "warning": false
+        },
+        {
+          "date": "1954-03",
+          "statistic": -0.8992458170593162,
+          "percentile": 20.05,
+          "critical95": 1.2108564732160092,
+          "warning": false
+        },
+        {
+          "date": "1954-04",
+          "statistic": -0.06716396258930236,
+          "percentile": 52.150000000000006,
+          "critical95": 1.402883163765318,
+          "warning": false
+        },
+        {
+          "date": "1954-05",
+          "statistic": 1.507229377895467,
+          "percentile": 94.85,
+          "critical95": 1.5141922339476437,
+          "warning": false
+        },
+        {
+          "date": "1954-06",
+          "statistic": 1.0419830967074872,
+          "percentile": 90.5,
+          "critical95": 1.2773303160470928,
+          "warning": false
+        },
+        {
+          "date": "1954-07",
+          "statistic": 1.6464856344317964,
+          "percentile": 95.95,
+          "critical95": 1.5666968658011582,
+          "warning": false
+        },
+        {
+          "date": "1954-08",
+          "statistic": 1.6075548245419182,
+          "percentile": 96.3,
+          "critical95": 1.5127318617721013,
+          "warning": false
+        },
+        {
+          "date": "1954-09",
+          "statistic": 1.7150884635609087,
+          "percentile": 97.6,
+          "critical95": 1.4563123382506464,
+          "warning": true
+        },
+        {
+          "date": "1954-10",
+          "statistic": 1.8259380453350929,
+          "percentile": 98.35000000000001,
+          "critical95": 1.4660217022975377,
+          "warning": true
+        },
+        {
+          "date": "1954-11",
+          "statistic": 2.4242134258231656,
+          "percentile": 99.6,
+          "critical95": 1.6718450930042283,
+          "warning": true
+        },
+        {
+          "date": "1954-12",
+          "statistic": 3.1589454466131275,
+          "percentile": 99.05000000000001,
+          "critical95": 2.280564261707322,
+          "warning": true
+        }
+      ],
+      "forward24mMaxDrawdown": -0.06191061910619111
+    },
+    {
+      "id": "sp1984",
+      "name": "US stocks, 1984",
+      "series": "SHILLER_SP",
+      "start": "1984-01",
+      "end": "1984-12",
+      "windowStart": "1984-01",
+      "windowEnd": "1984-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 74.55000000000001,
+      "points": [
+        {
+          "date": "1984-01",
+          "statistic": 0.09038741961123238,
+          "percentile": 74.55000000000001,
+          "critical95": 0.7148850531680092,
+          "warning": false
+        },
+        {
+          "date": "1984-02",
+          "statistic": -0.3900782503165172,
+          "percentile": 53.0,
+          "critical95": 1.081661322006824,
+          "warning": false
+        },
+        {
+          "date": "1984-03",
+          "statistic": -0.40891743784184154,
+          "percentile": 53.65,
+          "critical95": 0.8070999631173559,
+          "warning": false
+        },
+        {
+          "date": "1984-04",
+          "statistic": -0.4240453701360711,
+          "percentile": 50.2,
+          "critical95": 0.7512974158031551,
+          "warning": false
+        },
+        {
+          "date": "1984-05",
+          "statistic": -0.4747570262255933,
+          "percentile": 48.35,
+          "critical95": 0.664414656879187,
+          "warning": false
+        },
+        {
+          "date": "1984-06",
+          "statistic": -0.549640249752636,
+          "percentile": 48.699999999999996,
+          "critical95": 0.6905662764497382,
+          "warning": false
+        },
+        {
+          "date": "1984-07",
+          "statistic": -0.30411757246871335,
+          "percentile": 64.25,
+          "critical95": 0.6097066282775088,
+          "warning": false
+        },
+        {
+          "date": "1984-08",
+          "statistic": -0.38178553843259666,
+          "percentile": 53.25,
+          "critical95": 1.5476524304455859,
+          "warning": false
+        },
+        {
+          "date": "1984-09",
+          "statistic": -0.342186583083446,
+          "percentile": 54.25,
+          "critical95": 1.2228357701763226,
+          "warning": false
+        },
+        {
+          "date": "1984-10",
+          "statistic": -0.4159469977507327,
+          "percentile": 49.650000000000006,
+          "critical95": 1.1039216690898976,
+          "warning": false
+        },
+        {
+          "date": "1984-11",
+          "statistic": -0.3814907785852714,
+          "percentile": 55.05,
+          "critical95": 0.8979983336932829,
+          "warning": false
+        },
+        {
+          "date": "1984-12",
+          "statistic": -0.4696785045945514,
+          "percentile": 53.449999999999996,
+          "critical95": 0.7707397946936803,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.043636363636363695
+    },
+    {
+      "id": "nasdaq1993",
+      "name": "Nasdaq, 1993",
+      "series": "NASDAQCOM",
+      "start": "1993-01",
+      "end": "1993-12",
+      "windowStart": "1993-01",
+      "windowEnd": "1993-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 93.39999999999999,
+      "points": [
+        {
+          "date": "1993-01",
+          "statistic": 0.563522203775539,
+          "percentile": 84.85000000000001,
+          "critical95": 1.097072460179893,
+          "warning": false
+        },
+        {
+          "date": "1993-02",
+          "statistic": 0.3038545328116589,
+          "percentile": 81.69999999999999,
+          "critical95": 1.0470498517572049,
+          "warning": false
+        },
+        {
+          "date": "1993-03",
+          "statistic": 0.23586775979139118,
+          "percentile": 82.1,
+          "critical95": 0.7926719041554431,
+          "warning": false
+        },
+        {
+          "date": "1993-04",
+          "statistic": -0.09400548589572923,
+          "percentile": 67.0,
+          "critical95": 0.9008683032066704,
+          "warning": false
+        },
+        {
+          "date": "1993-05",
+          "statistic": 0.08920111462809537,
+          "percentile": 75.25,
+          "critical95": 0.7513092531336577,
+          "warning": false
+        },
+        {
+          "date": "1993-06",
+          "statistic": 0.13323956608553417,
+          "percentile": 78.9,
+          "critical95": 0.7472737640699888,
+          "warning": false
+        },
+        {
+          "date": "1993-07",
+          "statistic": 0.14203283388441906,
+          "percentile": 80.1,
+          "critical95": 0.670366623601972,
+          "warning": false
+        },
+        {
+          "date": "1993-08",
+          "statistic": 0.3169939795024675,
+          "percentile": 84.8,
+          "critical95": 0.729974627243606,
+          "warning": false
+        },
+        {
+          "date": "1993-09",
+          "statistic": 0.48301177422107283,
+          "percentile": 88.94999999999999,
+          "critical95": 0.7489516469433636,
+          "warning": false
+        },
+        {
+          "date": "1993-10",
+          "statistic": 0.7861776970052873,
+          "percentile": 93.39999999999999,
+          "critical95": 0.8989073066604559,
+          "warning": false
+        },
+        {
+          "date": "1993-11",
+          "statistic": 0.503384108726358,
+          "percentile": 85.05,
+          "critical95": 0.9132369895012737,
+          "warning": false
+        },
+        {
+          "date": "1993-12",
+          "statistic": 0.40767895728798637,
+          "percentile": 83.3,
+          "critical95": 0.7971090207206109,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.09433686210531811
+    },
+    {
+      "id": "nasdaq2012",
+      "name": "Nasdaq, 2012",
+      "series": "NASDAQCOM",
+      "start": "2012-01",
+      "end": "2012-12",
+      "windowStart": "2012-01",
+      "windowEnd": "2012-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 78.64999999999999,
+      "points": [
+        {
+          "date": "2012-01",
+          "statistic": -0.5918348391610673,
+          "percentile": 58.35,
+          "critical95": 0.4681736580981983,
+          "warning": false
+        },
+        {
+          "date": "2012-02",
+          "statistic": -0.33245921196493344,
+          "percentile": 70.7,
+          "critical95": 0.7686591608794044,
+          "warning": false
+        },
+        {
+          "date": "2012-03",
+          "statistic": -0.15967351302473212,
+          "percentile": 76.4,
+          "critical95": 0.7625906298268476,
+          "warning": false
+        },
+        {
+          "date": "2012-04",
+          "statistic": -0.1976922813076639,
+          "percentile": 78.64999999999999,
+          "critical95": 0.5544666470064236,
+          "warning": false
+        },
+        {
+          "date": "2012-05",
+          "statistic": -0.4866954462719253,
+          "percentile": 67.45,
+          "critical95": 0.6085625314731065,
+          "warning": false
+        },
+        {
+          "date": "2012-06",
+          "statistic": -0.5818634719712628,
+          "percentile": 64.35,
+          "critical95": 0.4548868217277585,
+          "warning": false
+        },
+        {
+          "date": "2012-07",
+          "statistic": -0.5029307903176066,
+          "percentile": 67.65,
+          "critical95": 0.38022192279937483,
+          "warning": false
+        },
+        {
+          "date": "2012-08",
+          "statistic": -0.3524462659811294,
+          "percentile": 74.75,
+          "critical95": 0.4200891773546034,
+          "warning": false
+        },
+        {
+          "date": "2012-09",
+          "statistic": -0.19958008003968927,
+          "percentile": 77.7,
+          "critical95": 0.5388425267915851,
+          "warning": false
+        },
+        {
+          "date": "2012-10",
+          "statistic": -0.3739354217745931,
+          "percentile": 70.75,
+          "critical95": 0.4874686817488451,
+          "warning": false
+        },
+        {
+          "date": "2012-11",
+          "statistic": -0.5816152567979316,
+          "percentile": 62.349999999999994,
+          "critical95": 0.5350614253219117,
+          "warning": false
+        },
+        {
+          "date": "2012-12",
+          "statistic": -0.5118798239238534,
+          "percentile": 61.5,
+          "critical95": 0.49855745742988145,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.036725835084007064
+    },
+    {
+      "id": "japan2003",
+      "name": "Japan, 2003",
+      "series": "NIKKEI225",
+      "start": "2003-01",
+      "end": "2003-12",
+      "windowStart": "2003-01",
+      "windowEnd": "2003-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 92.5,
+      "points": [
+        {
+          "date": "2003-01",
+          "statistic": 0.16576255753292754,
+          "percentile": 85.39999999999999,
+          "critical95": 0.4857339135807958,
+          "warning": false
+        },
+        {
+          "date": "2003-02",
+          "statistic": 0.13592481037462442,
+          "percentile": 86.25,
+          "critical95": 0.46751733036052984,
+          "warning": false
+        },
+        {
+          "date": "2003-03",
+          "statistic": 0.2117602183345108,
+          "percentile": 90.60000000000001,
+          "critical95": 0.40020683733226564,
+          "warning": false
+        },
+        {
+          "date": "2003-04",
+          "statistic": 0.2549559172262305,
+          "percentile": 92.5,
+          "critical95": 0.3523798291271449,
+          "warning": false
+        },
+        {
+          "date": "2003-05",
+          "statistic": 0.14240723347505743,
+          "percentile": 87.85000000000001,
+          "critical95": 0.3644824468663577,
+          "warning": false
+        },
+        {
+          "date": "2003-06",
+          "statistic": -0.11633379900245897,
+          "percentile": 61.55,
+          "critical95": 1.1461777842184147,
+          "warning": false
+        },
+        {
+          "date": "2003-07",
+          "statistic": -0.3248940635953091,
+          "percentile": 60.8,
+          "critical95": 1.8105697358739317,
+          "warning": false
+        },
+        {
+          "date": "2003-08",
+          "statistic": -0.3803127518483205,
+          "percentile": 62.349999999999994,
+          "critical95": 0.995758741893913,
+          "warning": false
+        },
+        {
+          "date": "2003-09",
+          "statistic": -0.06954706640458166,
+          "percentile": 74.64999999999999,
+          "critical95": 1.4813803128512322,
+          "warning": false
+        },
+        {
+          "date": "2003-10",
+          "statistic": 0.253829439972146,
+          "percentile": 84.15,
+          "critical95": 0.9319662264125345,
+          "warning": false
+        },
+        {
+          "date": "2003-11",
+          "statistic": -0.3614519679020471,
+          "percentile": 62.9,
+          "critical95": 0.9000714136604389,
+          "warning": false
+        },
+        {
+          "date": "2003-12",
+          "statistic": -0.36911863926627786,
+          "percentile": 66.75,
+          "critical95": 0.5560371052235729,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.08258797824563258
+    },
+    {
+      "id": "japan2012",
+      "name": "Japan, 2012",
+      "series": "NIKKEI225",
+      "start": "2012-01",
+      "end": "2012-12",
+      "windowStart": "2012-01",
+      "windowEnd": "2012-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 21.699999999999996,
+      "points": [
+        {
+          "date": "2012-01",
+          "statistic": -0.686142032744091,
+          "percentile": 21.699999999999996,
+          "critical95": 0.8141363188589414,
+          "warning": false
+        },
+        {
+          "date": "2012-02",
+          "statistic": -1.1514061265658835,
+          "percentile": 10.050000000000004,
+          "critical95": 1.076785072826558,
+          "warning": false
+        },
+        {
+          "date": "2012-03",
+          "statistic": -1.2127516949468453,
+          "percentile": 11.050000000000004,
+          "critical95": 1.6252282372068518,
+          "warning": false
+        },
+        {
+          "date": "2012-04",
+          "statistic": -1.3610694798966982,
+          "percentile": 5.149999999999999,
+          "critical95": 1.3175577618493286,
+          "warning": false
+        },
+        {
+          "date": "2012-05",
+          "statistic": -1.376395531754769,
+          "percentile": 3.3499999999999974,
+          "critical95": 1.6215036862582968,
+          "warning": false
+        },
+        {
+          "date": "2012-06",
+          "statistic": -1.2956113880428688,
+          "percentile": 4.200000000000004,
+          "critical95": 1.3093649159307412,
+          "warning": false
+        },
+        {
+          "date": "2012-07",
+          "statistic": -1.3885603494450427,
+          "percentile": 5.500000000000005,
+          "critical95": 1.0608977807891653,
+          "warning": false
+        },
+        {
+          "date": "2012-08",
+          "statistic": -1.4989366409719422,
+          "percentile": 4.749999999999998,
+          "critical95": 0.9573328809182305,
+          "warning": false
+        },
+        {
+          "date": "2012-09",
+          "statistic": -1.527101450237965,
+          "percentile": 3.300000000000003,
+          "critical95": 0.9755727778432395,
+          "warning": false
+        },
+        {
+          "date": "2012-10",
+          "statistic": -1.51072290730195,
+          "percentile": 4.049999999999998,
+          "critical95": 0.7823582945090244,
+          "warning": false
+        },
+        {
+          "date": "2012-11",
+          "statistic": -1.6228653401004791,
+          "percentile": 2.6000000000000023,
+          "critical95": 0.7481491496498602,
+          "warning": false
+        },
+        {
+          "date": "2012-12",
+          "statistic": -1.3823148302660981,
+          "percentile": 11.850000000000005,
+          "critical95": 0.708386815015488,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.09811094606490955
+    },
+    {
+      "id": "china2004",
+      "name": "China, 2004",
+      "series": "SPASTT01CNM661N",
+      "start": "2004-01",
+      "end": "2004-12",
+      "windowStart": "2004-01",
+      "windowEnd": "2004-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 74.15,
+      "points": [
+        {
+          "date": "2004-01",
+          "statistic": -1.0359211077067245,
+          "percentile": 25.249999999999993,
+          "critical95": 1.4935537201792273,
+          "warning": false
+        },
+        {
+          "date": "2004-02",
+          "statistic": -0.3859684930679611,
+          "percentile": 61.14999999999999,
+          "critical95": 1.5478686232323902,
+          "warning": false
+        },
+        {
+          "date": "2004-03",
+          "statistic": -0.06735836818849748,
+          "percentile": 74.15,
+          "critical95": 1.0089632262839292,
+          "warning": false
+        },
+        {
+          "date": "2004-04",
+          "statistic": -0.3625270673162251,
+          "percentile": 64.14999999999999,
+          "critical95": 0.6766076809469239,
+          "warning": false
+        },
+        {
+          "date": "2004-05",
+          "statistic": -1.0224792807907241,
+          "percentile": 32.95,
+          "critical95": 1.0700321295342812,
+          "warning": false
+        },
+        {
+          "date": "2004-06",
+          "statistic": -1.0008578740205587,
+          "percentile": 37.4,
+          "critical95": 1.1294134142599628,
+          "warning": false
+        },
+        {
+          "date": "2004-07",
+          "statistic": -0.9304262440904033,
+          "percentile": 42.1,
+          "critical95": 0.8372460375594302,
+          "warning": false
+        },
+        {
+          "date": "2004-08",
+          "statistic": -0.7426006289061736,
+          "percentile": 51.7,
+          "critical95": 0.7062761587555912,
+          "warning": false
+        },
+        {
+          "date": "2004-09",
+          "statistic": -0.7912582092282066,
+          "percentile": 52.25,
+          "critical95": 0.43147909850607435,
+          "warning": false
+        },
+        {
+          "date": "2004-10",
+          "statistic": -0.7789438951953858,
+          "percentile": 52.800000000000004,
+          "critical95": 0.31927380479351486,
+          "warning": false
+        },
+        {
+          "date": "2004-11",
+          "statistic": -0.7463284276420095,
+          "percentile": 56.75,
+          "critical95": 0.2929579516228008,
+          "warning": false
+        },
+        {
+          "date": "2004-12",
+          "statistic": -0.6102492195771102,
+          "percentile": 65.85,
+          "critical95": 0.18129616812292415,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.2003842532725334
+    },
+    {
+      "id": "china2011",
+      "name": "China, 2011",
+      "series": "SPASTT01CNM661N",
+      "start": "2011-01",
+      "end": "2011-12",
+      "windowStart": "2011-01",
+      "windowEnd": "2011-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 88.3,
+      "points": [
+        {
+          "date": "2011-01",
+          "statistic": -0.9769533442601246,
+          "percentile": 34.25,
+          "critical95": 0.32126006459714335,
+          "warning": false
+        },
+        {
+          "date": "2011-02",
+          "statistic": -1.0087217331416274,
+          "percentile": 31.399999999999995,
+          "critical95": 0.23939427312317116,
+          "warning": false
+        },
+        {
+          "date": "2011-03",
+          "statistic": -1.0367384390403322,
+          "percentile": 32.35,
+          "critical95": 0.19756206660687006,
+          "warning": false
+        },
+        {
+          "date": "2011-04",
+          "statistic": -1.0558472013222555,
+          "percentile": 32.35,
+          "critical95": 0.1374551954753324,
+          "warning": false
+        },
+        {
+          "date": "2011-05",
+          "statistic": -1.0465913510447766,
+          "percentile": 36.0,
+          "critical95": 0.19255105287674473,
+          "warning": false
+        },
+        {
+          "date": "2011-06",
+          "statistic": -1.033362929974292,
+          "percentile": 32.49999999999999,
+          "critical95": 0.3444478214810511,
+          "warning": false
+        },
+        {
+          "date": "2011-07",
+          "statistic": -1.0613217201836365,
+          "percentile": 25.949999999999996,
+          "critical95": 0.3442683880923058,
+          "warning": false
+        },
+        {
+          "date": "2011-08",
+          "statistic": -1.029594861565805,
+          "percentile": 32.95,
+          "critical95": 0.5353013721540457,
+          "warning": false
+        },
+        {
+          "date": "2011-09",
+          "statistic": -0.9619047669552209,
+          "percentile": 38.0,
+          "critical95": 0.5127996164535426,
+          "warning": false
+        },
+        {
+          "date": "2011-10",
+          "statistic": -0.486632303817661,
+          "percentile": 71.95,
+          "critical95": 0.2785901010593118,
+          "warning": false
+        },
+        {
+          "date": "2011-11",
+          "statistic": -0.4583869530278858,
+          "percentile": 73.95,
+          "critical95": 0.21854051928235269,
+          "warning": false
+        },
+        {
+          "date": "2011-12",
+          "statistic": 0.20903715211696383,
+          "percentile": 88.3,
+          "critical95": 0.6213840498074271,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.15865650337481763
+    },
+    {
+      "id": "housing1995",
+      "name": "US housing, 1995",
+      "series": "CSUSHPINSA",
+      "start": "1995-01",
+      "end": "1995-12",
+      "windowStart": "1995-01",
+      "windowEnd": "1995-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "1995-06",
+      "maxPercentile": 97.6,
+      "points": [
+        {
+          "date": "1995-01",
+          "statistic": 0.8203329160808736,
+          "percentile": 89.55,
+          "critical95": 1.1130103700890734,
+          "warning": false
+        },
+        {
+          "date": "1995-02",
+          "statistic": 0.7034701734006054,
+          "percentile": 90.64999999999999,
+          "critical95": 0.9527561917460546,
+          "warning": false
+        },
+        {
+          "date": "1995-03",
+          "statistic": 0.7216786662887131,
+          "percentile": 92.0,
+          "critical95": 0.8734170041214472,
+          "warning": false
+        },
+        {
+          "date": "1995-04",
+          "statistic": 0.9269464905810333,
+          "percentile": 95.15,
+          "critical95": 0.9121271597387209,
+          "warning": false
+        },
+        {
+          "date": "1995-05",
+          "statistic": 1.1640498778176132,
+          "percentile": 96.95,
+          "critical95": 0.9878694324422345,
+          "warning": false
+        },
+        {
+          "date": "1995-06",
+          "statistic": 1.4512015438504453,
+          "percentile": 96.39999999999999,
+          "critical95": 1.301207368739109,
+          "warning": true
+        },
+        {
+          "date": "1995-07",
+          "statistic": 1.7290941868371699,
+          "percentile": 95.45,
+          "critical95": 1.6306224705728396,
+          "warning": true
+        },
+        {
+          "date": "1995-08",
+          "statistic": 1.8749497080445212,
+          "percentile": 96.0,
+          "critical95": 1.669433931886146,
+          "warning": true
+        },
+        {
+          "date": "1995-09",
+          "statistic": 1.772969151388798,
+          "percentile": 97.6,
+          "critical95": 1.5065883894443153,
+          "warning": true
+        },
+        {
+          "date": "1995-10",
+          "statistic": 1.5390334048612464,
+          "percentile": 95.0,
+          "critical95": 1.5220845615646286,
+          "warning": true
+        },
+        {
+          "date": "1995-11",
+          "statistic": 1.2131227117286691,
+          "percentile": 88.1,
+          "critical95": 1.6131513612993564,
+          "warning": false
+        },
+        {
+          "date": "1995-12",
+          "statistic": 0.9078220281234104,
+          "percentile": 74.15,
+          "critical95": 1.738013782922753,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.002532825175326381
+    },
+    {
+      "id": "gold1995",
+      "name": "Gold, 1995",
+      "series": "GOLD_WB",
+      "start": "1995-01",
+      "end": "1995-12",
+      "windowStart": "1995-01",
+      "windowEnd": "1995-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 31.100000000000005,
+      "points": [
+        {
+          "date": "1995-01",
+          "statistic": -1.2102504946345394,
+          "percentile": 19.699999999999996,
+          "critical95": 0.28575700142358007,
+          "warning": false
+        },
+        {
+          "date": "1995-02",
+          "statistic": -1.253099775858025,
+          "percentile": 19.599999999999994,
+          "critical95": 0.1088546491997148,
+          "warning": false
+        },
+        {
+          "date": "1995-03",
+          "statistic": -1.1987296400318899,
+          "percentile": 22.050000000000004,
+          "critical95": 0.18898451128723737,
+          "warning": false
+        },
+        {
+          "date": "1995-04",
+          "statistic": -1.0520359848612495,
+          "percentile": 31.100000000000005,
+          "critical95": 0.4644539447020007,
+          "warning": false
+        },
+        {
+          "date": "1995-05",
+          "statistic": -1.1873311728526068,
+          "percentile": 18.95,
+          "critical95": 0.6298729150430746,
+          "warning": false
+        },
+        {
+          "date": "1995-06",
+          "statistic": -1.1558182330845463,
+          "percentile": 22.4,
+          "critical95": 0.38607771601278107,
+          "warning": false
+        },
+        {
+          "date": "1995-07",
+          "statistic": -1.1904474777047729,
+          "percentile": 22.550000000000004,
+          "critical95": 0.175542371124278,
+          "warning": false
+        },
+        {
+          "date": "1995-08",
+          "statistic": -1.244508802652676,
+          "percentile": 18.300000000000004,
+          "critical95": 0.11488143722753627,
+          "warning": false
+        },
+        {
+          "date": "1995-09",
+          "statistic": -1.2653582605122144,
+          "percentile": 20.399999999999995,
+          "critical95": 0.020473695877404604,
+          "warning": false
+        },
+        {
+          "date": "1995-10",
+          "statistic": -1.2762553478950367,
+          "percentile": 18.600000000000005,
+          "critical95": -0.08693019034750293,
+          "warning": false
+        },
+        {
+          "date": "1995-11",
+          "statistic": -1.2567976258677733,
+          "percentile": 19.35,
+          "critical95": -0.09748007918816899,
+          "warning": false
+        },
+        {
+          "date": "1995-12",
+          "statistic": -1.2336544018312687,
+          "percentile": 19.799999999999997,
+          "critical95": -0.14651014511011978,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.2866389959482162
+    }
+  ],
+  "excluded": [
+    {
+      "name": "British railway mania, 1845",
+      "reason": "Primary research verified, but no usable numeric railway-index observations acquired. Not counted as a pass or miss.",
+      "source": "https://mpra.ub.uni-muenchen.de/21820/1/MPRA_paper_21820.pdf"
+    },
+    {
+      "name": "South Sea, 1720",
+      "reason": "Yale numeric daily series acquired, but only16monthly observations: insufficient for the frozen60-month specification. Not counted.",
+      "source": "https://som.yale.edu/centers/international-center-for-finance/data/historical-south-sea-and-mississippi-data"
+    },
+    {
+      "name": "Bitcoin, 2013",
+      "reason": "Only41monthly observations before the December2013 peak. Insufficient for the frozen60-month specification; not counted.",
+      "source": "https://coinmetrics.substack.com/p/coin-metrics-state-of-the-network-6e8"
+    }
+  ],
+  "sensitivity": [
+    {
+      "id": "us1929",
+      "name": "US stocks, 1929",
+      "series": "SHILLER_SP",
+      "peak": "1929-09",
+      "source": "https://www.federalreservehistory.org/essays/stock-market-crash-of-1929",
+      "note": "Broad-market reconstruction; famous boom/crash, not a fundamental-value label.",
+      "windowStart": "1928-09",
+      "windowEnd": "1929-08",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "1928-09",
+      "maxPercentile": 99.95,
+      "points": [
+        {
+          "date": "1928-09",
+          "statistic": 3.5487775981549254,
+          "percentile": 98.4,
+          "critical95": 2.5430794627438473,
+          "warning": true
+        },
+        {
+          "date": "1928-10",
+          "statistic": 3.6705829320646037,
+          "percentile": 99.7,
+          "critical95": 2.341347176426488,
+          "warning": true
+        },
+        {
+          "date": "1928-11",
+          "statistic": 4.441203175493252,
+          "percentile": 99.6,
+          "critical95": 2.9741707280569063,
+          "warning": true
+        },
+        {
+          "date": "1928-12",
+          "statistic": 4.1943471842150934,
+          "percentile": 99.5,
+          "critical95": 2.5251440140319237,
+          "warning": true
+        },
+        {
+          "date": "1929-01",
+          "statistic": 5.061424096669834,
+          "percentile": 99.8,
+          "critical95": 3.021888946478995,
+          "warning": true
+        },
+        {
+          "date": "1929-02",
+          "statistic": 4.780149300345096,
+          "percentile": 99.7,
+          "critical95": 2.612060525249613,
+          "warning": true
+        },
+        {
+          "date": "1929-03",
+          "statistic": 4.810411991475038,
+          "percentile": 99.9,
+          "critical95": 2.467596033529682,
+          "warning": true
+        },
+        {
+          "date": "1929-04",
+          "statistic": 4.327066744636357,
+          "percentile": 99.7,
+          "critical95": 2.446166946913502,
+          "warning": true
+        },
+        {
+          "date": "1929-05",
+          "statistic": 4.344417046346503,
+          "percentile": 99.85000000000001,
+          "critical95": 2.3317821031734356,
+          "warning": true
+        },
+        {
+          "date": "1929-06",
+          "statistic": 4.442781493176417,
+          "percentile": 99.8,
+          "critical95": 2.227973346482318,
+          "warning": true
+        },
+        {
+          "date": "1929-07",
+          "statistic": 5.378430441352731,
+          "percentile": 99.95,
+          "critical95": 2.681278163827466,
+          "warning": true
+        },
+        {
+          "date": "1929-08",
+          "statistic": 6.1026787319428,
+          "percentile": 99.95,
+          "critical95": 2.968691736064282,
+          "warning": true
+        }
+      ],
+      "leadMonths": 12
+    },
+    {
+      "id": "gold1980",
+      "name": "Gold, 1980",
+      "series": "GOLD_WB",
+      "peak": "1980-01",
+      "source": "https://www.clevelandfed.org/publications/economic-commentary/1980/ec-19800505-after-silver-and-gold-some-sober-thoughts-on-speculative-bubbles",
+      "note": "World Bank London afternoon fixing monthly mean. A commodity, not a cash-flow-producing equity.",
+      "windowStart": "1979-01",
+      "windowEnd": "1979-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "1979-08",
+      "maxPercentile": 99.85000000000001,
+      "points": [
+        {
+          "date": "1979-01",
+          "statistic": 0.9159616230157284,
+          "percentile": 81.69999999999999,
+          "critical95": 2.1802974456695363,
+          "warning": false
+        },
+        {
+          "date": "1979-02",
+          "statistic": 1.5634927299265082,
+          "percentile": 89.85,
+          "critical95": 2.1314808174609245,
+          "warning": false
+        },
+        {
+          "date": "1979-03",
+          "statistic": 1.1150768549323427,
+          "percentile": 88.0,
+          "critical95": 1.9000484352093783,
+          "warning": false
+        },
+        {
+          "date": "1979-04",
+          "statistic": 0.8145837811713823,
+          "percentile": 84.55,
+          "critical95": 1.5956390267629748,
+          "warning": false
+        },
+        {
+          "date": "1979-05",
+          "statistic": 1.3753180742153792,
+          "percentile": 91.10000000000001,
+          "critical95": 1.8283893441780463,
+          "warning": false
+        },
+        {
+          "date": "1979-06",
+          "statistic": 2.056393464638794,
+          "percentile": 95.95,
+          "critical95": 1.8996114162999287,
+          "warning": false
+        },
+        {
+          "date": "1979-07",
+          "statistic": 2.497699058643113,
+          "percentile": 97.45,
+          "critical95": 1.9607334230006606,
+          "warning": false
+        },
+        {
+          "date": "1979-08",
+          "statistic": 2.433464902449163,
+          "percentile": 98.0,
+          "critical95": 1.8776248803855808,
+          "warning": true
+        },
+        {
+          "date": "1979-09",
+          "statistic": 3.842127915521787,
+          "percentile": 99.1,
+          "critical95": 2.791146342244956,
+          "warning": true
+        },
+        {
+          "date": "1979-10",
+          "statistic": 4.943069255980786,
+          "percentile": 99.45,
+          "critical95": 3.251395009343662,
+          "warning": true
+        },
+        {
+          "date": "1979-11",
+          "statistic": 3.9517538465294493,
+          "percentile": 99.55000000000001,
+          "critical95": 2.69910108809095,
+          "warning": true
+        },
+        {
+          "date": "1979-12",
+          "statistic": 5.5274298681795875,
+          "percentile": 99.85000000000001,
+          "critical95": 3.3662644989285027,
+          "warning": true
+        }
+      ],
+      "leadMonths": 5
+    },
+    {
+      "id": "us1987",
+      "name": "US stocks, 1987",
+      "series": "SHILLER_SP",
+      "peak": "1987-08",
+      "source": "https://www.federalreservehistory.org/essays/stock-market-crash-of-1987",
+      "note": "Pre-crash run-up. Whether this was a fundamental bubble is disputed.",
+      "windowStart": "1986-08",
+      "windowEnd": "1987-07",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "1986-08",
+      "maxPercentile": 99.4,
+      "points": [
+        {
+          "date": "1986-08",
+          "statistic": 2.2820519483315156,
+          "percentile": 98.7,
+          "critical95": 1.647710776311613,
+          "warning": true
+        },
+        {
+          "date": "1986-09",
+          "statistic": 1.6761247063894318,
+          "percentile": 96.45,
+          "critical95": 1.522206808279998,
+          "warning": true
+        },
+        {
+          "date": "1986-10",
+          "statistic": 1.5328790125766982,
+          "percentile": 94.39999999999999,
+          "critical95": 1.6057087213571344,
+          "warning": false
+        },
+        {
+          "date": "1986-11",
+          "statistic": 1.8083117314605721,
+          "percentile": 97.45,
+          "critical95": 1.5339584084323807,
+          "warning": false
+        },
+        {
+          "date": "1986-12",
+          "statistic": 1.84727951946685,
+          "percentile": 98.05,
+          "critical95": 1.4395180263152443,
+          "warning": false
+        },
+        {
+          "date": "1987-01",
+          "statistic": 2.3943997584326913,
+          "percentile": 98.3,
+          "critical95": 1.811954369992197,
+          "warning": true
+        },
+        {
+          "date": "1987-02",
+          "statistic": 3.0141725848581085,
+          "percentile": 98.9,
+          "critical95": 2.1600287450255458,
+          "warning": true
+        },
+        {
+          "date": "1987-03",
+          "statistic": 3.4045451670617046,
+          "percentile": 98.8,
+          "critical95": 2.2006741927453515,
+          "warning": true
+        },
+        {
+          "date": "1987-04",
+          "statistic": 2.9225120851310433,
+          "percentile": 98.7,
+          "critical95": 2.036414518805163,
+          "warning": true
+        },
+        {
+          "date": "1987-05",
+          "statistic": 2.7012727794025406,
+          "percentile": 98.75,
+          "critical95": 1.8632589378650397,
+          "warning": true
+        },
+        {
+          "date": "1987-06",
+          "statistic": 3.129706775935757,
+          "percentile": 99.2,
+          "critical95": 2.0548815909480593,
+          "warning": true
+        },
+        {
+          "date": "1987-07",
+          "statistic": 3.3271813495063083,
+          "percentile": 99.4,
+          "critical95": 2.076730476585608,
+          "warning": true
+        }
+      ],
+      "leadMonths": 12
+    },
+    {
+      "id": "japan1989",
+      "name": "Japan equities, 1989",
+      "series": "NIKKEI225",
+      "peak": "1989-12",
+      "source": "https://indexes.nikkei.co.jp/nkave/archives/file/nikkei_indexes_newsletter_vol51.pdf",
+      "note": "Nikkei225 equity-price proxy; not Japanese land prices.",
+      "windowStart": "1988-12",
+      "windowEnd": "1989-11",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "1988-12",
+      "maxPercentile": 99.95,
+      "points": [
+        {
+          "date": "1988-12",
+          "statistic": 2.822138127472159,
+          "percentile": 98.85000000000001,
+          "critical95": 1.8733096763310784,
+          "warning": true
+        },
+        {
+          "date": "1989-01",
+          "statistic": 3.2083550389486577,
+          "percentile": 99.2,
+          "critical95": 2.030155153931158,
+          "warning": true
+        },
+        {
+          "date": "1989-02",
+          "statistic": 3.375310495179023,
+          "percentile": 99.8,
+          "critical95": 1.841041429135361,
+          "warning": true
+        },
+        {
+          "date": "1989-03",
+          "statistic": 3.118866377965157,
+          "percentile": 99.45,
+          "critical95": 1.8034318896894583,
+          "warning": true
+        },
+        {
+          "date": "1989-04",
+          "statistic": 3.4774733326612752,
+          "percentile": 99.7,
+          "critical95": 1.9649853035560587,
+          "warning": true
+        },
+        {
+          "date": "1989-05",
+          "statistic": 3.5775159244765855,
+          "percentile": 99.8,
+          "critical95": 1.808751239272636,
+          "warning": true
+        },
+        {
+          "date": "1989-06",
+          "statistic": 3.011254462572734,
+          "percentile": 99.65,
+          "critical95": 1.7587258465467783,
+          "warning": true
+        },
+        {
+          "date": "1989-07",
+          "statistic": 3.0373140059201993,
+          "percentile": 99.6,
+          "critical95": 1.8577069756025557,
+          "warning": true
+        },
+        {
+          "date": "1989-08",
+          "statistic": 3.235321455743151,
+          "percentile": 99.8,
+          "critical95": 1.6589123676730642,
+          "warning": true
+        },
+        {
+          "date": "1989-09",
+          "statistic": 2.938080042750643,
+          "percentile": 99.45,
+          "critical95": 1.712236342664039,
+          "warning": true
+        },
+        {
+          "date": "1989-10",
+          "statistic": 3.0072205463431807,
+          "percentile": 99.9,
+          "critical95": 1.6133879074105257,
+          "warning": true
+        },
+        {
+          "date": "1989-11",
+          "statistic": 3.1096900719506535,
+          "percentile": 99.95,
+          "critical95": 1.5436792528447927,
+          "warning": true
+        }
+      ],
+      "leadMonths": 12
+    },
+    {
+      "id": "dotcom2000",
+      "name": "Dot-com, 2000",
+      "series": "NASDAQCOM",
+      "peak": "2000-03",
+      "source": "https://www.goldmansachs.com/our-firm/history/moments/2000-dot-com-bubble",
+      "note": "Nasdaq Composite; broad tech-heavy index, not failed internet firms alone.",
+      "windowStart": "1999-03",
+      "windowEnd": "2000-02",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "1999-06",
+      "maxPercentile": 99.95,
+      "points": [
+        {
+          "date": "1999-03",
+          "statistic": 2.545559424145871,
+          "percentile": 93.85,
+          "critical95": 2.738546987477424,
+          "warning": false
+        },
+        {
+          "date": "1999-04",
+          "statistic": 3.050084396177705,
+          "percentile": 96.7,
+          "critical95": 2.567915704858837,
+          "warning": false
+        },
+        {
+          "date": "1999-05",
+          "statistic": 2.6883690218862366,
+          "percentile": 95.6,
+          "critical95": 2.556615884632844,
+          "warning": false
+        },
+        {
+          "date": "1999-06",
+          "statistic": 2.5244969290554033,
+          "percentile": 96.1,
+          "critical95": 2.308755724917675,
+          "warning": true
+        },
+        {
+          "date": "1999-07",
+          "statistic": 3.241539119883934,
+          "percentile": 98.1,
+          "critical95": 2.310740343603833,
+          "warning": true
+        },
+        {
+          "date": "1999-08",
+          "statistic": 2.4748978839206948,
+          "percentile": 95.65,
+          "critical95": 2.303630601570163,
+          "warning": true
+        },
+        {
+          "date": "1999-09",
+          "statistic": 2.9458215857533707,
+          "percentile": 97.65,
+          "critical95": 2.2867156001483457,
+          "warning": true
+        },
+        {
+          "date": "1999-10",
+          "statistic": 2.7394262310713344,
+          "percentile": 97.25,
+          "critical95": 2.2490937850233883,
+          "warning": true
+        },
+        {
+          "date": "1999-11",
+          "statistic": 3.7969169348774914,
+          "percentile": 98.45,
+          "critical95": 2.661484332995624,
+          "warning": true
+        },
+        {
+          "date": "1999-12",
+          "statistic": 5.069140421887581,
+          "percentile": 99.4,
+          "critical95": 3.3520468955316565,
+          "warning": true
+        },
+        {
+          "date": "2000-01",
+          "statistic": 5.777100051694221,
+          "percentile": 99.95,
+          "critical95": 3.17768605299258,
+          "warning": true
+        },
+        {
+          "date": "2000-02",
+          "statistic": 6.903425269978392,
+          "percentile": 99.95,
+          "critical95": 3.0954974896372347,
+          "warning": true
+        }
+      ],
+      "leadMonths": 9
+    },
+    {
+      "id": "housing2006",
+      "name": "US housing, 2006",
+      "series": "CSUSHPINSA",
+      "peak": "2006-07",
+      "source": "https://press.spglobal.com/2016-11-29-The-S-P-CoreLogic-Case-Shiller-National-Index-Reaches-New-High-As-Home-Price-Gains-Continue",
+      "note": "Revised/backfilled national index; launched Dec2006. Prelaunch replay was not actually tradable or observable then.",
+      "windowStart": "2005-07",
+      "windowEnd": "2006-06",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "2005-07",
+      "maxPercentile": 99.95,
+      "points": [
+        {
+          "date": "2005-07",
+          "statistic": 16.05186334796182,
+          "percentile": 99.95,
+          "critical95": 3.0385041957085366,
+          "warning": true
+        },
+        {
+          "date": "2005-08",
+          "statistic": 16.163883686284127,
+          "percentile": 99.95,
+          "critical95": 3.007996053091783,
+          "warning": true
+        },
+        {
+          "date": "2005-09",
+          "statistic": 16.108866761245892,
+          "percentile": 99.95,
+          "critical95": 2.8703913499495144,
+          "warning": true
+        },
+        {
+          "date": "2005-10",
+          "statistic": 15.332915935288533,
+          "percentile": 99.95,
+          "critical95": 2.727896472327797,
+          "warning": true
+        },
+        {
+          "date": "2005-11",
+          "statistic": 14.324744596743832,
+          "percentile": 99.95,
+          "critical95": 2.7253166884436233,
+          "warning": true
+        },
+        {
+          "date": "2005-12",
+          "statistic": 12.740021329669526,
+          "percentile": 99.95,
+          "critical95": 2.621280786808963,
+          "warning": true
+        },
+        {
+          "date": "2006-01",
+          "statistic": 11.833543558845042,
+          "percentile": 99.95,
+          "critical95": 2.6152666905124833,
+          "warning": true
+        },
+        {
+          "date": "2006-02",
+          "statistic": 11.039290344475784,
+          "percentile": 99.95,
+          "critical95": 2.461585869433862,
+          "warning": true
+        },
+        {
+          "date": "2006-03",
+          "statistic": 10.896761056189181,
+          "percentile": 99.95,
+          "critical95": 2.451983674190945,
+          "warning": true
+        },
+        {
+          "date": "2006-04",
+          "statistic": 10.480734108680435,
+          "percentile": 99.95,
+          "critical95": 2.418807615820481,
+          "warning": true
+        },
+        {
+          "date": "2006-05",
+          "statistic": 9.948254555415284,
+          "percentile": 99.95,
+          "critical95": 2.321793363952607,
+          "warning": true
+        },
+        {
+          "date": "2006-06",
+          "statistic": 8.952495133315937,
+          "percentile": 99.95,
+          "critical95": 2.271706547567486,
+          "warning": true
+        }
+      ],
+      "leadMonths": 12
+    },
+    {
+      "id": "china2007",
+      "name": "China equities, 2007",
+      "series": "SPASTT01CNM661N",
+      "peak": "2007-10",
+      "source": "https://fred.stlouisfed.org/series/SPASTT01CNM661N",
+      "note": "OECD monthly share-price proxy; peak month checked in the price series.",
+      "windowStart": "2006-10",
+      "windowEnd": "2007-09",
+      "observations": 0,
+      "status": "insufficient",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": null,
+      "points": []
+    },
+    {
+      "id": "china2015",
+      "name": "China equities, 2015",
+      "series": "SPASTT01CNM661N",
+      "peak": "2015-06",
+      "source": "https://www.nber.org/system/files/working_papers/w24586/revisions/w24586.rev1.pdf",
+      "note": "Same country as2007, not an independent market.",
+      "windowStart": "2014-06",
+      "windowEnd": "2015-05",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 99.0,
+      "points": [
+        {
+          "date": "2014-06",
+          "statistic": -0.8873988360717324,
+          "percentile": 49.650000000000006,
+          "critical95": 0.0010017957752764238,
+          "warning": false
+        },
+        {
+          "date": "2014-07",
+          "statistic": -0.9698770739104706,
+          "percentile": 38.4,
+          "critical95": 0.06416808030338352,
+          "warning": false
+        },
+        {
+          "date": "2014-08",
+          "statistic": -1.1453468981359862,
+          "percentile": 23.0,
+          "critical95": 0.17971290480655472,
+          "warning": false
+        },
+        {
+          "date": "2014-09",
+          "statistic": -1.215981351664661,
+          "percentile": 18.65,
+          "critical95": 0.36224465846537296,
+          "warning": false
+        },
+        {
+          "date": "2014-10",
+          "statistic": -1.2319894771090314,
+          "percentile": 17.600000000000005,
+          "critical95": 0.28932436636147185,
+          "warning": false
+        },
+        {
+          "date": "2014-11",
+          "statistic": -0.025692942714544177,
+          "percentile": 82.4,
+          "critical95": 0.5849670490760323,
+          "warning": false
+        },
+        {
+          "date": "2014-12",
+          "statistic": 2.4834787454562304,
+          "percentile": 98.2,
+          "critical95": 1.9042953362097255,
+          "warning": false
+        },
+        {
+          "date": "2015-01",
+          "statistic": 3.3591229403253333,
+          "percentile": 98.7,
+          "critical95": 2.608166156076125,
+          "warning": false
+        },
+        {
+          "date": "2015-02",
+          "statistic": 1.080150242712306,
+          "percentile": 85.9,
+          "critical95": 1.8918963509740698,
+          "warning": false
+        },
+        {
+          "date": "2015-03",
+          "statistic": 1.8957864629638557,
+          "percentile": 92.5,
+          "critical95": 2.199157422141549,
+          "warning": false
+        },
+        {
+          "date": "2015-04",
+          "statistic": 3.93780987296458,
+          "percentile": 97.0,
+          "critical95": 3.340500862139978,
+          "warning": false
+        },
+        {
+          "date": "2015-05",
+          "statistic": 4.102461824006575,
+          "percentile": 99.0,
+          "critical95": 2.4690693902689747,
+          "warning": false
+        }
+      ]
+    },
+    {
+      "id": "bitcoin2017",
+      "name": "Bitcoin, 2017",
+      "series": "BTC",
+      "peak": "2017-12",
+      "source": "https://coinmetrics.substack.com/p/coin-metrics-state-of-the-network-6e8",
+      "note": "CoinMetrics reference rate; venue-specific highs vary.",
+      "windowStart": "2016-12",
+      "windowEnd": "2017-11",
+      "observations": 0,
+      "status": "insufficient",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": null,
+      "points": []
+    },
+    {
+      "id": "bitcoin2021",
+      "name": "Bitcoin, 2021",
+      "series": "BTC",
+      "peak": "2021-11",
+      "source": "https://github.com/coinmetrics/data",
+      "note": "Same asset as2017; final2021 peak, not the earlier April peak. Peak month checked against reference-rate data.",
+      "windowStart": "2020-11",
+      "windowEnd": "2021-10",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "2021-03",
+      "maxPercentile": 99.95,
+      "points": [
+        {
+          "date": "2020-11",
+          "statistic": 0.3491757452411606,
+          "percentile": 73.85,
+          "critical95": 1.6122025755585467,
+          "warning": false
+        },
+        {
+          "date": "2020-12",
+          "statistic": 1.9577824375957074,
+          "percentile": 89.64999999999999,
+          "critical95": 2.6239044046973152,
+          "warning": false
+        },
+        {
+          "date": "2021-01",
+          "statistic": 5.651230061418822,
+          "percentile": 98.2,
+          "critical95": 4.72075566677454,
+          "warning": false
+        },
+        {
+          "date": "2021-02",
+          "statistic": 7.362688524120144,
+          "percentile": 99.05000000000001,
+          "critical95": 5.637931088408551,
+          "warning": false
+        },
+        {
+          "date": "2021-03",
+          "statistic": 8.616622547533291,
+          "percentile": 99.95,
+          "critical95": 4.199314942055282,
+          "warning": true
+        },
+        {
+          "date": "2021-04",
+          "statistic": 7.104616753864617,
+          "percentile": 99.9,
+          "critical95": 3.493522129089715,
+          "warning": true
+        },
+        {
+          "date": "2021-05",
+          "statistic": 2.22435504187661,
+          "percentile": 89.05,
+          "critical95": 3.7571146292627473,
+          "warning": false
+        },
+        {
+          "date": "2021-06",
+          "statistic": 0.22676599404906442,
+          "percentile": 64.9,
+          "critical95": 3.877090596832103,
+          "warning": false
+        },
+        {
+          "date": "2021-07",
+          "statistic": 0.037036639381789846,
+          "percentile": 63.650000000000006,
+          "critical95": 3.2866541751050664,
+          "warning": false
+        },
+        {
+          "date": "2021-08",
+          "statistic": 1.0052016535233377,
+          "percentile": 78.2,
+          "critical95": 3.1443363794821044,
+          "warning": false
+        },
+        {
+          "date": "2021-09",
+          "statistic": 0.9220716833568319,
+          "percentile": 81.5,
+          "critical95": 2.993691742061597,
+          "warning": false
+        },
+        {
+          "date": "2021-10",
+          "statistic": 2.0316312244198227,
+          "percentile": 89.95,
+          "critical95": 2.9382501267952246,
+          "warning": false
+        }
+      ],
+      "leadMonths": 8
+    },
+    {
+      "id": "sp1954",
+      "name": "US stocks, 1954",
+      "series": "SHILLER_SP",
+      "start": "1954-01",
+      "end": "1954-12",
+      "windowStart": "1954-01",
+      "windowEnd": "1954-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": true,
+      "firstWarning": "1954-11",
+      "maxPercentile": 99.85000000000001,
+      "points": [
+        {
+          "date": "1954-01",
+          "statistic": 0.06207791238231607,
+          "percentile": 64.4,
+          "critical95": 1.247504383094068,
+          "warning": false
+        },
+        {
+          "date": "1954-02",
+          "statistic": 0.1847292183480332,
+          "percentile": 69.6,
+          "critical95": 1.2273184508784682,
+          "warning": false
+        },
+        {
+          "date": "1954-03",
+          "statistic": 0.3098475936255377,
+          "percentile": 73.25,
+          "critical95": 1.1965613191194628,
+          "warning": false
+        },
+        {
+          "date": "1954-04",
+          "statistic": 0.5789274573291424,
+          "percentile": 79.69999999999999,
+          "critical95": 1.3590661556636343,
+          "warning": false
+        },
+        {
+          "date": "1954-05",
+          "statistic": 0.8788253627940446,
+          "percentile": 86.45,
+          "critical95": 1.4608416077309403,
+          "warning": false
+        },
+        {
+          "date": "1954-06",
+          "statistic": 0.9056975832612955,
+          "percentile": 88.0,
+          "critical95": 1.3486718625747007,
+          "warning": false
+        },
+        {
+          "date": "1954-07",
+          "statistic": 1.2407950726109556,
+          "percentile": 92.30000000000001,
+          "critical95": 1.4395041854311965,
+          "warning": false
+        },
+        {
+          "date": "1954-08",
+          "statistic": 1.3901075954133608,
+          "percentile": 92.30000000000001,
+          "critical95": 1.569452366086991,
+          "warning": false
+        },
+        {
+          "date": "1954-09",
+          "statistic": 1.6020606280069476,
+          "percentile": 95.15,
+          "critical95": 1.572896825298713,
+          "warning": false
+        },
+        {
+          "date": "1954-10",
+          "statistic": 1.8259380453350549,
+          "percentile": 98.0,
+          "critical95": 1.4752746942725494,
+          "warning": false
+        },
+        {
+          "date": "1954-11",
+          "statistic": 2.4242134258231696,
+          "percentile": 98.9,
+          "critical95": 1.6911859703470429,
+          "warning": true
+        },
+        {
+          "date": "1954-12",
+          "statistic": 3.1589454466130484,
+          "percentile": 99.85000000000001,
+          "critical95": 1.9806890261255685,
+          "warning": true
+        }
+      ],
+      "forward24mMaxDrawdown": -0.06191061910619111
+    },
+    {
+      "id": "sp1984",
+      "name": "US stocks, 1984",
+      "series": "SHILLER_SP",
+      "start": "1984-01",
+      "end": "1984-12",
+      "windowStart": "1984-01",
+      "windowEnd": "1984-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 85.55,
+      "points": [
+        {
+          "date": "1984-01",
+          "statistic": 0.5355620765154273,
+          "percentile": 85.55,
+          "critical95": 1.0650240709431804,
+          "warning": false
+        },
+        {
+          "date": "1984-02",
+          "statistic": -0.002168377078858517,
+          "percentile": 73.15,
+          "critical95": 1.1178762098514265,
+          "warning": false
+        },
+        {
+          "date": "1984-03",
+          "statistic": -0.07449286512436278,
+          "percentile": 71.05,
+          "critical95": 0.9799331153757943,
+          "warning": false
+        },
+        {
+          "date": "1984-04",
+          "statistic": -0.09025616245899035,
+          "percentile": 67.0,
+          "critical95": 1.0252856016211465,
+          "warning": false
+        },
+        {
+          "date": "1984-05",
+          "statistic": -0.1573255243950546,
+          "percentile": 62.7,
+          "critical95": 1.024563756182571,
+          "warning": false
+        },
+        {
+          "date": "1984-06",
+          "statistic": -0.3219948174968557,
+          "percentile": 53.25,
+          "critical95": 1.0417587268629525,
+          "warning": false
+        },
+        {
+          "date": "1984-07",
+          "statistic": -0.41152666287959605,
+          "percentile": 49.0,
+          "critical95": 1.0575668315886948,
+          "warning": false
+        },
+        {
+          "date": "1984-08",
+          "statistic": 0.023420648677895298,
+          "percentile": 58.25,
+          "critical95": 1.5453038375187664,
+          "warning": false
+        },
+        {
+          "date": "1984-09",
+          "statistic": 0.07158409637777634,
+          "percentile": 62.74999999999999,
+          "critical95": 1.391532846368454,
+          "warning": false
+        },
+        {
+          "date": "1984-10",
+          "statistic": -0.017274968985330878,
+          "percentile": 59.74999999999999,
+          "critical95": 1.4371674324216346,
+          "warning": false
+        },
+        {
+          "date": "1984-11",
+          "statistic": 0.021317047631915765,
+          "percentile": 63.0,
+          "critical95": 1.2707926351279906,
+          "warning": false
+        },
+        {
+          "date": "1984-12",
+          "statistic": -0.08461424864036483,
+          "percentile": 60.14999999999999,
+          "critical95": 1.1632794744404626,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.043636363636363695
+    },
+    {
+      "id": "nasdaq1993",
+      "name": "Nasdaq, 1993",
+      "series": "NASDAQCOM",
+      "start": "1993-01",
+      "end": "1993-12",
+      "windowStart": "1993-01",
+      "windowEnd": "1993-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 93.55,
+      "points": [
+        {
+          "date": "1993-01",
+          "statistic": 0.8654761726953434,
+          "percentile": 89.8,
+          "critical95": 1.223277977096208,
+          "warning": false
+        },
+        {
+          "date": "1993-02",
+          "statistic": 0.6695358150516348,
+          "percentile": 86.5,
+          "critical95": 1.2795857400112756,
+          "warning": false
+        },
+        {
+          "date": "1993-03",
+          "statistic": 0.6482269377212039,
+          "percentile": 87.1,
+          "critical95": 1.19791071780496,
+          "warning": false
+        },
+        {
+          "date": "1993-04",
+          "statistic": 0.3605924489175453,
+          "percentile": 81.75,
+          "critical95": 1.0608810091542944,
+          "warning": false
+        },
+        {
+          "date": "1993-05",
+          "statistic": 0.5506531599266278,
+          "percentile": 86.5,
+          "critical95": 1.1238938732149417,
+          "warning": false
+        },
+        {
+          "date": "1993-06",
+          "statistic": 0.5817968797143264,
+          "percentile": 87.0,
+          "critical95": 1.0568778199134237,
+          "warning": false
+        },
+        {
+          "date": "1993-07",
+          "statistic": 0.5411251173451895,
+          "percentile": 86.7,
+          "critical95": 1.0286058858746037,
+          "warning": false
+        },
+        {
+          "date": "1993-08",
+          "statistic": 0.7363691246841867,
+          "percentile": 91.3,
+          "critical95": 1.0357196614631505,
+          "warning": false
+        },
+        {
+          "date": "1993-09",
+          "statistic": 0.8448292419476994,
+          "percentile": 92.7,
+          "critical95": 1.0409724911551543,
+          "warning": false
+        },
+        {
+          "date": "1993-10",
+          "statistic": 1.023168703527337,
+          "percentile": 93.55,
+          "critical95": 1.0955018449680372,
+          "warning": false
+        },
+        {
+          "date": "1993-11",
+          "statistic": 0.8292678028302886,
+          "percentile": 90.9,
+          "critical95": 1.0716351768218764,
+          "warning": false
+        },
+        {
+          "date": "1993-12",
+          "statistic": 0.7452376304423672,
+          "percentile": 90.25,
+          "critical95": 1.0162693180259577,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.09433686210531811
+    },
+    {
+      "id": "nasdaq2012",
+      "name": "Nasdaq, 2012",
+      "series": "NASDAQCOM",
+      "start": "2012-01",
+      "end": "2012-12",
+      "windowStart": "2012-01",
+      "windowEnd": "2012-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 67.5,
+      "points": [
+        {
+          "date": "2012-01",
+          "statistic": -0.5918348391610663,
+          "percentile": 46.35,
+          "critical95": 0.7627350966762724,
+          "warning": false
+        },
+        {
+          "date": "2012-02",
+          "statistic": -0.3324592119649386,
+          "percentile": 60.949999999999996,
+          "critical95": 0.9639671662493169,
+          "warning": false
+        },
+        {
+          "date": "2012-03",
+          "statistic": -0.15967351302473323,
+          "percentile": 67.5,
+          "critical95": 1.022824909277206,
+          "warning": false
+        },
+        {
+          "date": "2012-04",
+          "statistic": -0.19769228130765912,
+          "percentile": 64.9,
+          "critical95": 0.8984739531786601,
+          "warning": false
+        },
+        {
+          "date": "2012-05",
+          "statistic": -0.48669544627192796,
+          "percentile": 50.95,
+          "critical95": 0.9804700290425132,
+          "warning": false
+        },
+        {
+          "date": "2012-06",
+          "statistic": -0.5818634719712638,
+          "percentile": 46.150000000000006,
+          "critical95": 0.855798183207751,
+          "warning": false
+        },
+        {
+          "date": "2012-07",
+          "statistic": -0.5029307903176136,
+          "percentile": 49.25000000000001,
+          "critical95": 0.8657237395798192,
+          "warning": false
+        },
+        {
+          "date": "2012-08",
+          "statistic": -0.352446265981133,
+          "percentile": 56.60000000000001,
+          "critical95": 0.9229845287004335,
+          "warning": false
+        },
+        {
+          "date": "2012-09",
+          "statistic": -0.19958008003969038,
+          "percentile": 63.5,
+          "critical95": 0.9235247608469966,
+          "warning": false
+        },
+        {
+          "date": "2012-10",
+          "statistic": -0.37393542177458805,
+          "percentile": 57.05,
+          "critical95": 0.8565674668411999,
+          "warning": false
+        },
+        {
+          "date": "2012-11",
+          "statistic": -0.5816152567979248,
+          "percentile": 47.85,
+          "critical95": 0.8896966181232988,
+          "warning": false
+        },
+        {
+          "date": "2012-12",
+          "statistic": -0.5118798239238488,
+          "percentile": 51.800000000000004,
+          "critical95": 0.8005784837304801,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.036725835084007064
+    },
+    {
+      "id": "japan2003",
+      "name": "Japan, 2003",
+      "series": "NIKKEI225",
+      "start": "2003-01",
+      "end": "2003-12",
+      "windowStart": "2003-01",
+      "windowEnd": "2003-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 88.94999999999999,
+      "points": [
+        {
+          "date": "2003-01",
+          "statistic": 0.16576255753292896,
+          "percentile": 88.94999999999999,
+          "critical95": 0.45473895771849343,
+          "warning": false
+        },
+        {
+          "date": "2003-02",
+          "statistic": 0.13592481037462148,
+          "percentile": 88.35,
+          "critical95": 0.3986454763403756,
+          "warning": false
+        },
+        {
+          "date": "2003-03",
+          "statistic": 0.21176021833450787,
+          "percentile": 87.1,
+          "critical95": 0.5183021609979979,
+          "warning": false
+        },
+        {
+          "date": "2003-04",
+          "statistic": 0.2549559172262312,
+          "percentile": 86.94999999999999,
+          "critical95": 0.5438893649372565,
+          "warning": false
+        },
+        {
+          "date": "2003-05",
+          "statistic": 0.1424072334750601,
+          "percentile": 84.35000000000001,
+          "critical95": 0.5022147311059934,
+          "warning": false
+        },
+        {
+          "date": "2003-06",
+          "statistic": -0.11633379900245992,
+          "percentile": 72.6,
+          "critical95": 0.5294264223838923,
+          "warning": false
+        },
+        {
+          "date": "2003-07",
+          "statistic": -0.3248940635953081,
+          "percentile": 60.3,
+          "critical95": 0.7328760686048272,
+          "warning": false
+        },
+        {
+          "date": "2003-08",
+          "statistic": -0.3803127518483165,
+          "percentile": 57.60000000000001,
+          "critical95": 0.6226758111407732,
+          "warning": false
+        },
+        {
+          "date": "2003-09",
+          "statistic": -0.5263838341082764,
+          "percentile": 52.300000000000004,
+          "critical95": 0.7567289668495096,
+          "warning": false
+        },
+        {
+          "date": "2003-10",
+          "statistic": -0.5457315561983275,
+          "percentile": 54.099999999999994,
+          "critical95": 0.7284561673580695,
+          "warning": false
+        },
+        {
+          "date": "2003-11",
+          "statistic": -0.48590754455844276,
+          "percentile": 55.95,
+          "critical95": 0.6455832734807119,
+          "warning": false
+        },
+        {
+          "date": "2003-12",
+          "statistic": -0.5111961169045321,
+          "percentile": 52.800000000000004,
+          "critical95": 0.6051011189382494,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.08258797824563258
+    },
+    {
+      "id": "japan2012",
+      "name": "Japan, 2012",
+      "series": "NIKKEI225",
+      "start": "2012-01",
+      "end": "2012-12",
+      "windowStart": "2012-01",
+      "windowEnd": "2012-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 56.60000000000001,
+      "points": [
+        {
+          "date": "2012-01",
+          "statistic": -0.5788492338432679,
+          "percentile": 56.60000000000001,
+          "critical95": 0.21502069894185213,
+          "warning": false
+        },
+        {
+          "date": "2012-02",
+          "statistic": -0.7016988724314632,
+          "percentile": 49.2,
+          "critical95": 0.40429130127814017,
+          "warning": false
+        },
+        {
+          "date": "2012-03",
+          "statistic": -0.8145611791388012,
+          "percentile": 41.75,
+          "critical95": 0.7242514983578427,
+          "warning": false
+        },
+        {
+          "date": "2012-04",
+          "statistic": -0.7816820221412978,
+          "percentile": 42.55,
+          "critical95": 0.589938816897752,
+          "warning": false
+        },
+        {
+          "date": "2012-05",
+          "statistic": -0.6809177005473894,
+          "percentile": 50.550000000000004,
+          "critical95": 0.8555111851829262,
+          "warning": false
+        },
+        {
+          "date": "2012-06",
+          "statistic": -0.6545390611756483,
+          "percentile": 53.449999999999996,
+          "critical95": 0.5744198071416614,
+          "warning": false
+        },
+        {
+          "date": "2012-07",
+          "statistic": -0.6823756699007006,
+          "percentile": 52.2,
+          "critical95": 0.4348665798673413,
+          "warning": false
+        },
+        {
+          "date": "2012-08",
+          "statistic": -0.7197879832986765,
+          "percentile": 48.95,
+          "critical95": 0.3457637603114486,
+          "warning": false
+        },
+        {
+          "date": "2012-09",
+          "statistic": -0.7257890854260823,
+          "percentile": 52.5,
+          "critical95": 0.19762609330493167,
+          "warning": false
+        },
+        {
+          "date": "2012-10",
+          "statistic": -0.7133349570182258,
+          "percentile": 53.1,
+          "critical95": 0.16676069931667686,
+          "warning": false
+        },
+        {
+          "date": "2012-11",
+          "statistic": -0.7554609255199016,
+          "percentile": 49.1,
+          "critical95": 0.12165537967424214,
+          "warning": false
+        },
+        {
+          "date": "2012-12",
+          "statistic": -0.8637885757990408,
+          "percentile": 42.50000000000001,
+          "critical95": 0.32156198635437894,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.09811094606490955
+    },
+    {
+      "id": "china2004",
+      "name": "China, 2004",
+      "series": "SPASTT01CNM661N",
+      "start": "2004-01",
+      "end": "2004-12",
+      "windowStart": "2004-01",
+      "windowEnd": "2004-12",
+      "observations": 0,
+      "status": "insufficient",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": null,
+      "points": [],
+      "forward24mMaxDrawdown": -0.2003842532725334
+    },
+    {
+      "id": "china2011",
+      "name": "China, 2011",
+      "series": "SPASTT01CNM661N",
+      "start": "2011-01",
+      "end": "2011-12",
+      "windowStart": "2011-01",
+      "windowEnd": "2011-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 67.30000000000001,
+      "points": [
+        {
+          "date": "2011-01",
+          "statistic": -0.9769533442601233,
+          "percentile": 31.85,
+          "critical95": 0.5159180424053835,
+          "warning": false
+        },
+        {
+          "date": "2011-02",
+          "statistic": -0.9739678015460268,
+          "percentile": 29.45,
+          "critical95": 0.454134421704618,
+          "warning": false
+        },
+        {
+          "date": "2011-03",
+          "statistic": -0.9544586217522705,
+          "percentile": 30.400000000000006,
+          "critical95": 0.4687435957831945,
+          "warning": false
+        },
+        {
+          "date": "2011-04",
+          "statistic": -0.943271293339069,
+          "percentile": 33.3,
+          "critical95": 0.3342032541737296,
+          "warning": false
+        },
+        {
+          "date": "2011-05",
+          "statistic": -0.9965700115035447,
+          "percentile": 30.400000000000006,
+          "critical95": 0.3174836068563275,
+          "warning": false
+        },
+        {
+          "date": "2011-06",
+          "statistic": -1.0295217836367017,
+          "percentile": 27.349999999999998,
+          "critical95": 0.3895982428238413,
+          "warning": false
+        },
+        {
+          "date": "2011-07",
+          "statistic": -1.033303235175065,
+          "percentile": 26.8,
+          "critical95": 0.3033771183291955,
+          "warning": false
+        },
+        {
+          "date": "2011-08",
+          "statistic": -1.0295948615658002,
+          "percentile": 26.5,
+          "critical95": 0.3793125536758893,
+          "warning": false
+        },
+        {
+          "date": "2011-09",
+          "statistic": -0.9987768319200189,
+          "percentile": 30.049999999999997,
+          "critical95": 0.3346626403729054,
+          "warning": false
+        },
+        {
+          "date": "2011-10",
+          "statistic": -0.9797357456139721,
+          "percentile": 31.999999999999996,
+          "critical95": 0.2875953507903588,
+          "warning": false
+        },
+        {
+          "date": "2011-11",
+          "statistic": -1.021273371901463,
+          "percentile": 31.15,
+          "critical95": 0.18761382289049586,
+          "warning": false
+        },
+        {
+          "date": "2011-12",
+          "statistic": -0.40954786847891406,
+          "percentile": 67.30000000000001,
+          "critical95": 0.5289033843566999,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.15865650337481763
+    },
+    {
+      "id": "housing1995",
+      "name": "US housing, 1995",
+      "series": "CSUSHPINSA",
+      "start": "1995-01",
+      "end": "1995-12",
+      "windowStart": "1995-01",
+      "windowEnd": "1995-12",
+      "observations": 0,
+      "status": "insufficient",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": null,
+      "points": [],
+      "forward24mMaxDrawdown": -0.002532825175326381
+    },
+    {
+      "id": "gold1995",
+      "name": "Gold, 1995",
+      "series": "GOLD_WB",
+      "start": "1995-01",
+      "end": "1995-12",
+      "windowStart": "1995-01",
+      "windowEnd": "1995-12",
+      "observations": 12,
+      "status": "evaluated",
+      "warning": false,
+      "firstWarning": null,
+      "maxPercentile": 27.400000000000002,
+      "points": [
+        {
+          "date": "1995-01",
+          "statistic": -1.21025049463446,
+          "percentile": 22.950000000000003,
+          "critical95": 0.29259252611702363,
+          "warning": false
+        },
+        {
+          "date": "1995-02",
+          "statistic": -1.2530997758580942,
+          "percentile": 21.299999999999997,
+          "critical95": 0.1522755216806221,
+          "warning": false
+        },
+        {
+          "date": "1995-03",
+          "statistic": -1.1987296400318554,
+          "percentile": 23.799999999999997,
+          "critical95": 0.15284555239488684,
+          "warning": false
+        },
+        {
+          "date": "1995-04",
+          "statistic": -1.052035984861209,
+          "percentile": 27.400000000000002,
+          "critical95": 0.2596675334209097,
+          "warning": false
+        },
+        {
+          "date": "1995-05",
+          "statistic": -1.1873311728526241,
+          "percentile": 20.55,
+          "critical95": 0.35978108045312135,
+          "warning": false
+        },
+        {
+          "date": "1995-06",
+          "statistic": -1.1558182330848568,
+          "percentile": 20.599999999999994,
+          "critical95": 0.2803259588864277,
+          "warning": false
+        },
+        {
+          "date": "1995-07",
+          "statistic": -1.190447477704495,
+          "percentile": 16.849999999999998,
+          "critical95": 0.32376923032651345,
+          "warning": false
+        },
+        {
+          "date": "1995-08",
+          "statistic": -1.2445088026525473,
+          "percentile": 15.349999999999998,
+          "critical95": 0.21392710546406862,
+          "warning": false
+        },
+        {
+          "date": "1995-09",
+          "statistic": -1.2653582605120526,
+          "percentile": 12.7,
+          "critical95": 0.18118318644536285,
+          "warning": false
+        },
+        {
+          "date": "1995-10",
+          "statistic": -1.2762553478950942,
+          "percentile": 11.850000000000005,
+          "critical95": 0.11658700391412988,
+          "warning": false
+        },
+        {
+          "date": "1995-11",
+          "statistic": -1.2567976258679663,
+          "percentile": 14.049999999999995,
+          "critical95": 0.13616279318631833,
+          "warning": false
+        },
+        {
+          "date": "1995-12",
+          "statistic": -1.2336544018313278,
+          "percentile": 14.600000000000001,
+          "critical95": -0.0411373847839044,
+          "warning": false
+        }
+      ],
+      "forward24mMaxDrawdown": -0.2866389959482162
+    }
+  ],
+  "current": [
+    {
+      "id": "AI_PROXY",
+      "asOf": "2026-07",
+      "latest": {
+        "date": "2026-07",
+        "statistic": 1.1758428073223166,
+        "percentile": 81.69999999999999,
+        "critical95": 2.487922247860686,
+        "warning": false
+      },
+      "history": [
+        {
+          "date": "2023-01",
+          "statistic": -1.1013238570265544,
+          "percentile": 30.100000000000005,
+          "critical95": 1.1966564617467694,
+          "warning": false
+        },
+        {
+          "date": "2023-02",
+          "statistic": -1.1116236036864666,
+          "percentile": 29.100000000000005,
+          "critical95": 1.0227297774370425,
+          "warning": false
+        },
+        {
+          "date": "2023-03",
+          "statistic": -0.9420402962555441,
+          "percentile": 34.75,
+          "critical95": 1.194264290186565,
+          "warning": false
+        },
+        {
+          "date": "2023-04",
+          "statistic": -1.0136750454145518,
+          "percentile": 34.150000000000006,
+          "critical95": 1.0211638277420938,
+          "warning": false
+        },
+        {
+          "date": "2023-05",
+          "statistic": -0.8064407145215238,
+          "percentile": 40.25,
+          "critical95": 1.0941623186536615,
+          "warning": false
+        },
+        {
+          "date": "2023-06",
+          "statistic": -0.4324258032974597,
+          "percentile": 55.800000000000004,
+          "critical95": 1.1028025633502283,
+          "warning": false
+        },
+        {
+          "date": "2023-07",
+          "statistic": -0.1481207878061632,
+          "percentile": 69.10000000000001,
+          "critical95": 1.019473055459277,
+          "warning": false
+        },
+        {
+          "date": "2023-08",
+          "statistic": -0.0008200375006010897,
+          "percentile": 74.75,
+          "critical95": 0.8807917087259248,
+          "warning": false
+        },
+        {
+          "date": "2023-09",
+          "statistic": -0.6153092801175485,
+          "percentile": 49.45,
+          "critical95": 0.8203006547204166,
+          "warning": false
+        },
+        {
+          "date": "2023-10",
+          "statistic": -0.7492325004844873,
+          "percentile": 40.449999999999996,
+          "critical95": 0.8322387593182556,
+          "warning": false
+        },
+        {
+          "date": "2023-11",
+          "statistic": -0.4084444904615467,
+          "percentile": 52.35000000000001,
+          "critical95": 0.9825113328395034,
+          "warning": false
+        },
+        {
+          "date": "2023-12",
+          "statistic": -0.16114054582911008,
+          "percentile": 65.4,
+          "critical95": 0.95787492378736,
+          "warning": false
+        },
+        {
+          "date": "2024-01",
+          "statistic": 0.027014549356955277,
+          "percentile": 71.35000000000001,
+          "critical95": 0.9479624411703841,
+          "warning": false
+        },
+        {
+          "date": "2024-02",
+          "statistic": 0.42138868319365624,
+          "percentile": 82.2,
+          "critical95": 1.0387766137462027,
+          "warning": false
+        },
+        {
+          "date": "2024-03",
+          "statistic": 0.6024114116895438,
+          "percentile": 88.94999999999999,
+          "critical95": 0.9240180725518752,
+          "warning": false
+        },
+        {
+          "date": "2024-04",
+          "statistic": -0.10144712499055726,
+          "percentile": 63.25000000000001,
+          "critical95": 1.1156528689967369,
+          "warning": false
+        },
+        {
+          "date": "2024-05",
+          "statistic": 0.3783690105167836,
+          "percentile": 77.35,
+          "critical95": 1.531092729906244,
+          "warning": false
+        },
+        {
+          "date": "2024-06",
+          "statistic": 0.8698742603980942,
+          "percentile": 85.39999999999999,
+          "critical95": 1.6338256904099646,
+          "warning": false
+        },
+        {
+          "date": "2024-07",
+          "statistic": 0.3955044412426836,
+          "percentile": 78.05,
+          "critical95": 1.3335749447612792,
+          "warning": false
+        },
+        {
+          "date": "2024-08",
+          "statistic": 0.33548106395165683,
+          "percentile": 75.85,
+          "critical95": 1.2221524487127715,
+          "warning": false
+        },
+        {
+          "date": "2024-09",
+          "statistic": 0.5064092523116945,
+          "percentile": 83.7,
+          "critical95": 1.0736891245508229,
+          "warning": false
+        },
+        {
+          "date": "2024-10",
+          "statistic": 0.4088312331294204,
+          "percentile": 80.75,
+          "critical95": 0.938793175572713,
+          "warning": false
+        },
+        {
+          "date": "2024-11",
+          "statistic": 0.733434187724873,
+          "percentile": 88.75,
+          "critical95": 1.083960091480596,
+          "warning": false
+        },
+        {
+          "date": "2024-12",
+          "statistic": 0.7094126943585276,
+          "percentile": 90.4,
+          "critical95": 0.9813324517911602,
+          "warning": false
+        },
+        {
+          "date": "2025-01",
+          "statistic": 0.6285517324147243,
+          "percentile": 86.9,
+          "critical95": 0.9996511317054471,
+          "warning": false
+        },
+        {
+          "date": "2025-02",
+          "statistic": 0.23496714726881474,
+          "percentile": 70.7,
+          "critical95": 1.0825863152958861,
+          "warning": false
+        },
+        {
+          "date": "2025-03",
+          "statistic": -0.40455403730231576,
+          "percentile": 50.1,
+          "critical95": 1.536825179947861,
+          "warning": false
+        },
+        {
+          "date": "2025-04",
+          "statistic": -0.41256345582798326,
+          "percentile": 53.349999999999994,
+          "critical95": 1.1717109397870418,
+          "warning": false
+        },
+        {
+          "date": "2025-05",
+          "statistic": -0.06431628250826421,
+          "percentile": 60.5,
+          "critical95": 1.7693548170887572,
+          "warning": false
+        },
+        {
+          "date": "2025-06",
+          "statistic": 0.42829370281289986,
+          "percentile": 71.45,
+          "critical95": 2.3663069971689477,
+          "warning": false
+        },
+        {
+          "date": "2025-07",
+          "statistic": 0.7717469092351849,
+          "percentile": 80.0,
+          "critical95": 2.043194575076857,
+          "warning": false
+        },
+        {
+          "date": "2025-08",
+          "statistic": 0.814767366729915,
+          "percentile": 83.89999999999999,
+          "critical95": 1.6927444730795134,
+          "warning": false
+        },
+        {
+          "date": "2025-09",
+          "statistic": 1.2580817609390869,
+          "percentile": 88.25,
+          "critical95": 1.889253742388144,
+          "warning": false
+        },
+        {
+          "date": "2025-10",
+          "statistic": 1.7059208555736427,
+          "percentile": 92.85,
+          "critical95": 1.906663249725257,
+          "warning": false
+        },
+        {
+          "date": "2025-11",
+          "statistic": 1.0767995101477972,
+          "percentile": 88.4,
+          "critical95": 1.7657388535980902,
+          "warning": false
+        },
+        {
+          "date": "2025-12",
+          "statistic": 0.8789535310921301,
+          "percentile": 83.95,
+          "critical95": 1.5412375452741787,
+          "warning": false
+        },
+        {
+          "date": "2026-01",
+          "statistic": 0.8482172116156641,
+          "percentile": 87.45,
+          "critical95": 1.4260441379794826,
+          "warning": false
+        },
+        {
+          "date": "2026-02",
+          "statistic": 0.5816714463070957,
+          "percentile": 82.55,
+          "critical95": 1.286634131239334,
+          "warning": false
+        },
+        {
+          "date": "2026-03",
+          "statistic": 0.21461607055921356,
+          "percentile": 73.6,
+          "critical95": 1.2391728518167198,
+          "warning": false
+        },
+        {
+          "date": "2026-04",
+          "statistic": 1.1062922635547912,
+          "percentile": 75.85,
+          "critical95": 2.4454393089048776,
+          "warning": false
+        },
+        {
+          "date": "2026-05",
+          "statistic": 2.1554372657500456,
+          "percentile": 84.7,
+          "critical95": 3.3131471967293296,
+          "warning": false
+        },
+        {
+          "date": "2026-06",
+          "statistic": 1.3810992318557473,
+          "percentile": 81.4,
+          "critical95": 2.960281717885441,
+          "warning": false
+        },
+        {
+          "date": "2026-07",
+          "statistic": 1.1758428073223166,
+          "percentile": 81.69999999999999,
+          "critical95": 2.487922247860686,
+          "warning": false
+        }
+      ],
+      "sensitivity120": {
+        "date": "2026-07",
+        "statistic": 2.0195484918628575,
+        "percentile": 91.10000000000001,
+        "critical95": 2.480043667541536,
+        "warning": false
+      }
+    },
+    {
+      "id": "FF_Chips",
+      "asOf": "2026-07",
+      "latest": {
+        "date": "2026-07",
+        "statistic": 0.8796936340025732,
+        "percentile": 79.5,
+        "critical95": 2.595519314109117,
+        "warning": false
+      },
+      "history": [
+        {
+          "date": "2023-01",
+          "statistic": -0.9581859966490499,
+          "percentile": 34.95,
+          "critical95": 1.4688063948817887,
+          "warning": false
+        },
+        {
+          "date": "2023-02",
+          "statistic": -0.9657808557146003,
+          "percentile": 33.4,
+          "critical95": 1.1222605579798643,
+          "warning": false
+        },
+        {
+          "date": "2023-03",
+          "statistic": -0.7226182860717949,
+          "percentile": 43.7,
+          "critical95": 1.2964982232424427,
+          "warning": false
+        },
+        {
+          "date": "2023-04",
+          "statistic": -0.7840730558273887,
+          "percentile": 44.3,
+          "critical95": 1.1692770399711316,
+          "warning": false
+        },
+        {
+          "date": "2023-05",
+          "statistic": -0.49099801465165993,
+          "percentile": 54.25,
+          "critical95": 1.1893118378072425,
+          "warning": false
+        },
+        {
+          "date": "2023-06",
+          "statistic": -0.17385302969438457,
+          "percentile": 64.85000000000001,
+          "critical95": 1.3602761884429049,
+          "warning": false
+        },
+        {
+          "date": "2023-07",
+          "statistic": 0.011346675503820151,
+          "percentile": 70.65,
+          "critical95": 1.223884887340886,
+          "warning": false
+        },
+        {
+          "date": "2023-08",
+          "statistic": -0.11929520007256557,
+          "percentile": 68.35,
+          "critical95": 1.0617802195681447,
+          "warning": false
+        },
+        {
+          "date": "2023-09",
+          "statistic": -0.7333656781970828,
+          "percentile": 41.55,
+          "critical95": 1.2640706214070603,
+          "warning": false
+        },
+        {
+          "date": "2023-10",
+          "statistic": -0.8624306281119003,
+          "percentile": 34.4,
+          "critical95": 1.0369503010839922,
+          "warning": false
+        },
+        {
+          "date": "2023-11",
+          "statistic": -0.5742487292867563,
+          "percentile": 48.1,
+          "critical95": 1.3335384634265854,
+          "warning": false
+        },
+        {
+          "date": "2023-12",
+          "statistic": -0.3117005883032518,
+          "percentile": 56.49999999999999,
+          "critical95": 1.2226088393903647,
+          "warning": false
+        },
+        {
+          "date": "2024-01",
+          "statistic": -0.2369985247252044,
+          "percentile": 60.25,
+          "critical95": 1.0814326235662601,
+          "warning": false
+        },
+        {
+          "date": "2024-02",
+          "statistic": 0.19830045271911625,
+          "percentile": 73.8,
+          "critical95": 1.1524852065023905,
+          "warning": false
+        },
+        {
+          "date": "2024-03",
+          "statistic": 0.26743090757703797,
+          "percentile": 77.7,
+          "critical95": 1.0743970611979474,
+          "warning": false
+        },
+        {
+          "date": "2024-04",
+          "statistic": -0.1666672012218304,
+          "percentile": 60.199999999999996,
+          "critical95": 1.0753532472129266,
+          "warning": false
+        },
+        {
+          "date": "2024-05",
+          "statistic": 0.6219131361788617,
+          "percentile": 78.25,
+          "critical95": 1.6233302951068498,
+          "warning": false
+        },
+        {
+          "date": "2024-06",
+          "statistic": 1.1769632431243116,
+          "percentile": 88.2,
+          "critical95": 1.7818653142444103,
+          "warning": false
+        },
+        {
+          "date": "2024-07",
+          "statistic": 0.8528068687735034,
+          "percentile": 84.5,
+          "critical95": 1.5256869642632478,
+          "warning": false
+        },
+        {
+          "date": "2024-08",
+          "statistic": 0.8437739666441408,
+          "percentile": 87.7,
+          "critical95": 1.256949003416747,
+          "warning": false
+        },
+        {
+          "date": "2024-09",
+          "statistic": 0.8718312947150052,
+          "percentile": 86.94999999999999,
+          "critical95": 1.29585333879887,
+          "warning": false
+        },
+        {
+          "date": "2024-10",
+          "statistic": 0.7900493699212067,
+          "percentile": 89.45,
+          "critical95": 1.0904925611172236,
+          "warning": false
+        },
+        {
+          "date": "2024-11",
+          "statistic": 0.9347561165647454,
+          "percentile": 91.60000000000001,
+          "critical95": 1.1367753571471781,
+          "warning": false
+        },
+        {
+          "date": "2024-12",
+          "statistic": 1.0899851097587736,
+          "percentile": 94.6,
+          "critical95": 1.1216136773563588,
+          "warning": false
+        },
+        {
+          "date": "2025-01",
+          "statistic": 0.34642141463989723,
+          "percentile": 73.7,
+          "critical95": 1.2313064583509885,
+          "warning": false
+        },
+        {
+          "date": "2025-02",
+          "statistic": 0.2903329638714381,
+          "percentile": 72.64999999999999,
+          "critical95": 1.2201149633720703,
+          "warning": false
+        },
+        {
+          "date": "2025-03",
+          "statistic": -0.35375515043059685,
+          "percentile": 51.6,
+          "critical95": 1.4324772057063504,
+          "warning": false
+        },
+        {
+          "date": "2025-04",
+          "statistic": -0.4074873506940018,
+          "percentile": 51.550000000000004,
+          "critical95": 1.3815578029121227,
+          "warning": false
+        },
+        {
+          "date": "2025-05",
+          "statistic": -0.11806320663854128,
+          "percentile": 62.0,
+          "critical95": 1.6018014933013507,
+          "warning": false
+        },
+        {
+          "date": "2025-06",
+          "statistic": 0.34566243444534056,
+          "percentile": 68.25,
+          "critical95": 1.9081216691561693,
+          "warning": false
+        },
+        {
+          "date": "2025-07",
+          "statistic": 0.694729563914434,
+          "percentile": 79.0,
+          "critical95": 1.8677257164284864,
+          "warning": false
+        },
+        {
+          "date": "2025-08",
+          "statistic": 0.8092157720829806,
+          "percentile": 84.5,
+          "critical95": 1.642689036299751,
+          "warning": false
+        },
+        {
+          "date": "2025-09",
+          "statistic": 1.3716798408282072,
+          "percentile": 90.5,
+          "critical95": 1.787385189277465,
+          "warning": false
+        },
+        {
+          "date": "2025-10",
+          "statistic": 2.031403245407803,
+          "percentile": 94.89999999999999,
+          "critical95": 2.0436724691147337,
+          "warning": false
+        },
+        {
+          "date": "2025-11",
+          "statistic": 1.3467821277295144,
+          "percentile": 89.8,
+          "critical95": 1.8680426923752425,
+          "warning": false
+        },
+        {
+          "date": "2025-12",
+          "statistic": 1.0691379104728629,
+          "percentile": 88.4,
+          "critical95": 1.6485567163951904,
+          "warning": false
+        },
+        {
+          "date": "2026-01",
+          "statistic": 1.0260665927756727,
+          "percentile": 87.35,
+          "critical95": 1.6250791245064158,
+          "warning": false
+        },
+        {
+          "date": "2026-02",
+          "statistic": 0.742431051643265,
+          "percentile": 83.75,
+          "critical95": 1.3379661406830468,
+          "warning": false
+        },
+        {
+          "date": "2026-03",
+          "statistic": 0.37453633734152025,
+          "percentile": 77.8,
+          "critical95": 1.4660115518413916,
+          "warning": false
+        },
+        {
+          "date": "2026-04",
+          "statistic": 1.2746933075803875,
+          "percentile": 78.10000000000001,
+          "critical95": 2.416416353046066,
+          "warning": false
+        },
+        {
+          "date": "2026-05",
+          "statistic": 2.1917179450997506,
+          "percentile": 87.35,
+          "critical95": 3.1071970868887293,
+          "warning": false
+        },
+        {
+          "date": "2026-06",
+          "statistic": 1.5744791931868953,
+          "percentile": 85.65,
+          "critical95": 2.651794410195108,
+          "warning": false
+        },
+        {
+          "date": "2026-07",
+          "statistic": 0.8796936340025732,
+          "percentile": 79.5,
+          "critical95": 2.595519314109117,
+          "warning": false
+        }
+      ],
+      "sensitivity120": {
+        "date": "2026-07",
+        "statistic": 2.004099445527193,
+        "percentile": 91.5,
+        "critical95": 2.557348089760225,
+        "warning": false
+      }
+    },
+    {
+      "id": "FF_Hardw",
+      "asOf": "2026-07",
+      "latest": {
+        "date": "2026-07",
+        "statistic": 2.4955080309244058,
+        "percentile": 92.55,
+        "critical95": 2.7760330818937278,
+        "warning": false
+      },
+      "history": [
+        {
+          "date": "2023-01",
+          "statistic": -1.1983163436981634,
+          "percentile": 23.950000000000003,
+          "critical95": 0.8948212719003065,
+          "warning": false
+        },
+        {
+          "date": "2023-02",
+          "statistic": -1.213589139033813,
+          "percentile": 22.850000000000005,
+          "critical95": 0.6595426667387174,
+          "warning": false
+        },
+        {
+          "date": "2023-03",
+          "statistic": -1.0996823954760502,
+          "percentile": 29.700000000000003,
+          "critical95": 0.6762765447298441,
+          "warning": false
+        },
+        {
+          "date": "2023-04",
+          "statistic": -1.287272129539091,
+          "percentile": 21.450000000000003,
+          "critical95": 0.7625996449675525,
+          "warning": false
+        },
+        {
+          "date": "2023-05",
+          "statistic": -1.21005291744505,
+          "percentile": 22.250000000000004,
+          "critical95": 0.6857811682911987,
+          "warning": false
+        },
+        {
+          "date": "2023-06",
+          "statistic": -1.0689925753938752,
+          "percentile": 26.6,
+          "critical95": 0.6692339029841207,
+          "warning": false
+        },
+        {
+          "date": "2023-07",
+          "statistic": -1.0062699272686013,
+          "percentile": 33.5,
+          "critical95": 0.5512594401663418,
+          "warning": false
+        },
+        {
+          "date": "2023-08",
+          "statistic": -0.44429760967865956,
+          "percentile": 63.0,
+          "critical95": 0.6049615954267784,
+          "warning": false
+        },
+        {
+          "date": "2023-09",
+          "statistic": -1.0101082833872013,
+          "percentile": 34.050000000000004,
+          "critical95": 0.5931928457209756,
+          "warning": false
+        },
+        {
+          "date": "2023-10",
+          "statistic": -1.1191987204742027,
+          "percentile": 26.149999999999995,
+          "critical95": 0.5238710439069139,
+          "warning": false
+        },
+        {
+          "date": "2023-11",
+          "statistic": -1.0581303334288668,
+          "percentile": 26.449999999999996,
+          "critical95": 0.5679593923827991,
+          "warning": false
+        },
+        {
+          "date": "2023-12",
+          "statistic": -0.8534158850449949,
+          "percentile": 38.9,
+          "critical95": 0.5106030476476111,
+          "warning": false
+        },
+        {
+          "date": "2024-01",
+          "statistic": -0.4823617835101415,
+          "percentile": 58.20000000000001,
+          "critical95": 0.5018742065388772,
+          "warning": false
+        },
+        {
+          "date": "2024-02",
+          "statistic": 0.05027936354634448,
+          "percentile": 79.2,
+          "critical95": 0.6820530336607177,
+          "warning": false
+        },
+        {
+          "date": "2024-03",
+          "statistic": 0.7289879602252237,
+          "percentile": 93.15,
+          "critical95": 0.8816883153958174,
+          "warning": false
+        },
+        {
+          "date": "2024-04",
+          "statistic": -0.44702004823166375,
+          "percentile": 55.699999999999996,
+          "critical95": 1.1012923058944126,
+          "warning": false
+        },
+        {
+          "date": "2024-05",
+          "statistic": -0.09794064797450594,
+          "percentile": 69.65,
+          "critical95": 1.2209474434797216,
+          "warning": false
+        },
+        {
+          "date": "2024-06",
+          "statistic": 0.2804841784860371,
+          "percentile": 79.35,
+          "critical95": 1.1841655902398538,
+          "warning": false
+        },
+        {
+          "date": "2024-07",
+          "statistic": -0.07144442543366612,
+          "percentile": 70.10000000000001,
+          "critical95": 0.9802394048132661,
+          "warning": false
+        },
+        {
+          "date": "2024-08",
+          "statistic": -0.2529795224788864,
+          "percentile": 65.05000000000001,
+          "critical95": 0.844083778328449,
+          "warning": false
+        },
+        {
+          "date": "2024-09",
+          "statistic": -0.030860243496298366,
+          "percentile": 71.05,
+          "critical95": 0.8464322848994218,
+          "warning": false
+        },
+        {
+          "date": "2024-10",
+          "statistic": -0.0947645325271109,
+          "percentile": 70.85000000000001,
+          "critical95": 0.6868432705080498,
+          "warning": false
+        },
+        {
+          "date": "2024-11",
+          "statistic": 0.31544488971058005,
+          "percentile": 80.4,
+          "critical95": 0.9255650638322594,
+          "warning": false
+        },
+        {
+          "date": "2024-12",
+          "statistic": 0.20587119346419558,
+          "percentile": 78.45,
+          "critical95": 0.819105727503594,
+          "warning": false
+        },
+        {
+          "date": "2025-01",
+          "statistic": 0.30740136428931203,
+          "percentile": 80.25,
+          "critical95": 0.8489351737091341,
+          "warning": false
+        },
+        {
+          "date": "2025-02",
+          "statistic": -0.07261526594904269,
+          "percentile": 61.650000000000006,
+          "critical95": 1.044421411742086,
+          "warning": false
+        },
+        {
+          "date": "2025-03",
+          "statistic": -0.7028370953377665,
+          "percentile": 41.65,
+          "critical95": 1.5674105352991747,
+          "warning": false
+        },
+        {
+          "date": "2025-04",
+          "statistic": -0.7776298268957585,
+          "percentile": 38.449999999999996,
+          "critical95": 1.1220306719104811,
+          "warning": false
+        },
+        {
+          "date": "2025-05",
+          "statistic": -0.5375849498796851,
+          "percentile": 45.599999999999994,
+          "critical95": 1.606860364938269,
+          "warning": false
+        },
+        {
+          "date": "2025-06",
+          "statistic": -0.0015976283031293931,
+          "percentile": 60.5,
+          "critical95": 2.2923996499425177,
+          "warning": false
+        },
+        {
+          "date": "2025-07",
+          "statistic": 0.371281589766678,
+          "percentile": 71.89999999999999,
+          "critical95": 1.8716869427984884,
+          "warning": false
+        },
+        {
+          "date": "2025-08",
+          "statistic": 0.5603949663706895,
+          "percentile": 76.7,
+          "critical95": 1.6014425725011412,
+          "warning": false
+        },
+        {
+          "date": "2025-09",
+          "statistic": 0.9355589612019806,
+          "percentile": 83.6,
+          "critical95": 1.6999128838050812,
+          "warning": false
+        },
+        {
+          "date": "2025-10",
+          "statistic": 1.5668823158573144,
+          "percentile": 92.0,
+          "critical95": 1.8605509764054373,
+          "warning": false
+        },
+        {
+          "date": "2025-11",
+          "statistic": 0.753121467511366,
+          "percentile": 83.6,
+          "critical95": 1.7028492780248274,
+          "warning": false
+        },
+        {
+          "date": "2025-12",
+          "statistic": 0.57957046232793,
+          "percentile": 78.25,
+          "critical95": 1.5872046113308453,
+          "warning": false
+        },
+        {
+          "date": "2026-01",
+          "statistic": 0.8941305554270823,
+          "percentile": 86.3,
+          "critical95": 1.5551178403559507,
+          "warning": false
+        },
+        {
+          "date": "2026-02",
+          "statistic": 1.2045587159321591,
+          "percentile": 91.7,
+          "critical95": 1.4413900184203818,
+          "warning": false
+        },
+        {
+          "date": "2026-03",
+          "statistic": 0.7805640328518025,
+          "percentile": 87.3,
+          "critical95": 1.3841604331328299,
+          "warning": false
+        },
+        {
+          "date": "2026-04",
+          "statistic": 2.1391124066982576,
+          "percentile": 88.7,
+          "critical95": 2.6758690450733718,
+          "warning": false
+        },
+        {
+          "date": "2026-05",
+          "statistic": 4.039558703261864,
+          "percentile": 93.10000000000001,
+          "critical95": 4.3073819060382075,
+          "warning": false
+        },
+        {
+          "date": "2026-06",
+          "statistic": 3.42014976972896,
+          "percentile": 97.6,
+          "critical95": 3.084059546133857,
+          "warning": false
+        },
+        {
+          "date": "2026-07",
+          "statistic": 2.4955080309244058,
+          "percentile": 92.55,
+          "critical95": 2.7760330818937278,
+          "warning": false
+        }
+      ],
+      "sensitivity120": {
+        "date": "2026-07",
+        "statistic": 3.552257589334662,
+        "percentile": 98.5,
+        "critical95": 2.893798877554434,
+        "warning": true
+      }
+    },
+    {
+      "id": "FF_Softw",
+      "asOf": "2026-07",
+      "latest": {
+        "date": "2026-07",
+        "statistic": -0.37742748398273857,
+        "percentile": 57.35,
+        "critical95": 1.7102193794327942,
+        "warning": false
+      },
+      "history": [
+        {
+          "date": "2023-01",
+          "statistic": -0.6364477844051232,
+          "percentile": 56.55,
+          "critical95": 0.8818730179648967,
+          "warning": false
+        },
+        {
+          "date": "2023-02",
+          "statistic": -0.6295916469134242,
+          "percentile": 56.60000000000001,
+          "critical95": 0.7900264366955544,
+          "warning": false
+        },
+        {
+          "date": "2023-03",
+          "statistic": -0.9368548717749401,
+          "percentile": 40.300000000000004,
+          "critical95": 0.7803965968720038,
+          "warning": false
+        },
+        {
+          "date": "2023-04",
+          "statistic": -0.9889413358993747,
+          "percentile": 34.699999999999996,
+          "critical95": 0.7708223600363684,
+          "warning": false
+        },
+        {
+          "date": "2023-05",
+          "statistic": -0.7643286334868362,
+          "percentile": 42.900000000000006,
+          "critical95": 0.9495670300946633,
+          "warning": false
+        },
+        {
+          "date": "2023-06",
+          "statistic": -0.15596513846498783,
+          "percentile": 70.9,
+          "critical95": 0.8163432011432628,
+          "warning": false
+        },
+        {
+          "date": "2023-07",
+          "statistic": 0.2829052398265201,
+          "percentile": 84.7,
+          "critical95": 0.8891780365031882,
+          "warning": false
+        },
+        {
+          "date": "2023-08",
+          "statistic": -0.008393064510755862,
+          "percentile": 79.14999999999999,
+          "critical95": 0.6887840154978467,
+          "warning": false
+        },
+        {
+          "date": "2023-09",
+          "statistic": -0.4335328009066883,
+          "percentile": 59.5,
+          "critical95": 0.7545299523981914,
+          "warning": false
+        },
+        {
+          "date": "2023-10",
+          "statistic": -0.46759344739370107,
+          "percentile": 59.00000000000001,
+          "critical95": 0.6247172058130753,
+          "warning": false
+        },
+        {
+          "date": "2023-11",
+          "statistic": 0.08943337973646712,
+          "percentile": 72.8,
+          "critical95": 1.0440485251850313,
+          "warning": false
+        },
+        {
+          "date": "2023-12",
+          "statistic": 0.2117894926218292,
+          "percentile": 78.64999999999999,
+          "critical95": 0.9166182828158755,
+          "warning": false
+        },
+        {
+          "date": "2024-01",
+          "statistic": 0.41727874184340524,
+          "percentile": 86.55,
+          "critical95": 0.807078508973921,
+          "warning": false
+        },
+        {
+          "date": "2024-02",
+          "statistic": 0.6969878683026328,
+          "percentile": 92.35,
+          "critical95": 0.8731408299218553,
+          "warning": false
+        },
+        {
+          "date": "2024-03",
+          "statistic": 0.6657231015872408,
+          "percentile": 93.6,
+          "critical95": 0.7427740544137423,
+          "warning": false
+        },
+        {
+          "date": "2024-04",
+          "statistic": -0.02560422911831749,
+          "percentile": 72.39999999999999,
+          "critical95": 0.862132244287184,
+          "warning": false
+        },
+        {
+          "date": "2024-05",
+          "statistic": 0.13380238117888668,
+          "percentile": 79.60000000000001,
+          "critical95": 0.8278736480445618,
+          "warning": false
+        },
+        {
+          "date": "2024-06",
+          "statistic": 0.5940237672308023,
+          "percentile": 84.1,
+          "critical95": 1.2446300057184378,
+          "warning": false
+        },
+        {
+          "date": "2024-07",
+          "statistic": 0.04666448462445309,
+          "percentile": 71.35000000000001,
+          "critical95": 1.1961458000474756,
+          "warning": false
+        },
+        {
+          "date": "2024-08",
+          "statistic": 0.045475362914549,
+          "percentile": 72.05,
+          "critical95": 1.0397569413020442,
+          "warning": false
+        },
+        {
+          "date": "2024-09",
+          "statistic": 0.23342704882951038,
+          "percentile": 80.3,
+          "critical95": 0.9268257229668231,
+          "warning": false
+        },
+        {
+          "date": "2024-10",
+          "statistic": 0.11128887655444471,
+          "percentile": 75.44999999999999,
+          "critical95": 0.7968907640949792,
+          "warning": false
+        },
+        {
+          "date": "2024-11",
+          "statistic": 0.4679936917440357,
+          "percentile": 84.1,
+          "critical95": 1.0347555604137424,
+          "warning": false
+        },
+        {
+          "date": "2024-12",
+          "statistic": 0.39249986242447,
+          "percentile": 84.95,
+          "critical95": 0.9212695567122551,
+          "warning": false
+        },
+        {
+          "date": "2025-01",
+          "statistic": 0.6979797544631741,
+          "percentile": 88.6,
+          "critical95": 1.0166058790084649,
+          "warning": false
+        },
+        {
+          "date": "2025-02",
+          "statistic": -0.018356957772372683,
+          "percentile": 61.14999999999999,
+          "critical95": 1.616027022223045,
+          "warning": false
+        },
+        {
+          "date": "2025-03",
+          "statistic": -0.5099525921739613,
+          "percentile": 49.3,
+          "critical95": 1.996356139261816,
+          "warning": false
+        },
+        {
+          "date": "2025-04",
+          "statistic": -0.40811805699710224,
+          "percentile": 54.55,
+          "critical95": 1.276255498670312,
+          "warning": false
+        },
+        {
+          "date": "2025-05",
+          "statistic": 0.02851416095431235,
+          "percentile": 65.85,
+          "critical95": 2.0967513665692272,
+          "warning": false
+        },
+        {
+          "date": "2025-06",
+          "statistic": 0.4285378359858243,
+          "percentile": 76.6,
+          "critical95": 1.8895625208218834,
+          "warning": false
+        },
+        {
+          "date": "2025-07",
+          "statistic": 0.7231189612118594,
+          "percentile": 83.45,
+          "critical95": 1.62818916171105,
+          "warning": false
+        },
+        {
+          "date": "2025-08",
+          "statistic": 0.4871799153810255,
+          "percentile": 80.45,
+          "critical95": 1.4599437380773266,
+          "warning": false
+        },
+        {
+          "date": "2025-09",
+          "statistic": 0.8490316147299106,
+          "percentile": 85.85000000000001,
+          "critical95": 1.484648515396051,
+          "warning": false
+        },
+        {
+          "date": "2025-10",
+          "statistic": 0.8875513554984782,
+          "percentile": 88.94999999999999,
+          "critical95": 1.3179788019351557,
+          "warning": false
+        },
+        {
+          "date": "2025-11",
+          "statistic": 0.585570798446195,
+          "percentile": 84.3,
+          "critical95": 1.2193152100804365,
+          "warning": false
+        },
+        {
+          "date": "2025-12",
+          "statistic": 0.46259381610708616,
+          "percentile": 85.35000000000001,
+          "critical95": 1.0373888083366807,
+          "warning": false
+        },
+        {
+          "date": "2026-01",
+          "statistic": 0.10569076307160813,
+          "percentile": 75.4,
+          "critical95": 1.1496477501105886,
+          "warning": false
+        },
+        {
+          "date": "2026-02",
+          "statistic": -0.409331375987648,
+          "percentile": 61.5,
+          "critical95": 1.2106290440683771,
+          "warning": false
+        },
+        {
+          "date": "2026-03",
+          "statistic": -0.5999164709455088,
+          "percentile": 54.949999999999996,
+          "critical95": 1.0147120530541063,
+          "warning": false
+        },
+        {
+          "date": "2026-04",
+          "statistic": -0.274805603889608,
+          "percentile": 60.099999999999994,
+          "critical95": 1.771451914376694,
+          "warning": false
+        },
+        {
+          "date": "2026-05",
+          "statistic": 0.06497608064341262,
+          "percentile": 71.39999999999999,
+          "critical95": 1.6998679061837767,
+          "warning": false
+        },
+        {
+          "date": "2026-06",
+          "statistic": -0.5466121848648521,
+          "percentile": 51.150000000000006,
+          "critical95": 2.0773032015168575,
+          "warning": false
+        },
+        {
+          "date": "2026-07",
+          "statistic": -0.37742748398273857,
+          "percentile": 57.35,
+          "critical95": 1.7102193794327942,
+          "warning": false
+        }
+      ],
+      "sensitivity120": {
+        "date": "2026-07",
+        "statistic": -0.24624607634425422,
+        "percentile": 56.65,
+        "critical95": 2.095503743786953,
+        "warning": false
+      }
+    },
+    {
+      "id": "FF_Mkt",
+      "asOf": "2026-07",
+      "latest": {
+        "date": "2026-07",
+        "statistic": 0.5932288218764274,
+        "percentile": 82.45,
+        "critical95": 1.393651642737003,
+        "warning": false
+      },
+      "history": [
+        {
+          "date": "2023-01",
+          "statistic": -1.116839265290966,
+          "percentile": 27.349999999999998,
+          "critical95": 1.2006521836885204,
+          "warning": false
+        },
+        {
+          "date": "2023-02",
+          "statistic": -1.1813859927094104,
+          "percentile": 23.7,
+          "critical95": 0.9902957926949653,
+          "warning": false
+        },
+        {
+          "date": "2023-03",
+          "statistic": -1.1439918573363694,
+          "percentile": 26.900000000000002,
+          "critical95": 0.898235758465757,
+          "warning": false
+        },
+        {
+          "date": "2023-04",
+          "statistic": -1.1390255601611847,
+          "percentile": 26.349999999999994,
+          "critical95": 0.7803075251445587,
+          "warning": false
+        },
+        {
+          "date": "2023-05",
+          "statistic": -1.1393508014857323,
+          "percentile": 26.049999999999997,
+          "critical95": 0.6485202718701587,
+          "warning": false
+        },
+        {
+          "date": "2023-06",
+          "statistic": -0.9677190055245312,
+          "percentile": 35.699999999999996,
+          "critical95": 0.7427905160286256,
+          "warning": false
+        },
+        {
+          "date": "2023-07",
+          "statistic": -0.8456761402205164,
+          "percentile": 40.349999999999994,
+          "critical95": 0.6689910679940195,
+          "warning": false
+        },
+        {
+          "date": "2023-08",
+          "statistic": -0.8471004878054009,
+          "percentile": 41.949999999999996,
+          "critical95": 0.6807793126064091,
+          "warning": false
+        },
+        {
+          "date": "2023-09",
+          "statistic": -1.289365513101552,
+          "percentile": 16.600000000000005,
+          "critical95": 0.706648344675077,
+          "warning": false
+        },
+        {
+          "date": "2023-10",
+          "statistic": -1.4380555445766627,
+          "percentile": 10.7,
+          "critical95": 0.7051841385726995,
+          "warning": false
+        },
+        {
+          "date": "2023-11",
+          "statistic": -1.1782575512336355,
+          "percentile": 19.25,
+          "critical95": 1.1744675133783682,
+          "warning": false
+        },
+        {
+          "date": "2023-12",
+          "statistic": -0.6068633385785984,
+          "percentile": 47.45,
+          "critical95": 1.0820112205474928,
+          "warning": false
+        },
+        {
+          "date": "2024-01",
+          "statistic": -0.5285169423099111,
+          "percentile": 48.6,
+          "critical95": 0.8404834582436798,
+          "warning": false
+        },
+        {
+          "date": "2024-02",
+          "statistic": 0.08272684958072458,
+          "percentile": 72.05,
+          "critical95": 1.0250938444435622,
+          "warning": false
+        },
+        {
+          "date": "2024-03",
+          "statistic": 0.33628543259045335,
+          "percentile": 83.95,
+          "critical95": 0.9159544265341316,
+          "warning": false
+        },
+        {
+          "date": "2024-04",
+          "statistic": -0.4635513854482416,
+          "percentile": 49.4,
+          "critical95": 1.0825217359638102,
+          "warning": false
+        },
+        {
+          "date": "2024-05",
+          "statistic": -0.12538240563962622,
+          "percentile": 64.65,
+          "critical95": 1.0803424863080324,
+          "warning": false
+        },
+        {
+          "date": "2024-06",
+          "statistic": 0.09664425251517036,
+          "percentile": 73.44999999999999,
+          "critical95": 0.943232652572811,
+          "warning": false
+        },
+        {
+          "date": "2024-07",
+          "statistic": 0.14826686456722765,
+          "percentile": 76.9,
+          "critical95": 0.8107859647570245,
+          "warning": false
+        },
+        {
+          "date": "2024-08",
+          "statistic": 0.2404856310033735,
+          "percentile": 80.80000000000001,
+          "critical95": 0.7840878593452381,
+          "warning": false
+        },
+        {
+          "date": "2024-09",
+          "statistic": 0.3323643274639444,
+          "percentile": 84.35000000000001,
+          "critical95": 0.7270631961582704,
+          "warning": false
+        },
+        {
+          "date": "2024-10",
+          "statistic": 0.11477104843297702,
+          "percentile": 79.2,
+          "critical95": 0.6352323914077226,
+          "warning": false
+        },
+        {
+          "date": "2024-11",
+          "statistic": 0.6541640790899321,
+          "percentile": 86.8,
+          "critical95": 1.058474867756681,
+          "warning": false
+        },
+        {
+          "date": "2024-12",
+          "statistic": 0.16743844299307373,
+          "percentile": 69.25,
+          "critical95": 1.2359001034010475,
+          "warning": false
+        },
+        {
+          "date": "2025-01",
+          "statistic": 0.37258620235506856,
+          "percentile": 77.10000000000001,
+          "critical95": 1.2141255158307094,
+          "warning": false
+        },
+        {
+          "date": "2025-02",
+          "statistic": 0.07812488764057056,
+          "percentile": 60.949999999999996,
+          "critical95": 1.4533806132265004,
+          "warning": false
+        },
+        {
+          "date": "2025-03",
+          "statistic": -0.4372009167613322,
+          "percentile": 48.650000000000006,
+          "critical95": 1.4032063092596652,
+          "warning": false
+        },
+        {
+          "date": "2025-04",
+          "statistic": -0.48785307370528114,
+          "percentile": 47.199999999999996,
+          "critical95": 1.1273268382690826,
+          "warning": false
+        },
+        {
+          "date": "2025-05",
+          "statistic": -0.20094634288203175,
+          "percentile": 53.49999999999999,
+          "critical95": 1.5937945209676814,
+          "warning": false
+        },
+        {
+          "date": "2025-06",
+          "statistic": 0.10429165015604223,
+          "percentile": 67.45,
+          "critical95": 1.5491106665806336,
+          "warning": false
+        },
+        {
+          "date": "2025-07",
+          "statistic": 0.23640303868912144,
+          "percentile": 74.8,
+          "critical95": 1.2703193772580237,
+          "warning": false
+        },
+        {
+          "date": "2025-08",
+          "statistic": 0.3623996635253405,
+          "percentile": 78.7,
+          "critical95": 1.132304895226469,
+          "warning": false
+        },
+        {
+          "date": "2025-09",
+          "statistic": 0.620767382058107,
+          "percentile": 83.15,
+          "critical95": 1.2378027343340665,
+          "warning": false
+        },
+        {
+          "date": "2025-10",
+          "statistic": 0.7563854648324334,
+          "percentile": 89.55,
+          "critical95": 1.0688687401234218,
+          "warning": false
+        },
+        {
+          "date": "2025-11",
+          "statistic": 0.6681374711064995,
+          "percentile": 90.45,
+          "critical95": 0.8911462574822995,
+          "warning": false
+        },
+        {
+          "date": "2025-12",
+          "statistic": 0.5733020752011446,
+          "percentile": 87.4,
+          "critical95": 0.9578451979251595,
+          "warning": false
+        },
+        {
+          "date": "2026-01",
+          "statistic": 0.6155696348726833,
+          "percentile": 90.14999999999999,
+          "critical95": 0.8495596515648289,
+          "warning": false
+        },
+        {
+          "date": "2026-02",
+          "statistic": 0.44863308902713234,
+          "percentile": 87.25,
+          "critical95": 0.7428969377635051,
+          "warning": false
+        },
+        {
+          "date": "2026-03",
+          "statistic": -0.029914073171868547,
+          "percentile": 71.50000000000001,
+          "critical95": 0.9130627110143283,
+          "warning": false
+        },
+        {
+          "date": "2026-04",
+          "statistic": 0.5292339734620464,
+          "percentile": 71.89999999999999,
+          "critical95": 2.2454627683263455,
+          "warning": false
+        },
+        {
+          "date": "2026-05",
+          "statistic": 0.8970451808605946,
+          "percentile": 81.25,
+          "critical95": 2.2751954301538273,
+          "warning": false
+        },
+        {
+          "date": "2026-06",
+          "statistic": 0.7070857747303873,
+          "percentile": 82.3,
+          "critical95": 1.7616752896881207,
+          "warning": false
+        },
+        {
+          "date": "2026-07",
+          "statistic": 0.5932288218764274,
+          "percentile": 82.45,
+          "critical95": 1.393651642737003,
+          "warning": false
+        }
+      ],
+      "sensitivity120": {
+        "date": "2026-07",
+        "statistic": 0.8051748556944492,
+        "percentile": 83.55,
+        "critical95": 1.556648047177465,
+        "warning": false
+      }
+    },
+    {
+      "id": "NASDAQCOM",
+      "asOf": "2026-08",
+      "latest": {
+        "date": "2026-08",
+        "statistic": 1.010044395450979,
+        "percentile": 90.05,
+        "critical95": 1.3957575146857626,
+        "warning": false
+      },
+      "history": [
+        {
+          "date": "2023-01",
+          "statistic": -0.3566272394460067,
+          "percentile": 68.55,
+          "critical95": 0.7224644450981726,
+          "warning": false
+        },
+        {
+          "date": "2023-02",
+          "statistic": -0.7090975226604043,
+          "percentile": 52.05,
+          "critical95": 0.7246453006637407,
+          "warning": false
+        },
+        {
+          "date": "2023-03",
+          "statistic": -0.6991535716596616,
+          "percentile": 51.35000000000001,
+          "critical95": 0.6693456081748652,
+          "warning": false
+        },
+        {
+          "date": "2023-04",
+          "statistic": -0.8389092568663632,
+          "percentile": 41.75,
+          "critical95": 0.6784577988049999,
+          "warning": false
+        },
+        {
+          "date": "2023-05",
+          "statistic": -0.924843393251321,
+          "percentile": 41.2,
+          "critical95": 0.6250522031796305,
+          "warning": false
+        },
+        {
+          "date": "2023-06",
+          "statistic": -0.5342045489138799,
+          "percentile": 57.099999999999994,
+          "critical95": 0.7406429666511016,
+          "warning": false
+        },
+        {
+          "date": "2023-07",
+          "statistic": 0.09751070658265577,
+          "percentile": 82.60000000000001,
+          "critical95": 0.7216649843856645,
+          "warning": false
+        },
+        {
+          "date": "2023-08",
+          "statistic": -0.3897413946641468,
+          "percentile": 65.2,
+          "critical95": 0.6463247325098465,
+          "warning": false
+        },
+        {
+          "date": "2023-09",
+          "statistic": -0.454757229871771,
+          "percentile": 60.349999999999994,
+          "critical95": 0.5641979042436709,
+          "warning": false
+        },
+        {
+          "date": "2023-10",
+          "statistic": -0.5931414026607886,
+          "percentile": 48.4,
+          "critical95": 0.7002745332049876,
+          "warning": false
+        },
+        {
+          "date": "2023-11",
+          "statistic": -0.2992248126107791,
+          "percentile": 59.650000000000006,
+          "critical95": 0.9122317691319168,
+          "warning": false
+        },
+        {
+          "date": "2023-12",
+          "statistic": 0.13136350928547402,
+          "percentile": 74.85,
+          "critical95": 1.073896293130636,
+          "warning": false
+        },
+        {
+          "date": "2024-01",
+          "statistic": 0.2726092774232853,
+          "percentile": 83.95,
+          "critical95": 0.8685155987398956,
+          "warning": false
+        },
+        {
+          "date": "2024-02",
+          "statistic": 0.6883856319614001,
+          "percentile": 89.85,
+          "critical95": 1.038614154824116,
+          "warning": false
+        },
+        {
+          "date": "2024-03",
+          "statistic": 0.770682765367879,
+          "percentile": 92.85,
+          "critical95": 0.9217656925882408,
+          "warning": false
+        },
+        {
+          "date": "2024-04",
+          "statistic": 0.2859417928349581,
+          "percentile": 82.45,
+          "critical95": 0.8437992365086523,
+          "warning": false
+        },
+        {
+          "date": "2024-05",
+          "statistic": 0.5410101815221461,
+          "percentile": 87.4,
+          "critical95": 0.9137749058216647,
+          "warning": false
+        },
+        {
+          "date": "2024-06",
+          "statistic": 1.0261385982724998,
+          "percentile": 92.7,
+          "critical95": 1.1634919162032387,
+          "warning": false
+        },
+        {
+          "date": "2024-07",
+          "statistic": 1.1367550376862243,
+          "percentile": 95.15,
+          "critical95": 1.11837489590514,
+          "warning": false
+        },
+        {
+          "date": "2024-08",
+          "statistic": 0.30515036750183305,
+          "percentile": 73.95,
+          "critical95": 1.3251439201736326,
+          "warning": false
+        },
+        {
+          "date": "2024-09",
+          "statistic": 0.37040157307004123,
+          "percentile": 75.4,
+          "critical95": 1.2207551723159755,
+          "warning": false
+        },
+        {
+          "date": "2024-10",
+          "statistic": 0.6428335251391076,
+          "percentile": 83.6,
+          "critical95": 1.217554098935057,
+          "warning": false
+        },
+        {
+          "date": "2024-11",
+          "statistic": 0.8730560373064078,
+          "percentile": 89.60000000000001,
+          "critical95": 1.2660624545017782,
+          "warning": false
+        },
+        {
+          "date": "2024-12",
+          "statistic": 1.171611143236512,
+          "percentile": 93.39999999999999,
+          "critical95": 1.2964449022943063,
+          "warning": false
+        },
+        {
+          "date": "2025-01",
+          "statistic": 0.8388832523164217,
+          "percentile": 90.4,
+          "critical95": 1.1188843458711235,
+          "warning": false
+        },
+        {
+          "date": "2025-02",
+          "statistic": 0.7025321410363673,
+          "percentile": 85.5,
+          "critical95": 1.171522431488915,
+          "warning": false
+        },
+        {
+          "date": "2025-03",
+          "statistic": -0.2360000592923178,
+          "percentile": 53.65,
+          "critical95": 1.8191398883155399,
+          "warning": false
+        },
+        {
+          "date": "2025-04",
+          "statistic": -0.5699445214678343,
+          "percentile": 44.95,
+          "critical95": 1.976973843284072,
+          "warning": false
+        },
+        {
+          "date": "2025-05",
+          "statistic": -0.2175729698185511,
+          "percentile": 56.65,
+          "critical95": 2.8525701514813337,
+          "warning": false
+        },
+        {
+          "date": "2025-06",
+          "statistic": 0.06073665690661103,
+          "percentile": 65.8,
+          "critical95": 2.1009423808900247,
+          "warning": false
+        },
+        {
+          "date": "2025-07",
+          "statistic": 0.39782000683295,
+          "percentile": 72.95,
+          "critical95": 1.8819117161628172,
+          "warning": false
+        },
+        {
+          "date": "2025-08",
+          "statistic": 0.5613592599865844,
+          "percentile": 79.0,
+          "critical95": 1.6588498691994833,
+          "warning": false
+        },
+        {
+          "date": "2025-09",
+          "statistic": 0.8016567397816126,
+          "percentile": 85.75,
+          "critical95": 1.5750441200332939,
+          "warning": false
+        },
+        {
+          "date": "2025-10",
+          "statistic": 1.0402090637847248,
+          "percentile": 90.0,
+          "critical95": 1.4846728687837172,
+          "warning": false
+        },
+        {
+          "date": "2025-11",
+          "statistic": 0.9128631991226199,
+          "percentile": 89.7,
+          "critical95": 1.3521556810167565,
+          "warning": false
+        },
+        {
+          "date": "2025-12",
+          "statistic": 0.9482007416500867,
+          "percentile": 92.15,
+          "critical95": 1.166687495113094,
+          "warning": false
+        },
+        {
+          "date": "2026-01",
+          "statistic": 0.898536664027864,
+          "percentile": 92.55,
+          "critical95": 1.1207939171672963,
+          "warning": false
+        },
+        {
+          "date": "2026-02",
+          "statistic": 0.5481537930754908,
+          "percentile": 86.14999999999999,
+          "critical95": 1.0463842055612147,
+          "warning": false
+        },
+        {
+          "date": "2026-03",
+          "statistic": 0.22137363344814154,
+          "percentile": 80.2,
+          "critical95": 0.9985593393703263,
+          "warning": false
+        },
+        {
+          "date": "2026-04",
+          "statistic": 0.6134457993470442,
+          "percentile": 84.75,
+          "critical95": 1.2497204248536113,
+          "warning": false
+        },
+        {
+          "date": "2026-05",
+          "statistic": 1.2985795271031175,
+          "percentile": 87.75,
+          "critical95": 2.104228739806439,
+          "warning": false
+        },
+        {
+          "date": "2026-06",
+          "statistic": 1.1250976985845755,
+          "percentile": 89.4,
+          "critical95": 1.684913774736903,
+          "warning": false
+        },
+        {
+          "date": "2026-07",
+          "statistic": 0.8387803503388885,
+          "percentile": 85.75,
+          "critical95": 1.555127515852477,
+          "warning": false
+        },
+        {
+          "date": "2026-08",
+          "statistic": 1.010044395450979,
+          "percentile": 90.05,
+          "critical95": 1.3957575146857626,
+          "warning": false
+        }
+      ],
+      "sensitivity120": {
+        "date": "2026-08",
+        "statistic": 1.1771660081532245,
+        "percentile": 88.5,
+        "critical95": 1.734308666714102,
+        "warning": false
+      }
+    }
+  ],
+  "summary": {
+    "eventsTested": 10,
+    "eventsDetected": 7,
+    "eventsMissed": 3,
+    "controlsTested": 10,
+    "controlAlerts": 2,
+    "controlQuiet": 8
+  },
+  "simulations": {
+    "seed": 77531,
+    "assumptions": {
+      "ordinaryGrowthAnnual": 0.08,
+      "ordinaryVolAnnual": 0.18,
+      "volatilityShiftAnnual": [
+        0.12,
+        0.4
+      ],
+      "drawsPerEndpoint": 1999,
+      "evaluation": "any active3month95percentile warning within12months"
+    },
+    "results": [
+      {
+        "process": "additive_random_walk",
+        "paths": 200,
+        "evaluationMonthsPerPath": 12,
+        "pathsWithWarning": 5,
+        "pathAlarmRate": 0.025,
+        "pointwiseExceedances": 37,
+        "pointwiseExceedanceRate": 0.015416666666666667
+      },
+      {
+        "process": "ordinary_compounding_bull",
+        "paths": 200,
+        "evaluationMonthsPerPath": 12,
+        "pathsWithWarning": 12,
+        "pathAlarmRate": 0.06,
+        "pointwiseExceedances": 93,
+        "pointwiseExceedanceRate": 0.03875
+      },
+      {
+        "process": "volatility_shift_no_bubble",
+        "paths": 200,
+        "evaluationMonthsPerPath": 12,
+        "pathsWithWarning": 11,
+        "pathAlarmRate": 0.055,
+        "pointwiseExceedances": 78,
+        "pointwiseExceedanceRate": 0.0325
+      }
+    ]
+  },
+  "audit": {
+    "randomOLSWindows": 60,
+    "maximumAbsoluteOLSStatisticError": 7.602807272633072e-13,
+    "bootstrapDrawsIndependentlyRecomputed": 1999,
+    "independentBootstrapPercentile": 35.199999999999996,
+    "bootstrapMatchesDirectOLS": true,
+    "futureAppendAndMutationInvariant": true,
+    "threeMonthPersistenceNotBackdated": true,
+    "detectorSha256": "c1a1a53ff44ecc2c30c91a3ac0f776aa54c5a9c0f9b89b3ef70dc8b8e07293cb"
+  },
+  "sources": [
+    {
+      "title": "Phillips, Shi & Yu (2015), Testing for Multiple Bubbles",
+      "url": "https://doi.org/10.1111/iere.12132"
+    },
+    {
+      "title": "Vasilopoulos, Pavlidis & Mart\u00ednez-Garc\u00eda (2022), exuber",
+      "url": "https://www.jstatsoft.org/article/view/v103i10"
+    },
+    {
+      "title": "Greenwood, Shleifer & You (2019), Bubbles for Fama",
+      "url": "https://shleifer.scholars.harvard.edu/publications/bubbles-fama"
+    },
+    {
+      "title": "Kenneth French, 49 industry portfolios",
+      "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_49_ind_port.html"
+    }
+  ],
+  "publicationNote": "Research snapshot, manually recomputed on 2026-09-06. AI industry inputs latest July2026; Nasdaq August2026. This diagnostic does not auto-refresh. Existing SEC/Fed accounting/context feeds remain automatic.",
+  "currentNames": {
+    "AI_PROXY": "AI-exposed industry basket",
+    "FF_Chips": "Electronic equipment (Chips)",
+    "FF_Hardw": "Computers (Hardw)",
+    "FF_Softw": "Computer software (Softw)",
+    "FF_Mkt": "Broad US market",
+    "NASDAQCOM": "Nasdaq Composite"
+  }
+}

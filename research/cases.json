@@ -1,0 +1,173 @@
+{
+  "events": [
+    {
+      "id": "us1929",
+      "name": "US stocks, 1929",
+      "series": "SHILLER_SP",
+      "peak": "1929-09",
+      "source": "https://www.federalreservehistory.org/essays/stock-market-crash-of-1929",
+      "note": "Broad-market reconstruction; famous boom/crash, not a fundamental-value label."
+    },
+    {
+      "id": "gold1980",
+      "name": "Gold, 1980",
+      "series": "GOLD_WB",
+      "peak": "1980-01",
+      "source": "https://www.clevelandfed.org/publications/economic-commentary/1980/ec-19800505-after-silver-and-gold-some-sober-thoughts-on-speculative-bubbles",
+      "note": "World Bank London afternoon fixing monthly mean. A commodity, not a cash-flow-producing equity."
+    },
+    {
+      "id": "us1987",
+      "name": "US stocks, 1987",
+      "series": "SHILLER_SP",
+      "peak": "1987-08",
+      "source": "https://www.federalreservehistory.org/essays/stock-market-crash-of-1987",
+      "note": "Pre-crash run-up. Whether this was a fundamental bubble is disputed."
+    },
+    {
+      "id": "japan1989",
+      "name": "Japan equities, 1989",
+      "series": "NIKKEI225",
+      "peak": "1989-12",
+      "source": "https://indexes.nikkei.co.jp/nkave/archives/file/nikkei_indexes_newsletter_vol51.pdf",
+      "note": "Nikkei225 equity-price proxy; not Japanese land prices."
+    },
+    {
+      "id": "dotcom2000",
+      "name": "Dot-com, 2000",
+      "series": "NASDAQCOM",
+      "peak": "2000-03",
+      "source": "https://www.goldmansachs.com/our-firm/history/moments/2000-dot-com-bubble",
+      "note": "Nasdaq Composite; broad tech-heavy index, not failed internet firms alone."
+    },
+    {
+      "id": "housing2006",
+      "name": "US housing, 2006",
+      "series": "CSUSHPINSA",
+      "peak": "2006-07",
+      "source": "https://press.spglobal.com/2016-11-29-The-S-P-CoreLogic-Case-Shiller-National-Index-Reaches-New-High-As-Home-Price-Gains-Continue",
+      "note": "Revised/backfilled national index; launched Dec2006. Prelaunch replay was not actually tradable or observable then."
+    },
+    {
+      "id": "china2007",
+      "name": "China equities, 2007",
+      "series": "SPASTT01CNM661N",
+      "peak": "2007-10",
+      "source": "https://fred.stlouisfed.org/series/SPASTT01CNM661N",
+      "note": "OECD monthly share-price proxy; peak month checked in the price series."
+    },
+    {
+      "id": "china2015",
+      "name": "China equities, 2015",
+      "series": "SPASTT01CNM661N",
+      "peak": "2015-06",
+      "source": "https://www.nber.org/system/files/working_papers/w24586/revisions/w24586.rev1.pdf",
+      "note": "Same country as2007, not an independent market."
+    },
+    {
+      "id": "bitcoin2017",
+      "name": "Bitcoin, 2017",
+      "series": "BTC",
+      "peak": "2017-12",
+      "source": "https://coinmetrics.substack.com/p/coin-metrics-state-of-the-network-6e8",
+      "note": "CoinMetrics reference rate; venue-specific highs vary."
+    },
+    {
+      "id": "bitcoin2021",
+      "name": "Bitcoin, 2021",
+      "series": "BTC",
+      "peak": "2021-11",
+      "source": "https://github.com/coinmetrics/data",
+      "note": "Same asset as2017; final2021 peak, not the earlier April peak. Peak month checked against reference-rate data."
+    }
+  ],
+  "controls": [
+    {
+      "id": "sp1954",
+      "name": "US stocks, 1954",
+      "series": "SHILLER_SP",
+      "start": "1954-01",
+      "end": "1954-12"
+    },
+    {
+      "id": "sp1984",
+      "name": "US stocks, 1984",
+      "series": "SHILLER_SP",
+      "start": "1984-01",
+      "end": "1984-12"
+    },
+    {
+      "id": "nasdaq1993",
+      "name": "Nasdaq, 1993",
+      "series": "NASDAQCOM",
+      "start": "1993-01",
+      "end": "1993-12"
+    },
+    {
+      "id": "nasdaq2012",
+      "name": "Nasdaq, 2012",
+      "series": "NASDAQCOM",
+      "start": "2012-01",
+      "end": "2012-12"
+    },
+    {
+      "id": "japan2003",
+      "name": "Japan, 2003",
+      "series": "NIKKEI225",
+      "start": "2003-01",
+      "end": "2003-12"
+    },
+    {
+      "id": "japan2012",
+      "name": "Japan, 2012",
+      "series": "NIKKEI225",
+      "start": "2012-01",
+      "end": "2012-12"
+    },
+    {
+      "id": "china2004",
+      "name": "China, 2004",
+      "series": "SPASTT01CNM661N",
+      "start": "2004-01",
+      "end": "2004-12"
+    },
+    {
+      "id": "china2011",
+      "name": "China, 2011",
+      "series": "SPASTT01CNM661N",
+      "start": "2011-01",
+      "end": "2011-12"
+    },
+    {
+      "id": "housing1995",
+      "name": "US housing, 1995",
+      "series": "CSUSHPINSA",
+      "start": "1995-01",
+      "end": "1995-12"
+    },
+    {
+      "id": "gold1995",
+      "name": "Gold, 1995",
+      "series": "GOLD_WB",
+      "start": "1995-01",
+      "end": "1995-12"
+    }
+  ],
+  "excluded": [
+    {
+      "name": "British railway mania, 1845",
+      "reason": "Primary research verified, but no usable numeric railway-index observations acquired. Not counted as a pass or miss.",
+      "source": "https://mpra.ub.uni-muenchen.de/21820/1/MPRA_paper_21820.pdf"
+    },
+    {
+      "name": "South Sea, 1720",
+      "reason": "Yale numeric daily series acquired, but only16monthly observations: insufficient for the frozen60-month specification. Not counted.",
+      "source": "https://som.yale.edu/centers/international-center-for-finance/data/historical-south-sea-and-mississippi-data"
+    },
+    {
+      "name": "Bitcoin, 2013",
+      "reason": "Only41monthly observations before the December2013 peak. Insufficient for the frozen60-month specification; not counted.",
+      "source": "https://coinmetrics.substack.com/p/coin-metrics-state-of-the-network-6e8"
+    }
+  ]
+}

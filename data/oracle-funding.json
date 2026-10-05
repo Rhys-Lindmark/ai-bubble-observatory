@@ -1,0 +1,256 @@
+{
+  "company": "Oracle Corporation",
+  "periodStart": "2025-06-01",
+  "periodEnd": "2026-05-31",
+  "publicationDate": "2026-06-10",
+  "verifiedDate": "2026-09-07",
+  "source": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/",
+  "sourceSection": "Fiscal 2026 Financial Results: Condensed Consolidated Statements of Cash Flows; 2026 column",
+  "units": "USD millions",
+  "signConvention": "Inflows positive, outflows negative; operating rows reconcile net income to cash flow.",
+  "operatingRows": [
+    {
+      "id": "net_income",
+      "sourceLabel": "Net income",
+      "usdMillions": 17087
+    },
+    {
+      "id": "depreciation",
+      "sourceLabel": "Depreciation",
+      "usdMillions": 7623
+    },
+    {
+      "id": "amortization",
+      "sourceLabel": "Amortization of intangible assets",
+      "usdMillions": 1671
+    },
+    {
+      "id": "deferred_tax",
+      "sourceLabel": "Deferred income taxes",
+      "usdMillions": -917
+    },
+    {
+      "id": "sbc",
+      "sourceLabel": "Stock-based compensation",
+      "usdMillions": 4811
+    },
+    {
+      "id": "investment_gains",
+      "sourceLabel": "Gains from investments and other, net",
+      "usdMillions": -2433
+    },
+    {
+      "id": "receivables",
+      "sourceLabel": "Increase in trade receivables, net",
+      "usdMillions": -2190
+    },
+    {
+      "id": "prepaid_assets",
+      "sourceLabel": "Decrease in prepaid expenses and other assets",
+      "usdMillions": 2179
+    },
+    {
+      "id": "payables",
+      "sourceLabel": "Decrease in accounts payable and other liabilities",
+      "usdMillions": -240
+    },
+    {
+      "id": "tax_payable",
+      "sourceLabel": "Decrease in income taxes payable",
+      "usdMillions": -256
+    },
+    {
+      "id": "customer_financing_prepayments",
+      "sourceLabel": "Increase in deferred revenues from customer prepayments with significant financing component",
+      "usdMillions": 4592
+    },
+    {
+      "id": "other_deferred_revenue",
+      "sourceLabel": "Increase in other deferred revenues",
+      "usdMillions": 50
+    }
+  ],
+  "investingRows": [
+    {
+      "id": "investment_purchases",
+      "sourceLabel": "Purchases of marketable securities and other investments",
+      "usdMillions": -2039
+    },
+    {
+      "id": "investment_disposals",
+      "sourceLabel": "Proceeds from sales and maturities of marketable securities and other investments",
+      "usdMillions": 5848
+    },
+    {
+      "id": "capex",
+      "sourceLabel": "Capital expenditures",
+      "usdMillions": -55663
+    }
+  ],
+  "financingRows": [
+    {
+      "id": "common_equity",
+      "sourceLabel": "Proceeds from issuances of common stock",
+      "usdMillions": 1449
+    },
+    {
+      "id": "buybacks",
+      "sourceLabel": "Payments for repurchases of common stock",
+      "usdMillions": -95
+    },
+    {
+      "id": "award_tax_withholding",
+      "sourceLabel": "Shares repurchased for tax withholdings upon vesting of restricted stock-based awards",
+      "usdMillions": -111
+    },
+    {
+      "id": "preferred_equity",
+      "sourceLabel": "Proceeds from issuances of mandatory convertible preferred stock, net of issuance costs",
+      "usdMillions": 4954
+    },
+    {
+      "id": "dividends",
+      "sourceLabel": "Payments of dividends to stockholders",
+      "usdMillions": -5787
+    },
+    {
+      "id": "commercial_paper",
+      "sourceLabel": "(Repayments of) proceeds from issuances of commercial paper, net",
+      "usdMillions": -2285
+    },
+    {
+      "id": "capex_short_term_financing",
+      "sourceLabel": "Proceeds from short-term financing related to capital expenditures, net",
+      "usdMillions": 3345
+    },
+    {
+      "id": "debt_proceeds",
+      "sourceLabel": "Proceeds from issuances of senior notes, term loan credit agreements and other borrowings, net of issuance costs",
+      "usdMillions": 46093
+    },
+    {
+      "id": "debt_repayments",
+      "sourceLabel": "Repayments of senior notes, term loan credit agreements and other borrowings",
+      "usdMillions": -6942
+    },
+    {
+      "id": "other_financing",
+      "sourceLabel": "Other financing activities, net",
+      "usdMillions": -337
+    }
+  ],
+  "reportedTotals": {
+    "operating": 31977,
+    "investing": -51854,
+    "financing": 40284,
+    "fx": 96,
+    "netIncreaseCash": 20503,
+    "openingCash": 10786,
+    "closingCash": 31289,
+    "freeCashFlow": -23686
+  },
+  "waterfall": [
+    {
+      "id": "ocf",
+      "label": "Operating cash flow",
+      "inputIds": [
+        "net_income",
+        "depreciation",
+        "amortization",
+        "deferred_tax",
+        "sbc",
+        "investment_gains",
+        "receivables",
+        "prepaid_assets",
+        "payables",
+        "tax_payable",
+        "customer_financing_prepayments",
+        "other_deferred_revenue"
+      ],
+      "usdMillions": 31977
+    },
+    {
+      "id": "cash_capex",
+      "label": "Cash capital investment",
+      "inputIds": [
+        "capex"
+      ],
+      "usdMillions": -55663
+    },
+    {
+      "id": "other_investing",
+      "label": "Investment sales less purchases",
+      "inputIds": [
+        "investment_disposals",
+        "investment_purchases"
+      ],
+      "usdMillions": 3809
+    },
+    {
+      "id": "net_borrowing",
+      "label": "Net borrowing cash flow",
+      "inputIds": [
+        "debt_proceeds",
+        "debt_repayments",
+        "commercial_paper"
+      ],
+      "usdMillions": 36866
+    },
+    {
+      "id": "capex_financing",
+      "label": "Short-term capex financing",
+      "inputIds": [
+        "capex_short_term_financing"
+      ],
+      "usdMillions": 3345
+    },
+    {
+      "id": "equity",
+      "label": "Common and convertible preferred proceeds",
+      "inputIds": [
+        "common_equity",
+        "preferred_equity"
+      ],
+      "usdMillions": 6403
+    },
+    {
+      "id": "distributions",
+      "label": "Dividends and share repurchases",
+      "inputIds": [
+        "dividends",
+        "buybacks",
+        "award_tax_withholding"
+      ],
+      "usdMillions": -5993
+    },
+    {
+      "id": "other_financing",
+      "label": "Other financing",
+      "inputIds": [
+        "other_financing"
+      ],
+      "usdMillions": -337
+    },
+    {
+      "id": "fx",
+      "label": "Currency effect",
+      "usdMillions": 96
+    }
+  ],
+  "derived": {
+    "netBorrowingExcludingCapexArrangements": 36866,
+    "netBorrowingPlusCapexArrangements": 40211,
+    "equityProceeds": 6403,
+    "distributionsIncludingAwardTaxWithholding": -5993,
+    "otherInvesting": 3809,
+    "ocfExcludingIdentifiedCustomerFinancingPrepayments": 27385
+  },
+  "checks": {
+    "operatingReconciles": true,
+    "investingReconciles": true,
+    "financingReconciles": true,
+    "cashChangeReconciles": true,
+    "closingCashReconciles": true,
+    "waterfallReconciles": true
+  }
+}

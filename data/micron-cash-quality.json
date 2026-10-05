@@ -1,0 +1,13 @@
+{
+  "checked": "2026-09-07",
+  "unit": "USD millions",
+  "balanceDate": "2026-05-28",
+  "contractLiabilities": 422,
+  "remainingPerformanceObligations": 5000,
+  "expectedDepositsAndCommitments": 22000,
+  "expectedBasis": "Includes agreements after balance date; deposits plus related financial commitments, not all received cash.",
+  "source": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000015/mu-20260528.htm",
+  "cashFlowNote": "Nine-month noncurrent liability increase 5203 was largely income taxes payable related to Pillar Two. No isolated deposit contribution to OCF.",
+  "expectedCashDeposits": 18000,
+  "remainingPerformanceObligationsBasis": "Minimum committed volumes/pricing, excludes contracts with no fixed pricing/bands and terms <=1 year"
+}

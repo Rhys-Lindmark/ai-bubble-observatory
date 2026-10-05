@@ -1,0 +1,22 @@
+{
+  "version": "price-exuberance-research-v1",
+  "frozen_before_detector_results": true,
+  "as_of": "2026-09-06",
+  "method": "Rolling backward-supremum right-tailed Dickey-Fuller statistic, a price-only adaptation of Phillips-Shi-Yu",
+  "frequency": "monthly, only completed months",
+  "input": "positive nominal price/index levels; published series cadence retained, no interpolation; AI proxy is monthly rebalanced equal-weight total returns of French Chips, Hardw, Softw",
+  "window_points": 60,
+  "minimum_points": 14,
+  "lags": 0,
+  "intercept": true,
+  "null": "Additive random walk with drift estimated as mean price change; wild bootstrap centered price changes with independent Rademacher signs",
+  "bootstrap_draws": 1999,
+  "seed": 20260906,
+  "percentile": "100*(1-(1+count(bootstrap_stat>=observed_stat))/(B+1))",
+  "warning_rule": "At least three consecutive completed months with percentile >=95; signal begins on third month, never backdated",
+  "event_hit": "At least one active warning in 12 months ending at the last completed month strictly before the historical peak month",
+  "controls": "Predeclared 12-month contrast windows; absence of named event is not proof of fundamental fair value. Compare the same any-active-warning criterion as event windows",
+  "sensitivity": "120 points/minimum20 with all other rules unchanged where enough data exists; not used to choose primary result",
+  "statistical_caution": "Pointwise bootstrap reference rank is not a probability of a bubble or crash and does not control familywise repeated-monitoring false alarms. Wild bootstrap is a transparent research implementation, not an exact replication of published composite-bootstrap procedures. Price levels omit dividends/fundamentals; test ordinary geometric growth controls.",
+  "selection_caution": "Famous episodes and available data were chosen retrospectively, with dependent episodes. This is diagnostic replication/stress testing, not an untouched out-of-sample trial or calibrated bubble-probability model. Report every case, failure and excluded series."
+}

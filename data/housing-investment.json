@@ -1,0 +1,95 @@
+{
+  "name": "US private residential fixed investment",
+  "series": "PRFIA",
+  "beaAccount": "A011RC",
+  "source": "https://fred.stlouisfed.org/series/PRFIA",
+  "tableSource": "https://fred.stlouisfed.org/data/PRFIA",
+  "download": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PRFIA&cosd=2000-01-01&coed=2010-12-31",
+  "provider": "US Bureau of Economic Analysis via FRED",
+  "sourceUpdated": "2026-04-09 07:51 CDT",
+  "checked": "2026-09-07",
+  "units": "Billions of current USD",
+  "frequency": "Annual, not seasonally adjusted",
+  "rows": [
+    {
+      "year": 2000,
+      "date": "2000-01-01",
+      "value": 485.432
+    },
+    {
+      "year": 2001,
+      "date": "2001-01-01",
+      "value": 513.059
+    },
+    {
+      "year": 2002,
+      "date": "2002-01-01",
+      "value": 557.594
+    },
+    {
+      "year": 2003,
+      "date": "2003-01-01",
+      "value": 637.082
+    },
+    {
+      "year": 2004,
+      "date": "2004-01-01",
+      "value": 749.817
+    },
+    {
+      "year": 2005,
+      "date": "2005-01-01",
+      "value": 856.221
+    },
+    {
+      "year": 2006,
+      "date": "2006-01-01",
+      "value": 838.164
+    },
+    {
+      "year": 2007,
+      "date": "2007-01-01",
+      "value": 690.497
+    },
+    {
+      "year": 2008,
+      "date": "2008-01-01",
+      "value": 515.984
+    },
+    {
+      "year": 2009,
+      "date": "2009-01-01",
+      "value": 390.004
+    },
+    {
+      "year": 2010,
+      "date": "2010-01-01",
+      "value": 376.575
+    }
+  ],
+  "definitionSources": [
+    "https://www.bea.gov/help/glossary/residential-fixed-investment",
+    "https://www.bea.gov/help/glossary/residential-structures",
+    "https://www.bea.gov/sites/default/files/2019-12/Chapter-6.pdf"
+  ],
+  "includes": [
+    "New residential structures and manufactured homes",
+    "Improvements, additions, alterations, major replacements",
+    "Landlord-owned residential equipment rented to tenants",
+    "Brokers commissions and other nonfinancial ownership transfer costs on new and existing residential structures",
+    "Net purchases of existing structures from governments"
+  ],
+  "excludes": [
+    "Principal value of existing-home transfers between private owners",
+    "Unimproved land value",
+    "Ordinary repairs and maintenance",
+    "Loan origination and other financial service fees from fixed investment",
+    "Residential construction outside the United States"
+  ],
+  "limitations": [
+    "Gross investment flow, not net of depreciation, not capital stock or mortgage originations",
+    "Current revised vintage; not information known during the boom",
+    "New investment cannot be divided into services from the entire existing housing stock to infer project payback",
+    "Nominal dollar series; movements combine prices and real activity"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "checked": "2026-09-07",
+  "sourceUpdated": "2026-04-09",
+  "units": "USD billions, nominal annual, not seasonally adjusted",
+  "tenantSource": "https://fred.stlouisfed.org/series/DTENRC1A027NBEA",
+  "ownerSource": "https://fred.stlouisfed.org/series/DOWNRC1A027NBEA",
+  "methodology": "https://www.bea.gov/resources/methodologies/housing-services",
+  "scope": "Nonfarm housing services. Tenant expenditure and imputed owner-occupied rental value; not net profit or rent attributable to newly built housing. Owner rental value is not a cash receipt. Historical values are revised estimates, not then-known data.",
+  "rows": [
+    {
+      "year": 2000,
+      "tenantRent": 227.926,
+      "imputedOwnerRent": 768.887
+    },
+    {
+      "year": 2001,
+      "tenantRent": 242.254,
+      "imputedOwnerRent": 829.184
+    },
+    {
+      "year": 2002,
+      "tenantRent": 248.175,
+      "imputedOwnerRent": 867.061
+    },
+    {
+      "year": 2003,
+      "tenantRent": 251.766,
+      "imputedOwnerRent": 908.151
+    },
+    {
+      "year": 2004,
+      "tenantRent": 264.097,
+      "imputedOwnerRent": 959.299
+    },
+    {
+      "year": 2005,
+      "tenantRent": 281.723,
+      "imputedOwnerRent": 1029.105
+    },
+    {
+      "year": 2006,
+      "tenantRent": 291.548,
+      "imputedOwnerRent": 1089.174
+    },
+    {
+      "year": 2007,
+      "tenantRent": 308.827,
+      "imputedOwnerRent": 1153.082
+    },
+    {
+      "year": 2008,
+      "tenantRent": 330.143,
+      "imputedOwnerRent": 1226.944
+    },
+    {
+      "year": 2009,
+      "tenantRent": 346.308,
+      "imputedOwnerRent": 1244.066
+    },
+    {
+      "year": 2010,
+      "tenantRent": 361.058,
+      "imputedOwnerRent": 1267.588
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "research_as_of": "2026-09-06",
+  "persisted": "2026-09-07",
+  "scope": "Research only; no site edits or deployment",
+  "valuation": {
+    "title": "AI-exposed public-company multiples, not AI-only P/E",
+    "price_as_of": "2026-09-04 16:00 America/New_York",
+    "provider": "Stock Analysis; page credits S&P Global Market Intelligence for fundamental/historical data",
+    "definition": "Trailing P/E is share price divided by trailing annual EPS. Values below are provider-quoted P/E, with an arithmetic cross-check against displayed price and EPS. They are not independently rebuilt from filings.",
+    "forward_definition": "Provider field Forward PE; forecast earnings rather than realized earnings. Exact forecast horizon and GAAP/adjusted EPS basis were not verified; do not label these NTM or directly comparable to GAAP trailing P/E without further verification.",
+    "forward_display_recommendation": "Optional provider-reported companion column with the definition limitation visible; otherwise omit pending methodology verification.",
+    "aggregation": "Do not average company P/E ratios; no sector aggregate calculated.",
+    "caveats": [
+      "Whole-company earnings include non-AI operations and may contain investment gains, tax effects, or other nonrecurring items.",
+      "A multiple does not establish incremental AI profitability or investment return.",
+      "Memory earnings are cyclical; forecast earnings may be near a cyclical peak."
+    ],
+    "rows": [
+      {
+        "ticker": "NVDA",
+        "price_usd": 230.36,
+        "displayed_eps_usd": 7.91,
+        "trailing_pe_provider": 29.13,
+        "forward_pe_provider": 19.1,
+        "price_div_displayed_eps": 29.1226,
+        "source": "https://stockanalysis.com/stocks/nvda/",
+        "recommended_for_display": true,
+        "quality_note": "Price divided by displayed EPS agrees with provider P/E within rounding."
+      },
+      {
+        "ticker": "MSFT",
+        "price_usd": 499.7,
+        "displayed_eps_usd": 17.95,
+        "trailing_pe_provider": 27.84,
+        "forward_pe_provider": 25.3,
+        "price_div_displayed_eps": 27.8384,
+        "source": "https://stockanalysis.com/stocks/msft/",
+        "recommended_for_display": true,
+        "quality_note": "Price divided by displayed EPS agrees with provider P/E within rounding."
+      },
+      {
+        "ticker": "GOOGL",
+        "price_usd": 338.46,
+        "displayed_eps_usd": 19.93,
+        "trailing_pe_provider": 16.98,
+        "forward_pe_provider": 25.39,
+        "price_div_displayed_eps": 16.9824,
+        "source": "https://stockanalysis.com/stocks/googl/",
+        "recommended_for_display": true,
+        "quality_note": "Price divided by displayed EPS agrees with provider P/E within rounding."
+      },
+      {
+        "ticker": "AMZN",
+        "price_usd": 258.51,
+        "displayed_eps_usd": 12.44,
+        "trailing_pe_provider": 20.79,
+        "forward_pe_provider": 27.91,
+        "price_div_displayed_eps": 20.7805,
+        "source": "https://stockanalysis.com/stocks/amzn/",
+        "recommended_for_display": true,
+        "quality_note": "Price divided by displayed EPS agrees with provider P/E within rounding."
+      },
+      {
+        "ticker": "META",
+        "price_usd": 616.77,
+        "displayed_eps_usd": 26.54,
+        "trailing_pe_provider": 23.24,
+        "forward_pe_provider": 19.06,
+        "price_div_displayed_eps": 23.2393,
+        "source": "https://stockanalysis.com/stocks/meta/",
+        "recommended_for_display": true,
+        "quality_note": "Price divided by displayed EPS agrees with provider P/E within rounding."
+      },
+      {
+        "ticker": "ORCL",
+        "price_usd": 158.78,
+        "displayed_eps_usd": 5.83,
+        "trailing_pe_provider": 27.23,
+        "forward_pe_provider": 19.69,
+        "price_div_displayed_eps": 27.235,
+        "source": "https://stockanalysis.com/stocks/orcl/",
+        "recommended_for_display": true,
+        "quality_note": "Price divided by displayed EPS agrees with provider P/E within rounding."
+      },
+      {
+        "ticker": "MU",
+        "price_usd": 1016.59,
+        "displayed_eps_usd": 44.31,
+        "trailing_pe_provider": 22.94,
+        "forward_pe_provider": 7.07,
+        "price_div_displayed_eps": 22.9427,
+        "source": "https://stockanalysis.com/stocks/mu/",
+        "recommended_for_display": true,
+        "quality_note": "Price divided by displayed EPS agrees with provider P/E within rounding."
+      },
+      {
+        "ticker": "TSM",
+        "price_usd": 428.91,
+        "displayed_eps_usd": 13.44,
+        "trailing_pe_provider": 28.35,
+        "forward_pe_provider": 19.33,
+        "price_div_displayed_eps": 31.9129,
+        "source": "https://stockanalysis.com/stocks/tsm/",
+        "recommended_for_display": false,
+        "quality_note": "Exclude pending reconciliation: displayed price / displayed EPS materially differs from quoted P/E; ADR/FX/provider methodology may be involved, cause not verified."
+      },
+      {
+        "ticker": "ASML",
+        "price_usd": 1714.88,
+        "displayed_eps_usd": 31.41,
+        "trailing_pe_provider": 53.98,
+        "forward_pe_provider": 30.05,
+        "price_div_displayed_eps": 54.5966,
+        "source": "https://stockanalysis.com/stocks/asml/",
+        "recommended_for_display": false,
+        "quality_note": "Exclude pending reconciliation: displayed price / displayed EPS materially differs from quoted P/E; ADR/FX/provider methodology may be involved, cause not verified."
+      }
+    ]
+  },
+  "gdp": {
+    "source": "https://fred.stlouisfed.org/series/GDP",
+    "underlying_source": "U.S. Bureau of Economic Analysis",
+    "release_source": "https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-2nd-quarter-2026",
+    "release_date": "2026-08-26",
+    "period": "2026 Q2",
+    "nominal_gdp_billions_usd_saar": 32486.066,
+    "numerator_global_builders_ttm_capex_billions_usd": 566.366,
+    "numerator_provenance": "Supplied by parent task; not independently re-audited in this subtask",
+    "scale_percent": 1.7434120831989937,
+    "label": "Five global builders TTM capex equals 1.74% of the scale of latest annualized US nominal GDP",
+    "caveat": "Scale comparison only, not share of US GDP or contribution to US GDP growth. Global corporate capex includes foreign spending/imported equipment and differing fiscal windows; denominator is latest quarterly seasonally adjusted annual rate, not matching TTM GDP.",
+    "next_release": "2026-09-30"
+  },
+  "supply_signals": [
+    {
+      "company": "TSMC",
+      "release_date": "2026-07-16",
+      "period": "2026 Q2 ended June 30",
+      "source": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/qr/phase4_reports/2026-07/887682617ea280c69ee0bbec7665804756464837/2Q26%20EarningsRelease_WoG.pdf",
+      "actual_revenue_billions_usd": 40.2,
+      "revenue_growth_yoy_usd_percent": 33.7,
+      "actual_revenue_billions_twd": 1270.38,
+      "revenue_growth_yoy_twd_percent": 36.0,
+      "advanced_nodes_7nm_and_better_wafer_revenue_percent": 77,
+      "type": "Recognized revenue and shipment mix",
+      "caveat": "All-company foundry revenue, not AI-only; advanced nodes also serve non-AI customers. Recognized sales are stronger evidence than capacity plans, but do not establish end-user AI ROI or cash collection."
+    },
+    {
+      "company": "ASML",
+      "release_date": "2026-07-15",
+      "period": "2026 Q2",
+      "source": "https://www.asml.com/en/news/press-releases/2026/q2-2026-financial-results",
+      "actual_net_sales_billions_eur": 9.326,
+      "prior_quarter_net_sales_billions_eur": 8.767,
+      "new_lithography_systems_sold": 86,
+      "prior_quarter_new_systems_sold": 67,
+      "capacity_plan": {
+        "2026_low_na_euv_systems_approx": 65,
+        "2027_planned_increase_percent": 30,
+        "2026_duv_immersion_systems_approx": 130,
+        "2027_duv_planned_increase_percent": 30
+      },
+      "type": "Recognized sales plus separately identified prospective capacity",
+      "caveat": "Capacity expansion and customer commitments indicate expected demand, not recognized or paid end-user demand. Net sales cover AI and non-AI semiconductor applications. Bookings number not verified; do not invent one."
+    },
+    {
+      "company": "Micron",
+      "release_date": "2026-06-24",
+      "period": "Fiscal Q3 2026 ended May 28",
+      "source": "https://investors.micron.com/financials/quarterly-results/",
+      "actual_revenue_billions_usd": 41.456,
+      "year_ago_revenue_billions_usd": 9.301,
+      "cloud_memory_unit_revenue_billions_usd": 13.769,
+      "cloud_memory_year_ago_billions_usd": 3.386,
+      "core_data_center_unit_revenue_billions_usd": 11.524,
+      "core_data_center_year_ago_billions_usd": 1.53,
+      "operating_cash_flow_billions_usd": 25.39,
+      "type": "Recognized revenue and company operating cash flow",
+      "caveat": "Cloud memory and core data center include more than AI/HBM. Revenue growth can reflect pricing, mix, and shipments; it is not a pure unit-demand metric. Multi-year customer agreements are forward commitments, not already recognized revenue."
+    }
+  ]
+}

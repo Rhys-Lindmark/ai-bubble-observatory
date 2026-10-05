@@ -1,0 +1,41 @@
+{
+  "asOf": "2026-09-06",
+  "scopeNote": "Ecosystem context, excluded from hyperscaler capex score. Never sum supplier, cloud and lab revenues; they overlap along the same value chain. Run rates are neither GAAP annual revenue nor forecasts guaranteed to materialize.",
+  "cards": [
+    {"id":"openai","name":"OpenAI","short":"OAI","role":"Frontier lab / compute buyer","facts":[
+      {"label":"Revenue pace","value":"$2bn/month","date":"2026-03-31","type":"company_claim","note":"Latest total-revenue primary-source disclosure located. Annualizing gives $24bn, not reported annual GAAP revenue. Newer $40bn run rate was reported by Axios Aug17 from an internal company message, not a public audited filing.","url":"https://openai.com/index/accelerating-the-next-phase-ai/","secondaryUrl":"https://www.axios.com/2026/08/17/anthropic-revenue-run-rate-ipo-openai"},
+      {"label":"Funding round","value":"$122bn committed","date":"2026-03-31","type":"company_claim_commitment","note":"Closed round at $852bn post-money valuation; committed capital is not proof all funds were disbursed. Undrawn credit facility approximately $4.7bn at close.","url":"https://openai.com/index/accelerating-the-next-phase-ai/"},
+      {"label":"Compute commitment","value":"+$100bn AWS / 8 years","date":"2026-02-27","type":"announced_commitment","note":"Expansion of existing $38bn multi-year agreement. Separate from Amazon investment into OpenAI. Full GAAP financials and customer concentration unavailable in sources verified.","url":"https://openai.com/index/amazon-partnership/"}
+    ]},
+    {"id":"anthropic","name":"Anthropic","short":"Ant","role":"Frontier lab / compute buyer","facts":[
+      {"label":"Revenue pace","value":">$47bn run rate","date":"2026-05-28","type":"company_claim","note":"Primary public disclosure. Reuters Aug17 subsequently reported >$65bn at July-end, citing a person familiar; keep this newer value explicitly media-reported. No exact public GAAP revenue/cash-burn series verified.","url":"https://www.anthropic.com/news/series-h","secondaryUrl":"https://www.investing.com/news/stock-market-news/anthropic-revenue-run-rate-tops-65-billion-source-says-4864031"},
+      {"label":"Series H","value":"$65bn raised","date":"2026-05-28","type":"company_claim_financing","note":"$965bn post-money valuation; this is financing, not sales.","url":"https://www.anthropic.com/news/series-h"},
+      {"label":"Compute commitment","value":">$100bn AWS / 10 years","date":"2026-04-20","type":"announced_commitment","note":"Up to 5GW of capacity. Amazon announced $5bn investment that day and up to $20bn later; prior $8bn separately disclosed.","url":"https://www.anthropic.com/news/anthropic-amazon-compute"}
+    ]},
+    {"id":"spacexai","name":"SpaceX / xAI","short":"SpaceXai","role":"Public parent / AI segment / compute provider","facts":[
+      {"label":"Ownership","value":"xAI acquired by SpaceX","date":"2026-02-02","type":"company_announcement","note":"SpaceX has a public Q2 2026 10-Q. Do not label parent private or count xAI and SpaceX as unrelated firms.","url":"https://x.ai/news/xai-joins-spacex"},
+      {"label":"AI segment Q2 revenue","value":"$2.561bn","date":"2026-08-04","periodEnd":"2026-06-30","type":"sec_reported","note":"Includes Grok, X advertising/subscriptions and AI infrastructure. Segment operating loss $1.257bn. Not pure frontier-model revenue and not annual run rate.","url":"https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm"},
+      {"label":"Customer concentration","value":"19.5% of group Q2 revenue","date":"2026-08-04","periodEnd":"2026-06-30","type":"sec_reported","note":"Unnamed Customer B revenue relates to AI segment. Cloud agreements generally terminable with 90 days notice after initial ramp; do not assume B's identity.","url":"https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/spcx-20260630.htm"}
+    ]},
+    {"id":"nvidia","name":"NVIDIA","short":"NVDA","role":"Supplier / financing exposure","facts":[
+      {"label":"Supplier TTM revenue","value":"$302.970bn","date":"2026-08-26","periodEnd":"2026-07-26","type":"derived_from_sec","note":"TTM GAAP gross margin 74.67%; operating cash flow $134.360bn. Company-wide supplier metrics, not pure AI sales.","url":"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"},
+      {"label":"Direct customer concentration","value":"16% Q2 largest disclosed","date":"2026-08-26","periodEnd":"2026-07-26","type":"sec_reported","note":"H1 top three direct customers 16%,15%,13%. Direct distributors/integrators differ from ultimate users; unnamed indirect AI lab contribution cannot be assigned an identity.","url":"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"},
+      {"label":"Financing platforms","value":">$500bn target","date":"2026-08-26","type":"sec_disclosed_preliminary_mou","note":"Third-party capital mobilization over time; preliminary MOUs may not become definitive agreements. Aug11 company blog says optional residual support up to25% of individual opportunities, not a blanket $125bn guarantee.","url":"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm","secondaryUrl":"https://blogs.nvidia.com/blog/nvidia-ai-factory-compute/"}
+    ]}
+  ],
+  "edges": [
+    {"from":"Amazon","to":"OpenAI","type":"equity_investment_commitment","amount":"$50bn","date":"2026-02-27","label":"Initial $15bn; $35bn conditional later investment. Not AWS revenue.","url":"https://openai.com/index/amazon-partnership/"},
+    {"from":"OpenAI","to":"AWS","type":"compute_purchase_commitment","amount":"+$100bn / 8 years","date":"2026-02-27","label":"Expands earlier $38bn agreement; future compute purchases, not current capex.","url":"https://openai.com/index/amazon-partnership/"},
+    {"from":"Anthropic","to":"AWS","type":"compute_purchase_commitment","amount":">$100bn / 10 years","date":"2026-04-20","label":"Up to5GW; Amazon also invests in Anthropic, creating funding/customer dependence.","url":"https://www.anthropic.com/news/anthropic-amazon-compute"},
+    {"from":"SpaceX / xAI","to":"Anthropic","type":"compute_supply_agreement","date":"2026-05-06","label":"Colossus1 access: >300MW / >220,000 Nvidia GPUs. Capacity is not revenue; dollar terms omitted here.","url":"https://www.anthropic.com/news/higher-limits-spacex"},
+    {"from":"NVIDIA","to":"OpenAI","type":"strategic_investor_and_supplier","date":"2026-03-31","label":"Round anchor; OpenAI says training and majority of inference use Nvidia. Investment and chip purchases are distinct flows.","url":"https://openai.com/index/accelerating-the-next-phase-ai/"},
+    {"from":"NVIDIA","to":"Independent financing platforms","type":"optional_residual_value_support","amount":"up to25% per opportunity","date":"2026-08-11","label":"Project-specific potential support for >$500bn third-party mobilization target; neither disbursed funding nor blanket guarantee.","url":"https://blogs.nvidia.com/blog/nvidia-ai-factory-compute/"}
+  ],
+  "expertCritique": {
+    "source":"https://stratechery.com/2026/nvidias-risky-business/",
+    "date":"2026-08-11",
+    "attribution":"Ben Thompson analysis, not an endorsement of this monitor",
+    "summary":"Thompson argues residual-value support can protect supplier margins while transferring financing risk and exposing Nvidia to competing TPU/Trainium economics. The disclosed financing mechanism is verified separately with Nvidia; the claim that it effectively reduces prices is interpretation.",
+    "monitorDesign":"Keep the supplier outside the hyperscaler capex score: supplier sales and customer capex represent overlapping transactions. Track gross margin, cash conversion, receivables, inventories, concentration and contingent support separately to test whether booked demand becomes independent end-user cash flow. Rising inventories/receivables alone do not prove a bubble; product ramps, mix and terms matter. Credit risk depends on enforceable support, collateral values and correlated customer stress, not headline financing targets."
+  }
+}

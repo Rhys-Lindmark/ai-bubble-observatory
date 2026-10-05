@@ -1,0 +1,486 @@
+{
+  "source": "https://www.dallasfed.org/research/economics/2025/0225",
+  "workbook": "https://www.dallasfed.org/-/media/documents/research/economics/2025/0225data.xlsx",
+  "publication": "2025-02-25",
+  "retrieved": "2026-09-07",
+  "definition": "Dallas Fed published US house-price index divided by rent index; rebased to 2000 Q1=100. Not price in dollars divided by annual rental dollars, and not net rental yield.",
+  "rows": [
+    {
+      "quarter": "2000-Q1",
+      "date": "2000-03-31",
+      "house": 64.62304385171808,
+      "rent": 66.8147,
+      "priceToRentIndex": 100.0,
+      "houseIndex": 100.0,
+      "rentIndex": 100.0
+    },
+    {
+      "quarter": "2000-Q2",
+      "date": "2000-06-30",
+      "house": 65.46796956882439,
+      "rent": 67.3523,
+      "priceToRentIndex": 100.49884105404387,
+      "houseIndex": 101.30746815183302,
+      "rentIndex": 100.80461335604289
+    },
+    {
+      "quarter": "2000-Q3",
+      "date": "2000-09-30",
+      "house": 66.6495314537964,
+      "rent": 67.9328,
+      "priceToRentIndex": 101.43835503743495,
+      "houseIndex": 103.13585910117176,
+      "rentIndex": 101.67343413949325
+    },
+    {
+      "quarter": "2000-Q4",
+      "date": "2000-12-31",
+      "house": 67.82925647994253,
+      "rent": 68.5335,
+      "priceToRentIndex": 102.32900643274137,
+      "houseIndex": 104.96140762973239,
+      "rentIndex": 102.5724877908604
+    },
+    {
+      "quarter": "2001-Q1",
+      "date": "2001-03-31",
+      "house": 69.57872660045543,
+      "rent": 69.1073,
+      "priceToRentIndex": 104.09674823411312,
+      "houseIndex": 107.66860001226264,
+      "rentIndex": 103.43128084089278
+    },
+    {
+      "quarter": "2001-Q2",
+      "date": "2001-06-30",
+      "house": 70.52272727917381,
+      "rent": 69.8523,
+      "priceToRentIndex": 104.38377555478691,
+      "houseIndex": 109.12938028885323,
+      "rentIndex": 104.54630492990314
+    },
+    {
+      "quarter": "2001-Q3",
+      "date": "2001-09-30",
+      "house": 71.60246869522588,
+      "rent": 70.5548,
+      "priceToRentIndex": 104.92670707526128,
+      "houseIndex": 110.80021061762822,
+      "rentIndex": 105.59772026215786
+    },
+    {
+      "quarter": "2001-Q4",
+      "date": "2001-12-31",
+      "house": 72.65935109763612,
+      "rent": 71.2577,
+      "priceToRentIndex": 105.42517416404061,
+      "houseIndex": 112.43566809443065,
+      "rentIndex": 106.64973426506442
+    },
+    {
+      "quarter": "2002-Q1",
+      "date": "2002-03-31",
+      "house": 73.77633243005458,
+      "rent": 72.0175,
+      "priceToRentIndex": 105.9165029198255,
+      "houseIndex": 114.16412479631776,
+      "rentIndex": 107.78690916819203
+    },
+    {
+      "quarter": "2002-Q2",
+      "date": "2002-06-30",
+      "house": 74.7966038299563,
+      "rent": 72.6128,
+      "priceToRentIndex": 106.50090734947482,
+      "houseIndex": 115.74292910371435,
+      "rentIndex": 108.67788076575961
+    },
+    {
+      "quarter": "2002-Q3",
+      "date": "2002-09-30",
+      "house": 76.26438216201943,
+      "rent": 73.1091,
+      "priceToRentIndex": 107.85367089062024,
+      "houseIndex": 118.01422157862632,
+      "rentIndex": 109.42068137700237
+    },
+    {
+      "quarter": "2002-Q4",
+      "date": "2002-12-31",
+      "house": 77.531515455382,
+      "rent": 73.6083,
+      "priceToRentIndex": 108.90206070497277,
+      "houseIndex": 119.97502877345623,
+      "rentIndex": 110.16782235047077
+    },
+    {
+      "quarter": "2003-Q1",
+      "date": "2003-03-31",
+      "house": 78.55233947788042,
+      "rent": 73.983,
+      "priceToRentIndex": 109.77711133094171,
+      "houseIndex": 121.55468822874398,
+      "rentIndex": 110.72862708356095
+    },
+    {
+      "quarter": "2003-Q2",
+      "date": "2003-06-30",
+      "house": 79.26359899310012,
+      "rent": 74.2725,
+      "priceToRentIndex": 110.33933391121816,
+      "houseIndex": 122.65531653844064,
+      "rentIndex": 111.16191496781396
+    },
+    {
+      "quarter": "2003-Q3",
+      "date": "2003-09-30",
+      "house": 80.47017658698074,
+      "rent": 74.7498,
+      "priceToRentIndex": 111.30368216397032,
+      "houseIndex": 124.52241768683162,
+      "rentIndex": 111.87627872309535
+    },
+    {
+      "quarter": "2003-Q4",
+      "date": "2003-12-31",
+      "house": 82.94222471596836,
+      "rent": 75.2661,
+      "priceToRentIndex": 113.93597666968844,
+      "houseIndex": 128.34775301869854,
+      "rentIndex": 112.64901286692897
+    },
+    {
+      "quarter": "2004-Q1",
+      "date": "2004-03-31",
+      "house": 84.33072077821939,
+      "rent": 75.696,
+      "priceToRentIndex": 115.18541574668444,
+      "houseIndex": 130.49636128518165,
+      "rentIndex": 113.29243414996998
+    },
+    {
+      "quarter": "2004-Q2",
+      "date": "2004-06-30",
+      "house": 86.11802060523284,
+      "rent": 76.4167,
+      "priceToRentIndex": 116.51728935336018,
+      "houseIndex": 133.2620927030866,
+      "rentIndex": 114.37108899688243
+    },
+    {
+      "quarter": "2004-Q3",
+      "date": "2004-09-30",
+      "house": 89.38265962427904,
+      "rent": 76.9382,
+      "priceToRentIndex": 120.11461792406318,
+      "houseIndex": 138.3139114111888,
+      "rentIndex": 115.15160585918966
+    },
+    {
+      "quarter": "2004-Q4",
+      "date": "2004-12-31",
+      "house": 91.51692623839081,
+      "rent": 77.3315,
+      "priceToRentIndex": 122.35722066480389,
+      "houseIndex": 141.616551594788,
+      "rentIndex": 115.74024877758937
+    },
+    {
+      "quarter": "2005-Q1",
+      "date": "2005-03-31",
+      "house": 93.71144729931234,
+      "rent": 77.9186,
+      "priceToRentIndex": 124.34723053734002,
+      "houseIndex": 145.01243165571026,
+      "rentIndex": 116.6189476267947
+    },
+    {
+      "quarter": "2005-Q2",
+      "date": "2005-06-30",
+      "house": 96.40942417341621,
+      "rent": 78.3369,
+      "priceToRentIndex": 127.24411930743467,
+      "houseIndex": 149.18737717560026,
+      "rentIndex": 117.24500746093298
+    },
+    {
+      "quarter": "2005-Q3",
+      "date": "2005-09-30",
+      "house": 99.31372782898926,
+      "rent": 78.7014,
+      "priceToRentIndex": 130.47023314262043,
+      "houseIndex": 153.6816001067224,
+      "rentIndex": 117.79054609240183
+    },
+    {
+      "quarter": "2005-Q4",
+      "date": "2005-12-31",
+      "house": 101.80263730478154,
+      "rent": 79.2788,
+      "priceToRentIndex": 132.7659091496053,
+      "houseIndex": 157.53302728725458,
+      "rentIndex": 118.65472717830058
+    },
+    {
+      "quarter": "2006-Q1",
+      "date": "2006-03-31",
+      "house": 103.52176404331634,
+      "rent": 79.9529,
+      "priceToRentIndex": 133.8696277309199,
+      "houseIndex": 160.19326523964733,
+      "rentIndex": 119.66363689427625
+    },
+    {
+      "quarter": "2006-Q2",
+      "date": "2006-06-30",
+      "house": 104.24902907388562,
+      "rent": 80.8776,
+      "priceToRentIndex": 133.26876592183763,
+      "houseIndex": 161.31866105393,
+      "rentIndex": 121.04761377361568
+    },
+    {
+      "quarter": "2006-Q3",
+      "date": "2006-09-30",
+      "house": 105.0837523019543,
+      "rent": 81.7835,
+      "priceToRentIndex": 132.84783831630833,
+      "houseIndex": 162.6103415108023,
+      "rentIndex": 122.40345313231968
+    },
+    {
+      "quarter": "2006-Q4",
+      "date": "2006-12-31",
+      "house": 106.41674842791342,
+      "rent": 82.5784,
+      "priceToRentIndex": 133.2380087646921,
+      "houseIndex": 164.6730671988986,
+      "rentIndex": 123.59316138514428
+    },
+    {
+      "quarter": "2007-Q1",
+      "date": "2007-03-31",
+      "house": 106.91918898046677,
+      "rent": 83.3049,
+      "priceToRentIndex": 132.69963277826682,
+      "houseIndex": 165.45056160740438,
+      "rentIndex": 124.68049695650807
+    },
+    {
+      "quarter": "2007-Q2",
+      "date": "2007-06-30",
+      "house": 106.51330871218718,
+      "rent": 84.0032,
+      "priceToRentIndex": 131.0969711923839,
+      "houseIndex": 164.82248802236728,
+      "rentIndex": 125.72562624691874
+    },
+    {
+      "quarter": "2007-Q3",
+      "date": "2007-09-30",
+      "house": 105.2991841520124,
+      "rent": 84.6819,
+      "priceToRentIndex": 128.5638961289793,
+      "houseIndex": 162.9437084295015,
+      "rentIndex": 126.7414206753903
+    },
+    {
+      "quarter": "2007-Q4",
+      "date": "2007-12-31",
+      "house": 105.20780287065823,
+      "rent": 85.1959,
+      "priceToRentIndex": 127.67735246315378,
+      "houseIndex": 162.8023017796324,
+      "rentIndex": 127.51071246297596
+    },
+    {
+      "quarter": "2008-Q1",
+      "date": "2008-03-31",
+      "house": 104.53826196007098,
+      "rent": 85.7921,
+      "priceToRentIndex": 125.9831866719995,
+      "houseIndex": 161.76623032480651,
+      "rentIndex": 128.40303106951015
+    },
+    {
+      "quarter": "2008-Q2",
+      "date": "2008-06-30",
+      "house": 101.57893567763468,
+      "rent": 86.209,
+      "priceToRentIndex": 121.82478770672499,
+      "houseIndex": 157.18686342090967,
+      "rentIndex": 129.02699555636707
+    },
+    {
+      "quarter": "2008-Q3",
+      "date": "2008-09-30",
+      "house": 98.35381161948575,
+      "rent": 86.7641,
+      "priceToRentIndex": 117.20219400593052,
+      "houseIndex": 152.19619157086623,
+      "rentIndex": 129.857800753427
+    },
+    {
+      "quarter": "2008-Q4",
+      "date": "2008-12-31",
+      "house": 97.67932155785543,
+      "rent": 86.9426,
+      "priceToRentIndex": 116.15947047397322,
+      "houseIndex": 151.15246162342214,
+      "rentIndex": 130.12495753180065
+    },
+    {
+      "quarter": "2009-Q1",
+      "date": "2009-03-31",
+      "house": 98.49884619737507,
+      "rent": 87.1764,
+      "priceToRentIndex": 116.81989868580204,
+      "houseIndex": 152.42062324298328,
+      "rentIndex": 130.47488052778803
+    },
+    {
+      "quarter": "2009-Q2",
+      "date": "2009-06-30",
+      "house": 95.61458562543336,
+      "rent": 87.4954,
+      "priceToRentIndex": 112.98571516138841,
+      "houseIndex": 147.95741569342889,
+      "rentIndex": 130.95232037261263
+    },
+    {
+      "quarter": "2009-Q3",
+      "date": "2009-09-30",
+      "house": 93.09858590528536,
+      "rent": 87.5448,
+      "priceToRentIndex": 109.95053379680719,
+      "houseIndex": 144.06406810379642,
+      "rentIndex": 131.0262561981121
+    },
+    {
+      "quarter": "2009-Q4",
+      "date": "2009-12-31",
+      "house": 92.61075806351926,
+      "rent": 87.2184,
+      "priceToRentIndex": 109.78371839873921,
+      "houseIndex": 143.30918592448364,
+      "rentIndex": 130.5377409462289
+    },
+    {
+      "quarter": "2010-Q1",
+      "date": "2010-03-31",
+      "house": 91.5974800292219,
+      "rent": 87.0123,
+      "priceToRentIndex": 108.83973855212393,
+      "houseIndex": 141.7412034001346,
+      "rentIndex": 130.22927589287985
+    },
+    {
+      "quarter": "2010-Q2",
+      "date": "2010-06-30",
+      "house": 90.47868629030485,
+      "rent": 87.0141,
+      "priceToRentIndex": 107.50811971265959,
+      "houseIndex": 140.00994211587167,
+      "rentIndex": 130.23196991081304
+    },
+    {
+      "quarter": "2010-Q3",
+      "date": "2010-09-30",
+      "house": 91.33839099402398,
+      "rent": 87.1476,
+      "priceToRentIndex": 108.36337882651553,
+      "houseIndex": 141.34027979803312,
+      "rentIndex": 130.43177624085718
+    },
+    {
+      "quarter": "2010-Q4",
+      "date": "2010-12-31",
+      "house": 90.90533538728971,
+      "rent": 87.5772,
+      "priceToRentIndex": 107.32055999620385,
+      "houseIndex": 140.67015412625582,
+      "rentIndex": 131.07474852090934
+    },
+    {
+      "quarter": "2011-Q1",
+      "date": "2011-03-31",
+      "house": 88.4697378535436,
+      "rent": 87.9465,
+      "priceToRentIndex": 104.00657438419887,
+      "houseIndex": 136.9012237438759,
+      "rentIndex": 131.62747120019995
+    },
+    {
+      "quarter": "2011-Q2",
+      "date": "2011-06-30",
+      "house": 86.63863510551968,
+      "rent": 88.2684,
+      "priceToRentIndex": 101.48245387630247,
+      "houseIndex": 134.06771012569115,
+      "rentIndex": 132.1092514072502
+    },
+    {
+      "quarter": "2011-Q3",
+      "date": "2011-09-30",
+      "house": 87.26404152153845,
+      "rent": 88.855,
+      "priceToRentIndex": 101.54021164730014,
+      "houseIndex": 135.03548629150254,
+      "rentIndex": 132.98720191814076
+    },
+    {
+      "quarter": "2011-Q4",
+      "date": "2011-12-31",
+      "house": 87.87319105228312,
+      "rent": 89.6284,
+      "priceToRentIndex": 101.36671364453517,
+      "houseIndex": 135.97810597395267,
+      "rentIndex": 134.14473162343018
+    },
+    {
+      "quarter": "2012-Q1",
+      "date": "2012-03-31",
+      "house": 87.0406832050667,
+      "rent": 90.1392,
+      "priceToRentIndex": 99.83738669111308,
+      "houseIndex": 134.68985367632544,
+      "rentIndex": 134.9092340458013
+    },
+    {
+      "quarter": "2012-Q2",
+      "date": "2012-06-30",
+      "house": 86.36710766047693,
+      "rent": 90.6838,
+      "priceToRentIndex": 98.46985036299787,
+      "houseIndex": 133.64753888512598,
+      "rentIndex": 135.72432413825103
+    },
+    {
+      "quarter": "2012-Q3",
+      "date": "2012-09-30",
+      "house": 87.50183355776169,
+      "rent": 91.2713,
+      "priceToRentIndex": 99.12142336727801,
+      "houseIndex": 135.40345415876808,
+      "rentIndex": 136.60362165810815
+    },
+    {
+      "quarter": "2012-Q4",
+      "date": "2012-12-31",
+      "house": 88.39772574968072,
+      "rent": 92.0128,
+      "priceToRentIndex": 99.32931894774367,
+      "houseIndex": 136.7897896492082,
+      "rentIndex": 137.71340737891512
+    }
+  ],
+  "peak": {
+    "quarter": "2006-Q1",
+    "date": "2006-03-31",
+    "house": 103.52176404331634,
+    "rent": 79.9529,
+    "priceToRentIndex": 133.8696277309199,
+    "houseIndex": 160.19326523964733,
+    "rentIndex": 119.66363689427625
+  }
+}

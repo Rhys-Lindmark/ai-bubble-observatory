@@ -1,0 +1,104 @@
+{
+  "checked": "2026-09-07",
+  "tsmc": {
+    "ticker": "TSM",
+    "name": "TSMC",
+    "price": 428.91,
+    "priceCurrency": "USD",
+    "priceDate": "2026-09-04",
+    "priceSource": "https://stockanalysis.com/stocks/tsm/",
+    "earningsUnit": "USD per ADR (5 ordinary shares)",
+    "accounting": "TIFRS",
+    "quarters": [
+      {
+        "end": "2025-09-30",
+        "eps": 2.92,
+        "ordinaryEpsTwd": 17.44,
+        "source": "https://www.sec.gov/Archives/edgar/data/1046179/000104617925000116/a3q25e_withguidancexfinal.htm"
+      },
+      {
+        "end": "2025-12-31",
+        "eps": 3.14,
+        "ordinaryEpsTwd": 19.5,
+        "source": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000008/a4q25e_withguidancexfinal.htm"
+      },
+      {
+        "end": "2026-03-31",
+        "eps": 3.49,
+        "ordinaryEpsTwd": 22.08,
+        "source": "https://investor.tsmc.com/schinese/encrypt/files/encrypt_file/reports/2026-04/e85216eea8dccd8ca75d7e040e8d57be3ccd618b/1Q26%20EarningsRelease.pdf"
+      },
+      {
+        "end": "2026-06-30",
+        "eps": 4.31,
+        "ordinaryEpsTwd": 27.25,
+        "source": "https://www.sec.gov/Archives/edgar/data/1046179/000104617926000451/a2q26e_withguidancexfinal.htm"
+      }
+    ],
+    "ttmEps": 13.86,
+    "pe": 30.94588744588745,
+    "basis": "Sum of four rounded company-reported USD ADR diluted EPS amounts, using company quarter-specific currency translations. No additional ADR factor applied. Approximate trailing P/E; not provider method reconciliation."
+  },
+  "rows": [
+    {
+      "ticker": "TSM",
+      "price_usd": 428.91,
+      "eps_usd": 13.86,
+      "pe": 30.94588744588745,
+      "source": "https://stockanalysis.com/stocks/tsm/"
+    },
+    {
+      "ticker": "ASML",
+      "price_usd": 1714.88,
+      "eps_usd": 32.018609999999995,
+      "pe": 53.558852180029064,
+      "source": "https://stockanalysis.com/stocks/asml/"
+    }
+  ],
+  "asml": {
+    "issuer": "ASML",
+    "checkedAt": "2026-09-07",
+    "status": "candidate independently recomputed; provider discrepancy unresolved",
+    "accounting": "US GAAP diluted EPS, ordinary share, EUR",
+    "quarters": [
+      {
+        "period": "2025-09-28",
+        "eps": 5.48
+      },
+      {
+        "period": "2025-12-31",
+        "eps": 7.34
+      },
+      {
+        "period": "2026-03-29",
+        "eps": 7.15
+      },
+      {
+        "period": "2026-06-28",
+        "eps": 7.58
+      }
+    ],
+    "ttmEPS_EUR": 27.55,
+    "priceUSD": 1714.88,
+    "priceDate": "2026-09-04",
+    "priceTime": "16:00 EDT",
+    "usdPerEUR": 1.1622,
+    "fxDate": "2026-09-04",
+    "ttmEPS_USD_at_reference_fx": 32.018609999999995,
+    "recomputedPE": 53.558852180029064,
+    "providerEPS_USD": 31.41,
+    "providerPE_current": 55.22,
+    "providerPE_prior_saved": 53.98,
+    "providerPriceEPSQuotient": 54.596625278573704,
+    "sources": {
+      "eps": "https://www.sec.gov/Archives/edgar/data/937966/000162828026048235/financialstatementsusgaa.htm",
+      "epsQuarterTable": "https://ourbrand.asml.com/asset/9078cf4d-91fd-4dd9-a5d5-d1caab6dc046/2026_07_15_Presentation-Investor-Relations-Q2-2026.pdf",
+      "listing": "https://www.asml.com/en/investors/shares",
+      "price": "https://stockanalysis.com/stocks/asml/",
+      "fx": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml",
+      "fxDated": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3AC%2F2026%2F04600",
+      "fxDatedPDF": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3AC%2F2026%2F04600"
+    },
+    "fxVerification": "Saved ECB90day XML contains time=2026-09-04 USD=1.1622. Curl TLS chain failed locally; public request used --insecure. Independently corroborated EUR-Lex dated PDF search extraction."
+  }
+}

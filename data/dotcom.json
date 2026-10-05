@@ -1,0 +1,848 @@
+{
+  "title": "Dot-com retrospective financial-stress cross-check",
+  "cohort": [
+    "MSFT",
+    "INTC"
+  ],
+  "units": "USD millions",
+  "formula": "round(0.40*clamp((capex/OCF-0.30)/0.70*100,0,100)+0.35*clamp((capexYoY-revenueYoY)/0.50*100,0,100)+0.25*clamp((priorOperatingMargin-currentOperatingMargin)/0.10*100,0,100))",
+  "rows": [
+    {
+      "company": "MSFT",
+      "fiscalYear": 1996,
+      "fiscalEnd": "1996-06-30",
+      "units": "USD millions",
+      "reportVintage": 1998,
+      "revenue": 8671,
+      "operatingIncome": 3059,
+      "operatingCashFlow": 3719,
+      "cashCapex": 494,
+      "sources": [
+        {
+          "url": "https://www.microsoft.com/investor/reports/ar98/income.htm",
+          "locator": "Income Statements, fiscal-year columns",
+          "fields": [
+            "revenue",
+            "operatingIncome"
+          ]
+        },
+        {
+          "url": "https://www.microsoft.com/investor/reports/ar98/cash.htm",
+          "locator": "Cash Flows Statements, fiscal-year columns",
+          "fields": [
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    },
+    {
+      "company": "INTC",
+      "fiscalYear": 1996,
+      "fiscalEnd": "1996-12-28",
+      "units": "USD millions",
+      "reportVintage": 1998,
+      "revenue": 20847,
+      "operatingIncome": 7553,
+      "operatingCashFlow": 8743,
+      "cashCapex": 3024,
+      "sources": [
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-1998-annual-report.pdf#page=16",
+          "locator": "PDF page 16, Consolidated Statements of Income",
+          "fields": [
+            "revenue",
+            "operatingIncome"
+          ]
+        },
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-1998-annual-report.pdf#page=18",
+          "locator": "PDF page 18, Consolidated Statements of Cash Flows",
+          "fields": [
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    },
+    {
+      "company": "MSFT",
+      "fiscalYear": 1997,
+      "fiscalEnd": "1997-06-30",
+      "units": "USD millions",
+      "reportVintage": 1998,
+      "revenue": 11358,
+      "operatingIncome": 4871,
+      "operatingCashFlow": 4689,
+      "cashCapex": 499,
+      "sources": [
+        {
+          "url": "https://www.microsoft.com/investor/reports/ar98/income.htm",
+          "locator": "Income Statements, fiscal-year columns",
+          "fields": [
+            "revenue",
+            "operatingIncome"
+          ]
+        },
+        {
+          "url": "https://www.microsoft.com/investor/reports/ar98/cash.htm",
+          "locator": "Cash Flows Statements, fiscal-year columns",
+          "fields": [
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "priorYearComparative": {
+        "fiscalYear": 1996,
+        "revenue": 8671,
+        "operatingIncome": 3059,
+        "operatingCashFlow": 3719,
+        "cashCapex": 494
+      },
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    },
+    {
+      "company": "INTC",
+      "fiscalYear": 1997,
+      "fiscalEnd": "1997-12-27",
+      "units": "USD millions",
+      "reportVintage": 1998,
+      "revenue": 25070,
+      "operatingIncome": 9887,
+      "operatingCashFlow": 10008,
+      "cashCapex": 4501,
+      "sources": [
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-1998-annual-report.pdf#page=16",
+          "locator": "PDF page 16, Consolidated Statements of Income",
+          "fields": [
+            "revenue",
+            "operatingIncome"
+          ]
+        },
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-1998-annual-report.pdf#page=18",
+          "locator": "PDF page 18, Consolidated Statements of Cash Flows",
+          "fields": [
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "priorYearComparative": {
+        "fiscalYear": 1996,
+        "revenue": 20847,
+        "operatingIncome": 7553,
+        "operatingCashFlow": 8743,
+        "cashCapex": 3024
+      },
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    },
+    {
+      "company": "MSFT",
+      "fiscalYear": 1998,
+      "fiscalEnd": "1998-06-30",
+      "units": "USD millions",
+      "reportVintage": 1998,
+      "revenue": 14484,
+      "operatingIncome": 6414,
+      "operatingCashFlow": 6880,
+      "cashCapex": 656,
+      "sources": [
+        {
+          "url": "https://www.microsoft.com/investor/reports/ar98/income.htm",
+          "locator": "Income Statements, fiscal-year columns",
+          "fields": [
+            "revenue",
+            "operatingIncome"
+          ]
+        },
+        {
+          "url": "https://www.microsoft.com/investor/reports/ar98/cash.htm",
+          "locator": "Cash Flows Statements, fiscal-year columns",
+          "fields": [
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "priorYearComparative": {
+        "fiscalYear": 1997,
+        "revenue": 11358,
+        "operatingIncome": 4871,
+        "operatingCashFlow": 4689,
+        "cashCapex": 499
+      },
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    },
+    {
+      "company": "INTC",
+      "fiscalYear": 1998,
+      "fiscalEnd": "1998-12-26",
+      "units": "USD millions",
+      "reportVintage": 1998,
+      "revenue": 26273,
+      "operatingIncome": 8379,
+      "operatingCashFlow": 9191,
+      "cashCapex": 3557,
+      "sources": [
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-1998-annual-report.pdf#page=16",
+          "locator": "PDF page 16, Consolidated Statements of Income",
+          "fields": [
+            "revenue",
+            "operatingIncome"
+          ]
+        },
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-1998-annual-report.pdf#page=18",
+          "locator": "PDF page 18, Consolidated Statements of Cash Flows",
+          "fields": [
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "priorYearComparative": {
+        "fiscalYear": 1997,
+        "revenue": 25070,
+        "operatingIncome": 9887,
+        "operatingCashFlow": 10008,
+        "cashCapex": 4501
+      },
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    },
+    {
+      "company": "MSFT",
+      "fiscalYear": 1999,
+      "fiscalEnd": "1999-06-30",
+      "units": "USD millions",
+      "reportVintage": 1999,
+      "revenue": 19747,
+      "operatingIncome": 9928,
+      "operatingCashFlow": 10030,
+      "cashCapex": 583,
+      "sources": [
+        {
+          "url": "https://www.microsoft.com/investor/reports/ar99/income.htm",
+          "locator": "Income Statements, fiscal-year columns",
+          "fields": [
+            "revenue",
+            "operatingIncome"
+          ]
+        },
+        {
+          "url": "https://www.microsoft.com/investor/reports/ar99/cash.htm",
+          "locator": "Cash Flows Statements, fiscal-year columns",
+          "fields": [
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "priorYearComparative": {
+        "fiscalYear": 1998,
+        "revenue": 15262,
+        "operatingIncome": 6414,
+        "operatingCashFlow": 6880,
+        "cashCapex": 656
+      },
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    },
+    {
+      "company": "INTC",
+      "fiscalYear": 1999,
+      "fiscalEnd": "1999-12-25",
+      "units": "USD millions",
+      "reportVintage": 1999,
+      "revenue": 29389,
+      "operatingIncome": 9767,
+      "operatingCashFlow": 11335,
+      "cashCapex": 3403,
+      "sources": [
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-1999-annual-report.pdf#page=16",
+          "locator": "PDF page 16, Consolidated Statements of Income",
+          "fields": [
+            "revenue",
+            "operatingIncome"
+          ]
+        },
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-1999-annual-report.pdf#page=18",
+          "locator": "PDF page 18, Consolidated Statements of Cash Flows",
+          "fields": [
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "priorYearComparative": {
+        "fiscalYear": 1998,
+        "revenue": 26273,
+        "operatingIncome": 8379,
+        "operatingCashFlow": 9191,
+        "cashCapex": 3557
+      },
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    },
+    {
+      "company": "MSFT",
+      "fiscalYear": 2000,
+      "fiscalEnd": "2000-06-30",
+      "units": "USD millions",
+      "reportVintage": 2000,
+      "revenue": 22956,
+      "operatingIncome": 10937,
+      "operatingCashFlow": 13961,
+      "cashCapex": 879,
+      "sources": [
+        {
+          "url": "https://www.microsoft.com/investor/reports/ar00/income.htm",
+          "locator": "Income Statements, fiscal-year columns",
+          "fields": [
+            "revenue",
+            "operatingIncome"
+          ]
+        },
+        {
+          "url": "https://www.microsoft.com/investor/reports/ar00/cash.htm",
+          "locator": "Cash Flows Statements, fiscal-year columns",
+          "fields": [
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "priorYearComparative": {
+        "fiscalYear": 1999,
+        "revenue": 19747,
+        "operatingIncome": 9928,
+        "operatingCashFlow": 13137,
+        "cashCapex": 583
+      },
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    },
+    {
+      "company": "INTC",
+      "fiscalYear": 2000,
+      "fiscalEnd": "2000-12-30",
+      "units": "USD millions",
+      "reportVintage": 2000,
+      "revenue": 33726,
+      "operatingIncome": 10395,
+      "operatingCashFlow": 12827,
+      "cashCapex": 6674,
+      "sources": [
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-2000-annual-report.pdf#page=20",
+          "locator": "PDF page 20, Consolidated Statements of Income",
+          "fields": [
+            "revenue",
+            "operatingIncome"
+          ]
+        },
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-2000-annual-report.pdf#page=22",
+          "locator": "PDF page 22, Consolidated Statements of Cash Flows",
+          "fields": [
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "priorYearComparative": {
+        "fiscalYear": 1999,
+        "revenue": 29389,
+        "operatingIncome": 9767,
+        "operatingCashFlow": 12134,
+        "cashCapex": 3403
+      },
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    },
+    {
+      "company": "MSFT",
+      "fiscalYear": 2001,
+      "fiscalEnd": "2001-06-30",
+      "units": "USD millions",
+      "reportVintage": 2002,
+      "revenue": 25296,
+      "operatingIncome": 11720,
+      "operatingCashFlow": 13422,
+      "cashCapex": 1103,
+      "sources": [
+        {
+          "url": "https://www.microsoft.com/investor/reports/ar02/financials/item8_income.htm",
+          "locator": "Income Statements, fiscal-year columns",
+          "fields": [
+            "revenue",
+            "operatingIncome"
+          ]
+        },
+        {
+          "url": "https://www.microsoft.com/investor/reports/ar02/financials/item8_cashflows.htm",
+          "locator": "Cash Flows Statements, fiscal-year columns",
+          "fields": [
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "priorYearComparative": {
+        "fiscalYear": 2000,
+        "revenue": 22956,
+        "operatingIncome": 11006,
+        "operatingCashFlow": 11426,
+        "cashCapex": 879
+      },
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    },
+    {
+      "company": "INTC",
+      "fiscalYear": 2001,
+      "fiscalEnd": "2001-12-29",
+      "units": "USD millions",
+      "reportVintage": 2001,
+      "revenue": 26539,
+      "operatingIncome": 2256,
+      "operatingCashFlow": 8654,
+      "cashCapex": 7309,
+      "sources": [
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-2001-annual-report.pdf#page=22",
+          "locator": "PDF page 22, Consolidated Statements of Income",
+          "fields": [
+            "revenue",
+            "operatingIncome"
+          ]
+        },
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-2001-annual-report.pdf#page=24",
+          "locator": "PDF page 24, Consolidated Statements of Cash Flows",
+          "fields": [
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "priorYearComparative": {
+        "fiscalYear": 2000,
+        "revenue": 33726,
+        "operatingIncome": 10395,
+        "operatingCashFlow": 12827,
+        "cashCapex": 6674
+      },
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    },
+    {
+      "company": "MSFT",
+      "fiscalYear": 2002,
+      "fiscalEnd": "2002-06-30",
+      "units": "USD millions",
+      "reportVintage": 2002,
+      "revenue": 28365,
+      "operatingIncome": 11910,
+      "operatingCashFlow": 14509,
+      "cashCapex": 770,
+      "sources": [
+        {
+          "url": "https://www.microsoft.com/investor/reports/ar02/financials/item8_income.htm",
+          "locator": "Income Statements, fiscal-year columns",
+          "fields": [
+            "revenue",
+            "operatingIncome"
+          ]
+        },
+        {
+          "url": "https://www.microsoft.com/investor/reports/ar02/financials/item8_cashflows.htm",
+          "locator": "Cash Flows Statements, fiscal-year columns",
+          "fields": [
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "priorYearComparative": {
+        "fiscalYear": 2001,
+        "revenue": 25296,
+        "operatingIncome": 11720,
+        "operatingCashFlow": 13422,
+        "cashCapex": 1103
+      },
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    },
+    {
+      "company": "INTC",
+      "fiscalYear": 2002,
+      "fiscalEnd": "2002-12-28",
+      "units": "USD millions",
+      "reportVintage": 2002,
+      "revenue": 26764,
+      "operatingIncome": 4382,
+      "operatingCashFlow": 9129,
+      "cashCapex": 4703,
+      "sources": [
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-2002-annual-report.pdf#page=53",
+          "locator": "PDF page 53, Consolidated Statements of Income",
+          "fields": [
+            "revenue",
+            "operatingIncome"
+          ]
+        },
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-2002-annual-report.pdf#page=55",
+          "locator": "PDF page 55, Consolidated Statements of Cash Flows",
+          "fields": [
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "priorYearComparative": {
+        "fiscalYear": 2001,
+        "revenue": 26539,
+        "operatingIncome": 2256,
+        "operatingCashFlow": 8789,
+        "cashCapex": 7309
+      },
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    },
+    {
+      "company": "MSFT",
+      "fiscalYear": 2003,
+      "fiscalEnd": "2003-06-30",
+      "units": "USD millions",
+      "reportVintage": 2003,
+      "revenue": 32187,
+      "operatingIncome": 13217,
+      "operatingCashFlow": 15797,
+      "cashCapex": 891,
+      "sources": [
+        {
+          "url": "https://www.microsoft.com/investor/reports/ar03/alt/item_eight.htm",
+          "locator": "Item 8, Income Statements and Cash Flows Statements, fiscal-year columns",
+          "fields": [
+            "revenue",
+            "operatingIncome",
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "priorYearComparative": {
+        "fiscalYear": 2002,
+        "revenue": 28365,
+        "operatingIncome": 11910,
+        "operatingCashFlow": 14509,
+        "cashCapex": 770
+      },
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    },
+    {
+      "company": "INTC",
+      "fiscalYear": 2003,
+      "fiscalEnd": "2003-12-27",
+      "units": "USD millions",
+      "reportVintage": 2003,
+      "revenue": 30141,
+      "operatingIncome": 7533,
+      "operatingCashFlow": 11515,
+      "cashCapex": 3656,
+      "sources": [
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-2003-annual-report.pdf#page=58",
+          "locator": "PDF page 58, Consolidated Statements of Income",
+          "fields": [
+            "revenue",
+            "operatingIncome"
+          ]
+        },
+        {
+          "url": "https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2025-05/history-2003-annual-report.pdf#page=60",
+          "locator": "PDF page 60, Consolidated Statements of Cash Flows",
+          "fields": [
+            "operatingCashFlow",
+            "cashCapex"
+          ]
+        }
+      ],
+      "priorYearComparative": {
+        "fiscalYear": 2002,
+        "revenue": 26764,
+        "operatingIncome": 4382,
+        "operatingCashFlow": 9129,
+        "cashCapex": 4703
+      },
+      "publicationDate": null,
+      "publicationDateStatus": "Not verified; reportVintage is the fiscal year named by the source, not its publication year."
+    }
+  ],
+  "observations": [
+    {
+      "year": 1997,
+      "label": "1997",
+      "index": 15,
+      "indexUnrounded": 15.399190326883813,
+      "aggregate": {
+        "revenue": 36428,
+        "operatingIncome": 14758,
+        "operatingCashFlow": 14697,
+        "cashCapex": 5000
+      },
+      "priorAggregateSameVintage": {
+        "revenue": 29518,
+        "operatingIncome": 10612,
+        "operatingCashFlow": 12462,
+        "cashCapex": 3518
+      },
+      "capexToOcf": 0.34020548411240387,
+      "capexGrowth": 0.4212620807276861,
+      "revenueGrowth": 0.23409445084355318,
+      "growthGapPp": 18.716762988413294,
+      "operatingMargin": 0.4051279235752718,
+      "priorOperatingMargin": 0.3595094518598821,
+      "marginDeclinePp": -4.561847171538968,
+      "components": {
+        "cashStrain": 5.743640587486269,
+        "growthGap": 37.43352597682659,
+        "marginPressure": 0
+      },
+      "latestSourceVintage": 1998
+    },
+    {
+      "year": 1998,
+      "label": "1998",
+      "index": 11,
+      "indexUnrounded": 10.542966736740627,
+      "aggregate": {
+        "revenue": 40757,
+        "operatingIncome": 14793,
+        "operatingCashFlow": 16071,
+        "cashCapex": 4213
+      },
+      "priorAggregateSameVintage": {
+        "revenue": 36428,
+        "operatingIncome": 14758,
+        "operatingCashFlow": 14697,
+        "cashCapex": 5000
+      },
+      "capexToOcf": 0.2621492128678987,
+      "capexGrowth": -0.15739999999999998,
+      "revenueGrowth": 0.11883715822993302,
+      "growthGapPp": -27.6237158229933,
+      "operatingMargin": 0.36295605662830926,
+      "priorOperatingMargin": 0.4051279235752718,
+      "marginDeclinePp": 4.217186694696251,
+      "components": {
+        "cashStrain": 0,
+        "growthGap": 0,
+        "marginPressure": 42.17186694696251
+      },
+      "latestSourceVintage": 1998
+    },
+    {
+      "year": 1999,
+      "label": "1999",
+      "index": 0,
+      "indexUnrounded": 0.0,
+      "aggregate": {
+        "revenue": 49136,
+        "operatingIncome": 19695,
+        "operatingCashFlow": 21365,
+        "cashCapex": 3986
+      },
+      "priorAggregateSameVintage": {
+        "revenue": 41535,
+        "operatingIncome": 14793,
+        "operatingCashFlow": 16071,
+        "cashCapex": 4213
+      },
+      "capexToOcf": 0.18656681488415633,
+      "capexGrowth": -0.053880845003560385,
+      "revenueGrowth": 0.18300228722763934,
+      "growthGapPp": -23.688313223119973,
+      "operatingMargin": 0.40082627808531424,
+      "priorOperatingMargin": 0.3561574575659083,
+      "marginDeclinePp": -4.466882051940596,
+      "components": {
+        "cashStrain": 0,
+        "growthGap": 0,
+        "marginPressure": 0
+      },
+      "latestSourceVintage": 1999
+    },
+    {
+      "year": 2000,
+      "label": "2000",
+      "index": 41,
+      "indexUnrounded": 41.120263462967884,
+      "aggregate": {
+        "revenue": 56682,
+        "operatingIncome": 21332,
+        "operatingCashFlow": 26788,
+        "cashCapex": 7553
+      },
+      "priorAggregateSameVintage": {
+        "revenue": 49136,
+        "operatingIncome": 19695,
+        "operatingCashFlow": 25271,
+        "cashCapex": 3986
+      },
+      "capexToOcf": 0.2819546065402419,
+      "capexGrowth": 0.8948820873055694,
+      "revenueGrowth": 0.15357375447736898,
+      "growthGapPp": 74.13083328282003,
+      "operatingMargin": 0.3763452242334427,
+      "priorOperatingMargin": 0.40082627808531424,
+      "marginDeclinePp": 2.448105385187155,
+      "components": {
+        "cashStrain": 0,
+        "growthGap": 100,
+        "marginPressure": 24.481053851871547
+      },
+      "latestSourceVintage": 2000
+    },
+    {
+      "year": 2001,
+      "label": "2001",
+      "index": 44,
+      "indexUnrounded": 43.5781997383979,
+      "aggregate": {
+        "revenue": 51835,
+        "operatingIncome": 13976,
+        "operatingCashFlow": 22076,
+        "cashCapex": 8412
+      },
+      "priorAggregateSameVintage": {
+        "revenue": 56682,
+        "operatingIncome": 21401,
+        "operatingCashFlow": 24253,
+        "cashCapex": 7553
+      },
+      "capexToOcf": 0.38104729117593766,
+      "capexGrowth": 0.11372964385012585,
+      "revenueGrowth": -0.08551215553438485,
+      "growthGapPp": 19.92417993845107,
+      "operatingMargin": 0.2696247709076879,
+      "priorOperatingMargin": 0.37756254190042693,
+      "marginDeclinePp": 10.793777099273905,
+      "components": {
+        "cashStrain": 11.578184453705383,
+        "growthGap": 39.84835987690214,
+        "marginPressure": 100
+      },
+      "latestSourceVintage": 2002
+    },
+    {
+      "year": 2002,
+      "label": "2002",
+      "index": 0,
+      "indexUnrounded": 0.0,
+      "aggregate": {
+        "revenue": 55129,
+        "operatingIncome": 16292,
+        "operatingCashFlow": 23638,
+        "cashCapex": 5473
+      },
+      "priorAggregateSameVintage": {
+        "revenue": 51835,
+        "operatingIncome": 13976,
+        "operatingCashFlow": 22211,
+        "cashCapex": 8412
+      },
+      "capexToOcf": 0.23153397072510365,
+      "capexGrowth": -0.3493818354731336,
+      "revenueGrowth": 0.06354779589080728,
+      "growthGapPp": -41.29296313639409,
+      "operatingMargin": 0.29552504126684687,
+      "priorOperatingMargin": 0.2696247709076879,
+      "marginDeclinePp": -2.5900270359158983,
+      "components": {
+        "cashStrain": 0,
+        "growthGap": 0,
+        "marginPressure": 0
+      },
+      "latestSourceVintage": 2002
+    },
+    {
+      "year": 2003,
+      "label": "2003",
+      "index": 0,
+      "indexUnrounded": 0.0,
+      "aggregate": {
+        "revenue": 62328,
+        "operatingIncome": 20750,
+        "operatingCashFlow": 27312,
+        "cashCapex": 4547
+      },
+      "priorAggregateSameVintage": {
+        "revenue": 55129,
+        "operatingIncome": 16292,
+        "operatingCashFlow": 23638,
+        "cashCapex": 5473
+      },
+      "capexToOcf": 0.16648359695371998,
+      "capexGrowth": -0.16919422620135205,
+      "revenueGrowth": 0.13058462877977117,
+      "growthGapPp": -29.97788549811232,
+      "operatingMargin": 0.33291618534206135,
+      "priorOperatingMargin": 0.29552504126684687,
+      "marginDeclinePp": -3.739114407521449,
+      "components": {
+        "cashStrain": 0,
+        "growthGap": 0,
+        "marginPressure": 0
+      },
+      "latestSourceVintage": 2003
+    }
+  ],
+  "methodology": {
+    "aggregation": "Sum company cash capex, OCF, revenue and operating income before calculating ratios. Growth/margin comparisons use each current observation source vintage's own prior-year comparative.",
+    "capex": "Positive absolute value of cash-flow statement Additions to property [plant] and equipment. Excludes separately classified acquisitions and investments; no finance-lease additions.",
+    "period": "Annual fiscal years, Microsoft ending June and Intel ending late December. These do not share identical calendar windows and are not quarterly TTM observations.",
+    "timing": "Retrospective fiscal-year chart ONLY. Source publication/filing dates are not established; values were unavailable at fiscal year start and generally became public after fiscal year end. 1996\u201397 use AR1998; MSFT2001 uses AR2002. Never claim these are no-lookahead trading signals. A strict point-in-time backtest must lag each observation to verified publication dates and use then-available vintages.",
+    "reclassifications": "Prior comparatives differ between vintages. Examples: Microsoft1998 revenue14484 inAR98 versus15262 inAR99; Microsoft1999 OCF10030 inAR99 versus13137 inAR00; Microsoft2000 OCF13961 inAR00 versus11426 inAR02; Intel1999 OCF11335 inAR99 versus12134 inAR00. This dataset keeps paired comparisons internally consistent, rather than silently mixing revisions.",
+    "cohortCaveat": "Two large surviving technology infrastructure suppliers, chosen for primary archive availability. Survivor bias; excludes failed dot-coms, telecom carriers, and Cisco. Different business models and capital intensity from today's hyperscalers. Not an investable dot-com market index.",
+    "interpretation": "Same thresholds and weights without tuning. This tests this formula on this small cohort; it does not validate predictive power, calibration, or bubble probability."
+  },
+  "marketContext": {
+    "peak": {
+      "date": "2000-03-10",
+      "indexName": "Nasdaq Composite",
+      "approximateLevel": 5048,
+      "sourceUrl": "https://www.goldmansachs.com/our-firm/history/moments/2000-dot-com-bubble",
+      "sourceLocator": "Paragraph beginning The Nasdaq index rose 86% in 1999 alone"
+    },
+    "drawdown": {
+      "approximatePercent": 78,
+      "window": "early 2000 to late 2002",
+      "sourceUrl": "https://www.imf.org/external/pubs/ft/GFSR/2003/02/pdf/chp3.pdf#page=25",
+      "sourceLocator": "Chapter III, printed page 86 / PDF page 25, Market Price Reaction"
+    },
+    "display": "Use contextual annotations only, not a fabricated Nasdaq return line. No market time series included."
+  },
+  "verdict": {
+    "headline": "The unchanged index did not give a strong advance warning in this cohort.",
+    "detail": "The score is 11 in FY1998 and 0 in FY1999, rises to 41 in FY2000, peaks at 44 in FY2001, and returns to 0 in FY2002\u201303. The financial-stress peak follows the March 2000 market peak. This is evidence of a low/late response for these incumbents, not validation of a general bubble predictor.",
+    "important": "The FY2000 observation spans periods after the March market peak and cannot be treated as an advance signal; scores are retrospective, not timed to release dates."
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "checked": "2026-09-07",
+  "nvidia": {
+    "ticker": "NVDA",
+    "periodEnd": "2026-07-26",
+    "basis": "TTM = FY2026 + H1FY2027 - H1FY2026; USD millions except EPS",
+    "fy2026": {
+      "equityGains": 8918,
+      "pretaxIncome": 141450,
+      "dilutedEps": 4.9
+    },
+    "h1fy2027": {
+      "equityGains": 23707,
+      "pretaxIncome": 141410,
+      "dilutedEps": 4.85
+    },
+    "h1fy2026": {
+      "equityGains": 2073,
+      "pretaxIncome": 53117,
+      "dilutedEps": 1.84
+    },
+    "ttmEquityGains": 30552,
+    "ttmPretaxIncome": 229743,
+    "sourceAnnual": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2026/",
+    "sourceInterim": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/default.aspx",
+    "caveat": "Pretax realized/unrealized investment gains, not all specifically attributable to AI. No isolated after-tax gains-adjusted EPS acquired; do not subtract pretax gains from net income. FY2027 nonGAAP SBC policy changed, so nonGAAP series not spliced."
+  },
+  "microsoft": {
+    "ticker": "MSFT",
+    "checked_at": "2026-09-07",
+    "period": "FY2026 / TTM ended June 30, 2026",
+    "primary_source": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+    "release_date": "2026-07-29",
+    "units": "USD millions except EPS and share price",
+    "gaap_net_income": 133749,
+    "openai_net_income_benefit": 4963,
+    "company_openai_excluded_net_income": 128786,
+    "gaap_diluted_eps": 17.95,
+    "openai_diluted_eps_benefit": 0.67,
+    "company_openai_excluded_diluted_eps": 17.28,
+    "openai_effect_basis": "Company-reconciled net-income and diluted-EPS effect; after income taxes rather than a pre-tax gain subtracted from net income.",
+    "stored_provider_displayed_eps": 17.95,
+    "stored_provider_eps_matches_primary": true,
+    "price_usd": 499.7,
+    "price_as_of": "2026-09-04",
+    "gaap_pe_calculated": 27.838440111420613,
+    "openai_excluded_pe_calculated": 28.917824074074073,
+    "pe_change_percent": 3.877314814814814,
+    "q4_2026": {
+      "gaap_net_income": 35766,
+      "openai_net_income_benefit": 480,
+      "company_openai_excluded_net_income": 35286,
+      "gaap_diluted_eps": 4.81,
+      "openai_diluted_eps_benefit": 0.07,
+      "company_openai_excluded_diluted_eps": 4.74
+    },
+    "caveats": [
+      "OpenAI-only company adjustment, not exclusion of all AI investment gains or all nonrecurring items.",
+      "Release also states Q4 Anthropic investment gain of $3.2B; not removed by the OpenAI-only adjustment.",
+      "The $0.27 Q4 EPS guidance benefit combines Anthropic gain, lower voluntary retirement expense, severance and Xbox impairment effects; cannot assign all to Anthropic.",
+      "No separate after-tax Anthropic-only EPS effect verified; do not fabricate one or subtract $3.2B pre-tax from after-tax net income.",
+      "EPS denominator is whole company, not incremental AI-only earnings; no claim that non-GAAP results are intrinsically superior.",
+      "Fixed September 4 share price is stored provider snapshot, not newly audited in this subtask."
+    ]
+  }
+}

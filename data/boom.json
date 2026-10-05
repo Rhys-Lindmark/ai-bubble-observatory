@@ -1,0 +1,256 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-09-06",
+  "scope": "Official publisher page and supplied Apollo excerpt, not the full book. Printed page numbers are zine pagination. Historical measurements are dated, not current values.",
+  "homepage": {
+    "title": "Can investors lose while useful capacity grows?",
+    "body": "Boom argues that concentrated ambition and funding can accelerate innovation. Track two outcomes separately: financial losses and capabilities that remain useful. For AI, compare financial exposure with useful output, sustained usage and infrastructure utilization. Lower prices can help customers while squeezing suppliers. Productive progress alone does not justify a valuation.",
+    "columns": [
+      "Who bears losses?",
+      "What remains useful?"
+    ],
+    "sourceIds": [
+      "boom-page"
+    ],
+    "claimType": "First sentence: publisher/author thesis. Remaining copy: dashboard inference."
+  },
+  "appendix": [
+    {
+      "text": "The supplied Boom excerpt examines Apollo as a publicly financed social bubble: political enthusiasm enabled costly overinvestment, while support later faded (zine pp. 19\u201321). The authors argue NASA procurement accelerated semiconductor affordability and diffusion, while acknowledging those technologies might otherwise have emerged later (pp. 30\u201331). They also discuss cultural legacy beyond measurable returns (pp. 32\u201333). These are the authors\u2019 interpretations, not proof that every bubble produces net benefits.",
+      "sourceIds": [
+        "boom-apollo"
+      ],
+      "claimType": "author claims, paraphrased"
+    },
+    {
+      "text": "The excerpt does not establish an inflection-versus-mean-reversion taxonomy. The two-column dashboard lens is our inference: trace financial exposure separately from surviving assets, adoption and useful output. Apollo appropriations expose public resources to opportunity cost; that financing differs from shareholder-funded technology firms.",
+      "sourceIds": [
+        "boom-apollo"
+      ],
+      "claimType": "scope limitation and dashboard inference"
+    },
+    {
+      "text": "Use dated observations with their original units. Capacity, adoption and falling unit cost are different indicators, so do not combine them into a social-value score. None identifies the counterfactual: what would have happened without excessive investment.",
+      "sourceIds": [],
+      "claimType": "measurement design"
+    }
+  ],
+  "cases": [
+    {
+      "caseId": "ai-current",
+      "name": "AI",
+      "lossRisk": "Prospective exposure: equity investors, creditors and compute counterparties may bear losses if revenue disappoints. Company financing and compute commitments establish exposure, not realized losses.",
+      "lossRiskSourceIds": [
+        "openai-financing",
+        "anthropic-financing",
+        "openai-compute",
+        "anthropic-compute"
+      ],
+      "lossRiskClaimType": "scenario inference from existing verified disclosures",
+      "productiveEvidence": "GPT-3.5-level inference cost fell more than 280-fold, November 2022\u2013October 2024.",
+      "productiveEvidenceSourceIds": [
+        "stanford-ai2025"
+      ],
+      "uncertainty": "Benchmark-matched inference cost is not full task cost, profitability or current infrastructure utilization.",
+      "evidenceId": "ai-inference-cost"
+    },
+    {
+      "caseId": "ukrail1845",
+      "name": "British railways, including Ireland",
+      "lossRisk": "The promotion boom\u2019s expansion was associated with deteriorating shareholder value.",
+      "lossRiskSourceIds": [
+        "rail-table5"
+      ],
+      "lossRiskClaimType": "paper finding; not quantified loss allocation",
+      "productiveEvidence": "Open railway mileage rose from 2,343 in 1845 to 6,308 in 1850.",
+      "productiveEvidenceSourceIds": [
+        "rail-table5"
+      ],
+      "uncertainty": "Physical capacity does not establish utilization or net welfare. This is Britain and Ireland, not the U.S. 1873 railway case.",
+      "evidenceId": "rail-mileage"
+    },
+    {
+      "caseId": "dotcom2000",
+      "name": "Dotcom",
+      "lossRisk": "Shareholders bore falling equity values; Mishkin distinguishes this episode from bubbles accompanied by marked bank deterioration.",
+      "lossRiskSourceIds": [
+        "fed-tech"
+      ],
+      "lossRiskClaimType": "ownership inference and central-bank analysis",
+      "productiveEvidence": "U.S. high-speed internet lines grew from about 7.1 million in December 2000 to 9.6 million in June 2001.",
+      "productiveEvidenceSourceIds": [
+        "fcc2002"
+      ],
+      "uncertainty": "An adoption count during the bust does not measure telecom asset utilization, survivor profits or economy-wide net benefit.",
+      "evidenceId": "fcc-lines"
+    }
+  ],
+  "evidenceCandidates": [
+    {
+      "id": "ai-inference-cost",
+      "caseId": "ai-current",
+      "label": "Inference cost at GPT-3.5-level performance",
+      "unit": "fold decline",
+      "periodStart": "2022-11",
+      "periodEnd": "2024-10",
+      "value": 280,
+      "operator": ">",
+      "cadence": "reported endpoint comparison",
+      "rawMonthlySeriesAvailable": false,
+      "sourceIds": [
+        "stanford-ai2025"
+      ],
+      "sourceLocator": "Takeaway 7",
+      "presentation": "Single dated comparison; do not interpolate a monthly cost curve",
+      "limits": "Published 2025 historical comparison, not a September 2026 quote; benchmark performance is not every useful task."
+    },
+    {
+      "id": "rail-mileage",
+      "caseId": "ukrail1845",
+      "label": "Railway miles open, including Ireland",
+      "unit": "miles",
+      "cadence": "annual historical observations; selected endpoints",
+      "points": [
+        {
+          "year": 1845,
+          "value": 2343
+        },
+        {
+          "year": 1850,
+          "value": 6308
+        }
+      ],
+      "sourceIds": [
+        "rail-table5"
+      ],
+      "sourceLocator": "Table 5, printed p. 44 / PDF page 45",
+      "presentation": "Two observations or a chart labeled selected annual observations; no invented monthly values",
+      "limits": "Stock of physical track, not utilization. Do not mix with England-only figures. Table passenger counts and receipts have period footnotes and are excluded."
+    },
+    {
+      "id": "fcc-lines",
+      "caseId": "dotcom2000",
+      "label": "U.S. high-speed internet lines",
+      "unit": "million lines or wireless channels",
+      "cadence": "semiannual observations",
+      "points": [
+        {
+          "date": "2000-12-31",
+          "value": 7.1,
+          "approximate": true
+        },
+        {
+          "date": "2001-06-30",
+          "value": 9.6
+        }
+      ],
+      "reportedPercentGrowth": 36,
+      "sourceIds": [
+        "fcc2002"
+      ],
+      "sourceLocator": "PDF page 1, first bullet",
+      "presentation": "Two dated bars or endpoints",
+      "limits": "Over 200 Kbps in at least one direction, homes and businesses; lines are not unique people. Source growth uses underlying unrounded values, so do not replace its 36% with arithmetic from rounded endpoints."
+    }
+  ],
+  "design": {
+    "layout": "Two parallel columns: financial exposure and observed productive evidence; actual units and dates. Expandable source notes.",
+    "prohibitedClaims": [
+      "No 0\u2013100 social-value score",
+      "No claim productive value offsets an investor loss dollar for dollar",
+      "No inferred inflection/mean-reversion book taxonomy",
+      "No U.S. railway mapping for British evidence",
+      "No monthly values interpolated from endpoints"
+    ],
+    "stillMissing": [
+      "Comparable AI utilization and useful task cost over time",
+      "Residual equipment value and remaining economic asset life",
+      "Causal net welfare estimate including opportunity cost and harms"
+    ]
+  },
+  "sources": [
+    {
+      "id": "boom-page",
+      "title": "Boom: Bubbles and the End of Stagnation \u2014 Stripe Press",
+      "url": "https://press.stripe.com/boom",
+      "locator": "Publisher synopsis; authors Byrne Hobart and Tobias Huber",
+      "type": "publisher synopsis",
+      "wordBudget": 200
+    },
+    {
+      "id": "boom-apollo",
+      "title": "Boom excerpt: The Apollo Program",
+      "url": "https://assets.stripeassets.com/fzn2n1nzq965/5YNm3RQCS1hihzSewtIjny/d5ec92c15e5fa2972e5e928eb9aefd74/BOOM_zine.pdf",
+      "locator": "Printed zine pp. 19\u201321, 30\u201333; PDF pages 10\u201311, 16\u201317 (one-based)",
+      "type": "book excerpt / author interpretation",
+      "wordBudget": 200,
+      "localEvidence": "BOOM_zine.pdf; excerpt-text.txt; boom-pdf10.png; boom-pdf11.png; boom-pdf16.png; boom-pdf17.png"
+    },
+    {
+      "id": "stanford-ai2025",
+      "title": "Stanford HAI \u2014 2025 AI Index, takeaway 7",
+      "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
+      "locator": "Takeaway 7: AI becomes more efficient, affordable and accessible",
+      "type": "research institution synthesis",
+      "wordBudget": 200
+    },
+    {
+      "id": "rail-table5",
+      "title": "Campbell and Turner (2015), Managerial failure in mid-Victorian Britain?",
+      "url": "https://pure.qub.ac.uk/files/15654138/RailwayManagerial.pdf",
+      "locator": "Table 5, printed p. 44 / PDF page 45; table draws on Parliamentary Papers; includes Ireland",
+      "type": "original historical research using parliamentary data",
+      "doi": "https://doi.org/10.1080/00076791.2015.1026260",
+      "wordBudget": 200,
+      "localEvidence": "../railroads/raw/managerial.pdf; rail-pdf45.png"
+    },
+    {
+      "id": "fcc2002",
+      "title": "FCC Releases Study on Telephone Trends, May 22, 2002",
+      "url": "https://docs.fcc.gov/public/attachments/DOC-222737A1.pdf",
+      "locator": "PDF page 1, Advanced Telecommunications Services, first bullet",
+      "type": "government statistical release",
+      "wordBudget": 200
+    },
+    {
+      "id": "fed-tech",
+      "title": "Mishkin (2008), How Should We Respond to Asset Price Bubbles?",
+      "url": "https://www.federalreserve.gov/newsevents/speech/mishkin20080515a.htm",
+      "locator": "Distinction between credit-driven and other bubbles; technology-stock episode",
+      "type": "central-bank analysis",
+      "reuse": "work/long-run/metrics/risk-bearers.json"
+    },
+    {
+      "id": "openai-financing",
+      "title": "OpenAI \u2014 Accelerating the next phase of AI",
+      "url": "https://openai.com/index/accelerating-the-next-phase-ai/",
+      "type": "company disclosure",
+      "reuse": "work/ecosystem/research.json"
+    },
+    {
+      "id": "anthropic-financing",
+      "title": "Anthropic \u2014 Series H",
+      "url": "https://www.anthropic.com/news/series-h",
+      "type": "company disclosure",
+      "reuse": "work/ecosystem/research.json"
+    },
+    {
+      "id": "openai-compute",
+      "title": "OpenAI and Amazon partnership",
+      "url": "https://openai.com/index/amazon-partnership/",
+      "type": "company disclosure",
+      "reuse": "work/ecosystem/research.json"
+    },
+    {
+      "id": "anthropic-compute",
+      "title": "Anthropic and Amazon compute agreement",
+      "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+      "type": "company disclosure",
+      "reuse": "work/ecosystem/research.json"
+    }
+  ],
+  "copyCounts": {
+    "homepageWords": 63,
+    "appendixAndCaseWords": 286
+  }
+}

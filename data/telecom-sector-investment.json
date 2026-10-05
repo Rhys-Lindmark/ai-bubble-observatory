@@ -1,0 +1,275 @@
+{
+  "checked": "2026-09-07",
+  "units": "USD millions, nominal current dollars",
+  "name": "US telecom industry capital expenditures",
+  "definition": "Sum of wired, wireless (except satellite), and telecommunications resellers/satellite/other in Census ACES Table4b, total expenditures including new and used structures/equipment.",
+  "vintagePolicy": "Each year from the following survey\u2019s revised comparative Table4b, including later available2004 comparative from2005survey. Not originally published contemporary values.",
+  "rows": [
+    {
+      "year": 1999,
+      "total": 84433,
+      "new": 84134,
+      "used": 299,
+      "components": [
+        {
+          "label": "Wired telecommunications carriers",
+          "code": "51331.0",
+          "total": 59752,
+          "new": 59552,
+          "used": 200,
+          "excelRow": 115,
+          "totalCell": "C115",
+          "newCell": "D115"
+        },
+        {
+          "label": "Wireless telecommunications carriers (except satellite)",
+          "code": "51332.0",
+          "total": 14422,
+          "new": 14376,
+          "used": 46,
+          "excelRow": 116,
+          "totalCell": "C116",
+          "newCell": "D116"
+        },
+        {
+          "label": "Telecommunications resellers, satellite, and other telecommunications",
+          "code": "51333, 51334, 51339 ",
+          "total": 10259,
+          "new": 10206,
+          "used": 53,
+          "excelRow": 117,
+          "totalCell": "C117",
+          "newCell": "D117"
+        }
+      ],
+      "source": "https://www2.census.gov/programs-surveys/aces/tables/2000/table4b.xls",
+      "sourceSurveyYear": 2000,
+      "tableTitle": "Table 4b.  Capital Expenditures for Structures and Equipment for Companies With Employees by Industry: 1999 Revised",
+      "sheet": "table4b",
+      "classification": "NAICS1997"
+    },
+    {
+      "year": 2000,
+      "total": 113301,
+      "new": 112632,
+      "used": 669,
+      "components": [
+        {
+          "label": "Wired telecommunications carriers",
+          "code": "51331.0",
+          "total": 74206,
+          "new": 73923,
+          "used": 283,
+          "excelRow": 115,
+          "totalCell": "C115",
+          "newCell": "D115"
+        },
+        {
+          "label": "Wireless telecommunications carriers (except satellite)",
+          "code": "51332.0",
+          "total": 25482,
+          "new": 25263,
+          "used": 219,
+          "excelRow": 116,
+          "totalCell": "C116",
+          "newCell": "D116"
+        },
+        {
+          "label": "Telecommunications resellers, satellite, and other telecommunications",
+          "code": "51333, 51334, 51339",
+          "total": 13613,
+          "new": 13446,
+          "used": 167,
+          "excelRow": 117,
+          "totalCell": "C117",
+          "newCell": "D117"
+        }
+      ],
+      "source": "https://www2.census.gov/programs-surveys/aces/tables/2001/table4b.xls",
+      "sourceSurveyYear": 2001,
+      "tableTitle": "Table 4b.  Capital Expenditures for Structures and Equipment for Companies With Employees by Industry: 2000 Revised",
+      "sheet": "table4b",
+      "classification": "NAICS1997"
+    },
+    {
+      "year": 2001,
+      "total": 105607,
+      "new": 105447,
+      "used": 160,
+      "components": [
+        {
+          "label": "Wired telecommunications carriers",
+          "code": "51331.0",
+          "total": 71974,
+          "new": 71918,
+          "used": 56,
+          "excelRow": 115,
+          "totalCell": "C115",
+          "newCell": "D115"
+        },
+        {
+          "label": "Wireless telecommunications carriers (except satellite)",
+          "code": "51332.0",
+          "total": 24028,
+          "new": 24007,
+          "used": 21,
+          "excelRow": 116,
+          "totalCell": "C116",
+          "newCell": "D116"
+        },
+        {
+          "label": "Telecommunications resellers, satellite, and other telecommunications",
+          "code": "51333, 51334, 51339",
+          "total": 9605,
+          "new": 9522,
+          "used": 83,
+          "excelRow": 117,
+          "totalCell": "C117",
+          "newCell": "D117"
+        }
+      ],
+      "source": "https://www2.census.gov/programs-surveys/aces/tables/2002/table4b.xls",
+      "sourceSurveyYear": 2002,
+      "tableTitle": "Table 4b.  Capital Expenditures for Structures and Equipment for Companies With Employees by Industry: 2001 Revised ",
+      "sheet": "Sheet1",
+      "classification": "NAICS1997"
+    },
+    {
+      "year": 2002,
+      "total": 61442,
+      "new": 61378,
+      "used": 64,
+      "components": [
+        {
+          "label": "Wired telecommunications carriers",
+          "code": "51331.0",
+          "total": 32718,
+          "new": 32705,
+          "used": 13,
+          "excelRow": 116,
+          "totalCell": "C116",
+          "newCell": "D116"
+        },
+        {
+          "label": "Wireless telecommunications carriers (except satellite)",
+          "code": "51332.0",
+          "total": 23033,
+          "new": 22997,
+          "used": 36,
+          "excelRow": 117,
+          "totalCell": "C117",
+          "newCell": "D117"
+        },
+        {
+          "label": "Telecommunications resellers, satellite, and other telecommunications",
+          "code": "51333, 51334, 51339",
+          "total": 5691,
+          "new": 5676,
+          "used": 15,
+          "excelRow": 118,
+          "totalCell": "C118",
+          "newCell": "D118"
+        }
+      ],
+      "source": "https://www2.census.gov/programs-surveys/aces/tables/2003/table4b.xls",
+      "sourceSurveyYear": 2003,
+      "tableTitle": "Table 4b.  Capital Expenditures for Structures and Equipment for Companies With Employees by Industry: 2002 Revised ",
+      "sheet": "table4b",
+      "classification": "NAICS1997"
+    },
+    {
+      "year": 2003,
+      "total": 50526,
+      "new": 48729,
+      "used": 1797,
+      "components": [
+        {
+          "label": "Wired telecommunications carriers",
+          "code": "5171.0",
+          "total": 25741,
+          "new": 24191,
+          "used": 1550,
+          "excelRow": 121,
+          "totalCell": "C121",
+          "newCell": "D121"
+        },
+        {
+          "label": "Wireless telecommunications carriers (except satellite)",
+          "code": "5172.0",
+          "total": 20989,
+          "new": 20972,
+          "used": 17,
+          "excelRow": 122,
+          "totalCell": "C122",
+          "newCell": "D122"
+        },
+        {
+          "label": "Telecommunications resellers, satellite, and other telecommunications",
+          "code": "5173, 5174, 5179",
+          "total": 3796,
+          "new": 3566,
+          "used": 230,
+          "excelRow": 123,
+          "totalCell": "C123",
+          "newCell": "D123"
+        }
+      ],
+      "source": "https://www2.census.gov/programs-surveys/aces/tables/2004/table4b.xls",
+      "sourceSurveyYear": 2004,
+      "tableTitle": "Table 4b.  Capital Expenditures for Structures and Equipment for Companies With Employees by Industry: 2003 Revised and Restated",
+      "sheet": "table4b",
+      "classification": "NAICS2002"
+    },
+    {
+      "year": 2004,
+      "total": 51182,
+      "new": 47732,
+      "used": 3450,
+      "components": [
+        {
+          "label": "Wired telecommunications carriers",
+          "code": "5171.0",
+          "total": 24497,
+          "new": 21106,
+          "used": 3391,
+          "excelRow": 96,
+          "totalCell": "C96",
+          "newCell": "D96"
+        },
+        {
+          "label": "Wireless telecommunications carriers (except satellite)",
+          "code": "5172.0",
+          "total": 23998,
+          "new": 23963,
+          "used": 35,
+          "excelRow": 97,
+          "totalCell": "C97",
+          "newCell": "D97"
+        },
+        {
+          "label": "Telecommunications resellers, satellite, and other telecommunications",
+          "code": "5173, 5174, 5179",
+          "total": 2687,
+          "new": 2663,
+          "used": 24,
+          "excelRow": 98,
+          "totalCell": "C98",
+          "newCell": "D98"
+        }
+      ],
+      "source": "https://www2.census.gov/programs-surveys/aces/tables/2005/table4b.xls",
+      "sourceSurveyYear": 2005,
+      "tableTitle": "Table 4b.  Capital Expenditures for Structures and Equipment for Companies With Employees by Industry: 2004 Revised and Restated",
+      "sheet": "table4b",
+      "classification": "NAICS2002"
+    }
+  ],
+  "boundaries": [
+    "Industry detail covers companies with employees; domestic operations excluding Puerto Rico, USVirginIslands and territories.",
+    "Capitalized asset additions including noncash capital leases and construction inprogress; not cashflowstatement cashcapex.",
+    "Includes used structures/equipment; expenditures are gross without subtraction of disposals.",
+    "1999\u20132002 NAICS1997;2003\u20132004 NAICS2002 with2003restatement. Classificationbreak requires visible note; do not call exact constantpopulation.",
+    "Fiscal reports are accepted when calendar reports/estimates unavailable.",
+    "No denominator match to FCC established; do not call enduserrevenue\u00f7capex a projectpayback or cashcoverage ratio."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "company": "Global Crossing",
+  "role": "Fiber network operator; Chapter11 January28 2002",
+  "source": "https://www.sec.gov/Archives/edgar/data/1061322/000119312503090817/d10k.txt",
+  "filingDate": "2003-12-08",
+  "checked": "2026-09-07",
+  "unit": "USD millions",
+  "vintage": "FY2002 report; FY2000 restated and discontinued operations reclassified retrospectively",
+  "scope": "Continuing operations (telecommunications plus installation/maintenance). Operating cash excludes discontinued operations and separately presented reorganization cash. 2002 is in bankruptcy, with suspended prepetition interest.",
+  "locators": {
+    "revenue": "Note29 F-93 consolidated revenues (also F-6)",
+    "cash": "F-8 cash flows; continuing operations and purchases of property/equipment",
+    "bankruptcy": "Item5; Note2; January28 2002",
+    "debt": "Note10 F-58 to F-60; default reclassification and scheduled terms"
+  },
+  "rows": [
+    {
+      "year": 2000,
+      "revenue": 3505,
+      "capex": 3366,
+      "ocf": 549,
+      "totalOcf": -437,
+      "discontinuedCash": -986,
+      "reorganizationCash": 0
+    },
+    {
+      "year": 2001,
+      "revenue": 3659,
+      "capex": 2643,
+      "ocf": -906,
+      "totalOcf": -1224,
+      "discontinuedCash": -318,
+      "reorganizationCash": 0
+    },
+    {
+      "year": 2002,
+      "revenue": 3116,
+      "capex": 281,
+      "ocf": 407,
+      "totalOcf": 49,
+      "discontinuedCash": -66,
+      "reorganizationCash": -292
+    }
+  ],
+  "debtContext": {
+    "defaultReclassifiedDebt2001": 6589,
+    "unrestrictedCash2001": 607,
+    "contractualInterestNotAccrued2002": 519,
+    "note": "Debt classified current because of bankruptcy default, not an original maturity wall. Notes originally due2004\u20132009 and credit facilities2004/2006; financing stress can precede stated maturities."
+  }
+}

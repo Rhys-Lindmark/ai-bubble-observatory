@@ -1,0 +1,20 @@
+{
+  "rates": {
+    "observed": "2026-09-03",
+    "nominal": 4.77,
+    "real": 2.42,
+    "checkedAt": "2026-09-06T20:32:52.926Z",
+    "source": "https://www.federalreserve.gov/releases/h15/"
+  },
+  "nvidia": {
+    "periodEnd": "2026-07-26",
+    "filed": "2026-08-26",
+    "revenue": 302970000000,
+    "grossMargin": 0.7467439020365053,
+    "ocf": 134360000000,
+    "checkedAt": "2026-09-06T20:32:52.926Z",
+    "source": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json"
+  },
+  "failures": [],
+  "nextCheckAt": "2026-09-06T20:32:52.926Z"
+}

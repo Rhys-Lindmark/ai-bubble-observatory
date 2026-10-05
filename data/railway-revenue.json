@@ -1,0 +1,112 @@
+{
+  "as_of": "2026-09-07",
+  "scope": "Research only; no site changes",
+  "audit": {
+    "existing_reader_cases": 10,
+    "priority_existing_gap": "US housing 2006 matched price/rent index would fill an applicable valuation gap; US1873 matched railroad revenue/net income and capital investment population would best serve infrastructure analogy. Neither matched ratio acquired in this bounded pass.",
+    "acquired_ancillary_case": "UK railway mania 1845; not one of current ten reader historicalCases",
+    "inapplicable_cases": [
+      "Gold 1980",
+      "Bitcoin 2017",
+      "Bitcoin 2021"
+    ],
+    "existing_limitations": [
+      "Japan NRI350 earnings population differs from Nikkei225 price index",
+      "China year-end Shanghai P/E is not peak-month P/E",
+      "US broad-market CAPE is context, not Nasdaq or AI-sector P/E",
+      "Dotcom MSFT/INTC survivors are not failed startups or telecom population"
+    ]
+  },
+  "series": {
+    "id": "uk-railway-industry-revenue-construction-cost",
+    "population": "British railway industry as compiled in source Table 1",
+    "cadence": "annual; no monthly interpolation",
+    "source": "https://www-users.cse.umn.edu/~odlyzko/doc/mania02.pdf",
+    "source_author": "Andrew Odlyzko",
+    "source_version_date": "2011-06-25",
+    "source_table": "Table 1, printed page 8; PDF page index 7",
+    "underlying_provenance": "Footnote 8, printed page 54: derived from Tooke and Newmarch, A History of Prices, vol. 5 (1857), p.352. Author notes alternative sources differ. Underlying original not separately acquired.",
+    "observations": [
+      {
+        "year": 1844,
+        "miles_in_service": 2240,
+        "construction_cost_gbp_per_mile": 35700,
+        "annual_revenue_gbp_per_mile": 3280,
+        "annual_revenue_div_construction_cost_percent": 9.187675070028012
+      },
+      {
+        "year": 1845,
+        "miles_in_service": 2536,
+        "construction_cost_gbp_per_mile": 35000,
+        "annual_revenue_gbp_per_mile": 3470,
+        "annual_revenue_div_construction_cost_percent": 9.914285714285715
+      },
+      {
+        "year": 1846,
+        "miles_in_service": 3142,
+        "construction_cost_gbp_per_mile": 31800,
+        "annual_revenue_gbp_per_mile": 3300,
+        "annual_revenue_div_construction_cost_percent": 10.377358490566039
+      },
+      {
+        "year": 1847,
+        "miles_in_service": 3945,
+        "construction_cost_gbp_per_mile": 31700,
+        "annual_revenue_gbp_per_mile": 2870,
+        "annual_revenue_div_construction_cost_percent": 9.053627760252365
+      },
+      {
+        "year": 1848,
+        "miles_in_service": 5127,
+        "construction_cost_gbp_per_mile": 34200,
+        "annual_revenue_gbp_per_mile": 2560,
+        "annual_revenue_div_construction_cost_percent": 7.485380116959065
+      },
+      {
+        "year": 1849,
+        "miles_in_service": 5996,
+        "construction_cost_gbp_per_mile": 35200,
+        "annual_revenue_gbp_per_mile": 2100,
+        "annual_revenue_div_construction_cost_percent": 5.965909090909091
+      },
+      {
+        "year": 1850,
+        "miles_in_service": 6621,
+        "construction_cost_gbp_per_mile": 35200,
+        "annual_revenue_gbp_per_mile": 2080,
+        "annual_revenue_div_construction_cost_percent": 5.909090909090909
+      },
+      {
+        "year": 1851,
+        "miles_in_service": 6890,
+        "construction_cost_gbp_per_mile": 35100,
+        "annual_revenue_gbp_per_mile": 2220,
+        "annual_revenue_div_construction_cost_percent": 6.3247863247863245
+      }
+    ],
+    "ratio_definition": "Annual revenue per mile divided by construction cost per mile, same row/population; gross annual revenue relative to accumulated construction cost.",
+    "forbidden_labels": [
+      "P/E",
+      "capex/OCF",
+      "ROIC",
+      "net profit margin",
+      "shareholder yield",
+      "US railroad 1873"
+    ],
+    "caveats": [
+      "Gross revenue is before operating expenses, interest and taxes",
+      "Construction cost is not annual capex or market capitalization",
+      "Old and new lines are aggregated; not an incremental new-line return",
+      "Source accounting/provenance differs from modern cash-flow statements",
+      "Rounded source inputs; display derived ratio to one decimal at most",
+      "Do not splice into US1873 or modern capex/OCF series"
+    ]
+  },
+  "rejected_join": {
+    "case": "usrail1873",
+    "candidate_source": "https://fred.stlouisfed.org/series/M035BBUSM144NNBR",
+    "candidate_metric": "NBER/Babson railroad gross earnings, 1870\u20131879, monthly, millions USD, NSA",
+    "reason": "FRED notes company coverage changes between series time segments; count/list and match to national railroad investment not established. Gross earnings is not net income or OCF.",
+    "matched_ratio": null
+  }
+}

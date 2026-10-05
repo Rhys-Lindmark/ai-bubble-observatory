@@ -1,0 +1,97 @@
+{
+  "status": "Admitted as one-vintage reported financial capital and gross earnings; not cash investment",
+  "source": "https://www2.census.gov/library/publications/1879/compendia/1878statab.pdf",
+  "table": 145,
+  "printedPage": 153,
+  "pdfPageIndex": 155,
+  "unit": "nominal USD except miles",
+  "rows": [
+    {
+      "year": 1871,
+      "milesOperated": 44614,
+      "capitalAndFundedDebt": 2664627645,
+      "grossEarnings": 403329208,
+      "netEarnings": 141746404,
+      "freightEarnings": 294430322,
+      "passengerEarnings": 108898886,
+      "dividends": 56456681
+    },
+    {
+      "year": 1872,
+      "milesOperated": 57323,
+      "capitalAndFundedDebt": 3159423057,
+      "grossEarnings": 465241055,
+      "netEarnings": 165754373,
+      "freightEarnings": 340931785,
+      "passengerEarnings": 132309270,
+      "dividends": 64418157
+    },
+    {
+      "year": 1873,
+      "milesOperated": 66237,
+      "capitalAndFundedDebt": 3784543034,
+      "grossEarnings": 526419935,
+      "netEarnings": 183810562,
+      "freightEarnings": 389035508,
+      "passengerEarnings": 137384427,
+      "dividends": 67120709
+    },
+    {
+      "year": 1874,
+      "milesOperated": 69273,
+      "capitalAndFundedDebt": 4221763594,
+      "grossEarnings": 520466016,
+      "netEarnings": 189570958,
+      "freightEarnings": 379466935,
+      "passengerEarnings": 140999081,
+      "dividends": 67042942
+    },
+    {
+      "year": 1875,
+      "milesOperated": 71759,
+      "capitalAndFundedDebt": 4415631630,
+      "grossEarnings": 503065505,
+      "netEarnings": 185506438,
+      "freightEarnings": 363960234,
+      "passengerEarnings": 139105271,
+      "dividends": 74294208
+    },
+    {
+      "year": 1876,
+      "milesOperated": 73508,
+      "capitalAndFundedDebt": 4468591935,
+      "grossEarnings": 497257959,
+      "netEarnings": 186452752,
+      "freightEarnings": 361137376,
+      "passengerEarnings": 136120583,
+      "dividends": 68039668
+    },
+    {
+      "year": 1877,
+      "milesOperated": 74112,
+      "capitalAndFundedDebt": 4568507248,
+      "grossEarnings": 472909272,
+      "netEarnings": 170976697,
+      "freightEarnings": 342859222,
+      "passengerEarnings": 130050050,
+      "dividends": 58556312
+    }
+  ],
+  "boundaries": [
+    "Capital and funded debt is a financial account balance, not verified cash construction outlays.",
+    "Net earnings historical definition is not verified modern GAAP operating income or operating cash.",
+    "Changing mileage/population is not a fixed cohort.",
+    "1871\u20131877 table; no fabricated 1870 or 1878\u20131880 rows."
+  ],
+  "discrepancies": [
+    {
+      "year": 1872,
+      "field": "grossEarnings",
+      "printed": 465241055,
+      "sumPrintedComponents": 473241055,
+      "difference": 8000000,
+      "resolution": "Unresolved. Preserve printed fields; no silent correction or component chart."
+    }
+  ],
+  "methodSource": "https://archive.org/details/poorsmanualofrai11newyuoft"
+}
