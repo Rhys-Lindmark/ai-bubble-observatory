@@ -6,7 +6,7 @@ A source-grounded dashboard comparing AI demand, earnings, valuations, investmen
 - Original Sites deployment: https://ai-bubble-observatory.rhyslindmark.chatgpt.site/
 - Research appendix: https://ai.rhyslindmark.com/bubble/appendix
 
-This repository is a source snapshot of the deployed observatory, exported on October 5, 2026. Financial observations retain their individual dates; exporting the code does not refresh the data. Research scores are not validated crash probabilities. Revenue, annualized run rates, profit, cash and financing commitments have distinct definitions in the dashboard.
+This repository is a source snapshot of the deployed observatory, updated on October 16, 2026. The main page uses five evidence lenses inspired by Azeem Azhar, with independently dated source observations, Noah Smith’s railroad financing comparison, and explicit cash-flow assumptions. The October 16 update refreshes SEC accounts and demand evidence. Financial observations retain their individual dates; the review date does not imply every input is daily. Research scores are not validated crash probabilities. Revenue, annualized run rates, profit, cash and financing commitments have distinct definitions in the dashboard.
 
 ## Development
 

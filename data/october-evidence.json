@@ -1,0 +1,828 @@
+{
+  "reviewed": "2026-10-16",
+  "ramp": {
+    "source": "https://ramp.com/data/ai-index-oct-2026",
+    "published": "2026-10-14",
+    "scope": "Selected Ramp businesses; not a census of US firms. Vendor percentages overlap.",
+    "adoption": [
+      {
+        "date": "2023-07",
+        "overall": 24.5329062762,
+        "openai": 24.4947761763,
+        "anthropic": 0.152520399603
+      },
+      {
+        "date": "2023-08",
+        "overall": 25.3841734884,
+        "openai": 25.3482694241,
+        "anthropic": 0.193881947436
+      },
+      {
+        "date": "2023-09",
+        "overall": 26.4880541362,
+        "openai": 26.3637619113,
+        "anthropic": 0.580030382544
+      },
+      {
+        "date": "2023-10",
+        "overall": 27.2500982576,
+        "openai": 27.105987161,
+        "anthropic": 0.766409013494
+      },
+      {
+        "date": "2023-11",
+        "overall": 28.155771552,
+        "openai": 27.9715392923,
+        "anthropic": 0.857632933105
+      },
+      {
+        "date": "2023-12",
+        "overall": 29.4099607458,
+        "openai": 29.2320902846,
+        "anthropic": 1.04882237488
+      },
+      {
+        "date": "2024-01",
+        "overall": 30.4011713031,
+        "openai": 30.2371888726,
+        "anthropic": 1.07174231332
+      },
+      {
+        "date": "2024-02",
+        "overall": 30.6367461431,
+        "openai": 30.4516129032,
+        "anthropic": 1.08835904628
+      },
+      {
+        "date": "2024-03",
+        "overall": 31.1888859204,
+        "openai": 30.7133315522,
+        "anthropic": 4.34410900347
+      },
+      {
+        "date": "2024-04",
+        "overall": 30.8052291571,
+        "openai": 30.1948217102,
+        "anthropic": 4.93412686301
+      },
+      {
+        "date": "2024-05",
+        "overall": 31.1579861949,
+        "openai": 30.5787517498,
+        "anthropic": 4.78351112613
+      },
+      {
+        "date": "2024-06",
+        "overall": 31.3691829444,
+        "openai": 30.6175474412,
+        "anthropic": 5.47023616202
+      },
+      {
+        "date": "2024-07",
+        "overall": 31.8357552326,
+        "openai": 30.7781184731,
+        "anthropic": 6.87908278896
+      },
+      {
+        "date": "2024-08",
+        "overall": 32.0603568855,
+        "openai": 30.7506463782,
+        "anthropic": 7.75653795617
+      },
+      {
+        "date": "2024-09",
+        "overall": 32.9052511416,
+        "openai": 31.6210045662,
+        "anthropic": 8.44341161122
+      },
+      {
+        "date": "2024-10",
+        "overall": 33.5249339755,
+        "openai": 31.9752990524,
+        "anthropic": 9.13857386982
+      },
+      {
+        "date": "2024-11",
+        "overall": 34.178985973,
+        "openai": 32.4435706454,
+        "anthropic": 9.86426708004
+      },
+      {
+        "date": "2024-12",
+        "overall": 34.5011118807,
+        "openai": 32.7767853888,
+        "anthropic": 10.1819109766
+      },
+      {
+        "date": "2025-01",
+        "overall": 35.5642131627,
+        "openai": 33.7936552108,
+        "anthropic": 10.6407402254
+      },
+      {
+        "date": "2025-02",
+        "overall": 36.661748927,
+        "openai": 34.8209495708,
+        "anthropic": 11.0347371245
+      },
+      {
+        "date": "2025-03",
+        "overall": 37.4972088424,
+        "openai": 35.4684359948,
+        "anthropic": 11.9589141599
+      },
+      {
+        "date": "2025-04",
+        "overall": 39.0028786672,
+        "openai": 37.2052428493,
+        "anthropic": 11.8729711521
+      },
+      {
+        "date": "2025-05",
+        "overall": 40.300002947,
+        "openai": 38.4876079333,
+        "anthropic": 12.400907671
+      },
+      {
+        "date": "2025-06",
+        "overall": 41.1868456987,
+        "openai": 39.1698907601,
+        "anthropic": 13.6151570323
+      },
+      {
+        "date": "2025-07",
+        "overall": 42.5470332851,
+        "openai": 40.0595254348,
+        "anthropic": 14.9359691997
+      },
+      {
+        "date": "2025-08",
+        "overall": 43.5057636511,
+        "openai": 40.7846929974,
+        "anthropic": 15.6624931385
+      },
+      {
+        "date": "2025-09",
+        "overall": 43.8034454389,
+        "openai": 41.026152427,
+        "anthropic": 16.0230360749
+      },
+      {
+        "date": "2025-10",
+        "overall": 43.6201780415,
+        "openai": 40.676749306,
+        "anthropic": 16.6531061549
+      },
+      {
+        "date": "2025-11",
+        "overall": 44.4420988436,
+        "openai": 41.1394928811,
+        "anthropic": 17.2589308751
+      },
+      {
+        "date": "2025-12",
+        "overall": 44.4990420376,
+        "openai": 40.9985348811,
+        "anthropic": 17.8451482024
+      },
+      {
+        "date": "2026-01",
+        "overall": 45.5281393692,
+        "openai": 40.8587526715,
+        "anthropic": 21.1644323554
+      },
+      {
+        "date": "2026-02",
+        "overall": 47.7388918908,
+        "openai": 40.8828297103,
+        "anthropic": 26.9898998296
+      },
+      {
+        "date": "2026-03",
+        "overall": 50.1508916324,
+        "openai": 40.0509504213,
+        "anthropic": 33.731138546
+      },
+      {
+        "date": "2026-04",
+        "overall": 51.9882069751,
+        "openai": 39.3965404639,
+        "anthropic": 38.1985781195
+      },
+      {
+        "date": "2026-05",
+        "overall": 53.2465669929,
+        "openai": 39.3209278979,
+        "anthropic": 40.7030941881
+      },
+      {
+        "date": "2026-06",
+        "overall": 53.9800093221,
+        "openai": 39.1527267078,
+        "anthropic": 42.082275968
+      },
+      {
+        "date": "2026-07",
+        "overall": 54.8376391723,
+        "openai": 39.4560870792,
+        "anthropic": 43.2127034696
+      },
+      {
+        "date": "2026-08",
+        "overall": 55.2426163698,
+        "openai": 39.5115812279,
+        "anthropic": 43.5355401918
+      },
+      {
+        "date": "2026-09",
+        "overall": 55.8665626577,
+        "openai": 40.6369017574,
+        "anthropic": 43.7816424234
+      }
+    ],
+    "tokens": [
+      {
+        "date": "2026-01-11",
+        "volume": 100.0,
+        "spend": 100.0
+      },
+      {
+        "date": "2026-01-18",
+        "volume": 111.3,
+        "spend": 111.6
+      },
+      {
+        "date": "2026-01-25",
+        "volume": 120.9,
+        "spend": 124.7
+      },
+      {
+        "date": "2026-02-01",
+        "volume": 134.6,
+        "spend": 142.9
+      },
+      {
+        "date": "2026-02-08",
+        "volume": 146.6,
+        "spend": 155.5
+      },
+      {
+        "date": "2026-02-15",
+        "volume": 156.1,
+        "spend": 178.5
+      },
+      {
+        "date": "2026-02-22",
+        "volume": 158.5,
+        "spend": 186.0
+      },
+      {
+        "date": "2026-03-01",
+        "volume": 193.0,
+        "spend": 230.4
+      },
+      {
+        "date": "2026-03-08",
+        "volume": 217.7,
+        "spend": 245.4
+      },
+      {
+        "date": "2026-03-15",
+        "volume": 222.4,
+        "spend": 259.6
+      },
+      {
+        "date": "2026-03-22",
+        "volume": 221.0,
+        "spend": 236.3
+      },
+      {
+        "date": "2026-03-29",
+        "volume": 237.6,
+        "spend": 232.5
+      },
+      {
+        "date": "2026-04-05",
+        "volume": 244.0,
+        "spend": 234.9
+      },
+      {
+        "date": "2026-04-12",
+        "volume": 262.1,
+        "spend": 240.0
+      },
+      {
+        "date": "2026-04-19",
+        "volume": 295.9,
+        "spend": 255.8
+      },
+      {
+        "date": "2026-04-26",
+        "volume": 335.3,
+        "spend": 280.6
+      },
+      {
+        "date": "2026-05-03",
+        "volume": 348.9,
+        "spend": 294.5
+      },
+      {
+        "date": "2026-05-10",
+        "volume": 365.4,
+        "spend": 302.2
+      },
+      {
+        "date": "2026-05-17",
+        "volume": 388.6,
+        "spend": 336.9
+      },
+      {
+        "date": "2026-05-24",
+        "volume": 406.7,
+        "spend": 333.0
+      },
+      {
+        "date": "2026-05-31",
+        "volume": 392.8,
+        "spend": 323.1
+      },
+      {
+        "date": "2026-06-07",
+        "volume": 460.0,
+        "spend": 374.8
+      },
+      {
+        "date": "2026-06-14",
+        "volume": 458.7,
+        "spend": 383.8
+      },
+      {
+        "date": "2026-06-21",
+        "volume": 455.4,
+        "spend": 358.9
+      },
+      {
+        "date": "2026-06-28",
+        "volume": 520.8,
+        "spend": 394.1
+      },
+      {
+        "date": "2026-07-05",
+        "volume": 456.5,
+        "spend": 368.2
+      },
+      {
+        "date": "2026-07-12",
+        "volume": 592.2,
+        "spend": 497.2
+      },
+      {
+        "date": "2026-07-19",
+        "volume": 602.0,
+        "spend": 509.7
+      },
+      {
+        "date": "2026-07-26",
+        "volume": 644.7,
+        "spend": 568.3
+      },
+      {
+        "date": "2026-08-02",
+        "volume": 744.1,
+        "spend": 604.8
+      },
+      {
+        "date": "2026-08-09",
+        "volume": 767.7,
+        "spend": 576.6
+      },
+      {
+        "date": "2026-08-16",
+        "volume": 784.1,
+        "spend": 553.1
+      },
+      {
+        "date": "2026-08-23",
+        "volume": 812.9,
+        "spend": 540.6
+      },
+      {
+        "date": "2026-08-30",
+        "volume": 848.1,
+        "spend": 518.7
+      },
+      {
+        "date": "2026-09-06",
+        "volume": 866.8,
+        "spend": 526.6
+      },
+      {
+        "date": "2026-09-13",
+        "volume": 803.4,
+        "spend": 499.0
+      },
+      {
+        "date": "2026-09-20",
+        "volume": 947.5,
+        "spend": 589.1
+      },
+      {
+        "date": "2026-09-27",
+        "volume": 999.4,
+        "spend": 560.5
+      },
+      {
+        "date": "2026-10-04",
+        "volume": 1094.5,
+        "spend": 533.5
+      },
+      {
+        "date": "2026-10-11",
+        "volume": 1224.6,
+        "spend": 614.0
+      }
+    ],
+    "spending": [
+      {
+        "date": "2023-09",
+        "median": 2.28,
+        "topOne": 920.05
+      },
+      {
+        "date": "2023-10",
+        "median": 2.61,
+        "topOne": 911.35
+      },
+      {
+        "date": "2023-11",
+        "median": 2.73,
+        "topOne": 883.55
+      },
+      {
+        "date": "2023-12",
+        "median": 2.67,
+        "topOne": 1105.91
+      },
+      {
+        "date": "2024-01",
+        "median": 2.86,
+        "topOne": 1000.0
+      },
+      {
+        "date": "2024-02",
+        "median": 3.04,
+        "topOne": 982.25
+      },
+      {
+        "date": "2024-03",
+        "median": 3.13,
+        "topOne": 1225.47
+      },
+      {
+        "date": "2024-04",
+        "median": 3.11,
+        "topOne": 1572.79
+      },
+      {
+        "date": "2024-05",
+        "median": 3.11,
+        "topOne": 1406.16
+      },
+      {
+        "date": "2024-06",
+        "median": 3.0,
+        "topOne": 1400.7
+      },
+      {
+        "date": "2024-07",
+        "median": 3.04,
+        "topOne": 1767.04
+      },
+      {
+        "date": "2024-08",
+        "median": 3.03,
+        "topOne": 1692.13
+      },
+      {
+        "date": "2024-09",
+        "median": 3.04,
+        "topOne": 1587.92
+      },
+      {
+        "date": "2024-10",
+        "median": 3.16,
+        "topOne": 1471.82
+      },
+      {
+        "date": "2024-11",
+        "median": 3.32,
+        "topOne": 1673.21
+      },
+      {
+        "date": "2024-12",
+        "median": 3.26,
+        "topOne": 1871.76
+      },
+      {
+        "date": "2025-01",
+        "median": 3.51,
+        "topOne": 2069.15
+      },
+      {
+        "date": "2025-02",
+        "median": 3.87,
+        "topOne": 2181.82
+      },
+      {
+        "date": "2025-03",
+        "median": 4.0,
+        "topOne": 2437.46
+      },
+      {
+        "date": "2025-04",
+        "median": 4.0,
+        "topOne": 2519.64
+      },
+      {
+        "date": "2025-05",
+        "median": 4.16,
+        "topOne": 2446.69
+      },
+      {
+        "date": "2025-06",
+        "median": 4.29,
+        "topOne": 2194.45
+      },
+      {
+        "date": "2025-07",
+        "median": 4.59,
+        "topOne": 2467.38
+      },
+      {
+        "date": "2025-08",
+        "median": 5.0,
+        "topOne": 2642.2
+      },
+      {
+        "date": "2025-09",
+        "median": 5.0,
+        "topOne": 2488.79
+      },
+      {
+        "date": "2025-10",
+        "median": 5.44,
+        "topOne": 3334.32
+      },
+      {
+        "date": "2025-11",
+        "median": 5.35,
+        "topOne": 3063.05
+      },
+      {
+        "date": "2025-12",
+        "median": 5.54,
+        "topOne": 4182.43
+      },
+      {
+        "date": "2026-01",
+        "median": 6.3,
+        "topOne": 3384.47
+      },
+      {
+        "date": "2026-02",
+        "median": 7.5,
+        "topOne": 3348.02
+      },
+      {
+        "date": "2026-03",
+        "median": 9.65,
+        "topOne": 4767.33
+      },
+      {
+        "date": "2026-04",
+        "median": 10.95,
+        "topOne": 4715.01
+      },
+      {
+        "date": "2026-05",
+        "median": 12.05,
+        "topOne": 5119.21
+      },
+      {
+        "date": "2026-06",
+        "median": 12.84,
+        "topOne": 6561.99
+      },
+      {
+        "date": "2026-07",
+        "median": 14.15,
+        "topOne": 9770.4
+      },
+      {
+        "date": "2026-08",
+        "median": 14.72,
+        "topOne": 8407.29
+      },
+      {
+        "date": "2026-09",
+        "median": 15.69,
+        "topOne": 9567.24
+      }
+    ],
+    "monthlyGrowth": [
+      {
+        "date": "2025-02",
+        "change": 18.07782623
+      },
+      {
+        "date": "2025-03",
+        "change": 45.36302243
+      },
+      {
+        "date": "2025-04",
+        "change": 20.14386605
+      },
+      {
+        "date": "2025-05",
+        "change": 13.10857929
+      },
+      {
+        "date": "2025-06",
+        "change": 14.29925145
+      },
+      {
+        "date": "2025-07",
+        "change": 40.55234719
+      },
+      {
+        "date": "2025-08",
+        "change": 12.98629999
+      },
+      {
+        "date": "2025-09",
+        "change": 21.5993184
+      },
+      {
+        "date": "2025-10",
+        "change": 57.80001412
+      },
+      {
+        "date": "2025-11",
+        "change": -1.98534518
+      },
+      {
+        "date": "2025-12",
+        "change": 8.81180283
+      },
+      {
+        "date": "2026-01",
+        "change": 20.47922954
+      },
+      {
+        "date": "2026-02",
+        "change": 49.13191357
+      },
+      {
+        "date": "2026-03",
+        "change": 44.77778681
+      },
+      {
+        "date": "2026-04",
+        "change": 5.50481041
+      },
+      {
+        "date": "2026-05",
+        "change": 21.40238957
+      },
+      {
+        "date": "2026-06",
+        "change": 17.86684118
+      },
+      {
+        "date": "2026-07",
+        "change": 43.14476411
+      },
+      {
+        "date": "2026-08",
+        "change": 0.99121097
+      },
+      {
+        "date": "2026-09",
+        "change": -0.0211185
+      }
+    ],
+    "downloads": [
+      "https://datawrapper.dwcdn.net/bFQzW/1/dataset.csv",
+      "https://datawrapper.dwcdn.net/qWoIn/1/dataset.csv",
+      "https://datawrapper.dwcdn.net/Djt5y/1/dataset.csv",
+      "https://datawrapper.dwcdn.net/Baat4/1/dataset.csv"
+    ]
+  },
+  "valuation": {
+    "value": 27.58,
+    "date": "2026-10-15",
+    "source": "https://boomorbubble.ai/api/gauges",
+    "corroboration": "https://worldperatio.com/index/nasdaq-100/",
+    "scope": "EV / WorldPE estimated Nasdaq-100 proxy via QQQ; not AI-only P/E. Methods differ between providers."
+  },
+  "gpu": {
+    "value": 3.13,
+    "date": "2026-10-15",
+    "source": "https://data.ornn.com/markets/h100-sxm",
+    "methodology": "https://data.ornn.com/methodology",
+    "scope": "Vendor-published H100 SXM on-demand transaction index; excludes reserved contracts. Not marketwide utilization.",
+    "change30": 23.7
+  },
+  "oracle": {
+    "date": "2026-08-31",
+    "published": "2026-09-10",
+    "capex": 28.499,
+    "ocf": 23.103,
+    "equity": 20,
+    "rpo": 664,
+    "source": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx"
+  },
+  "labs": {
+    "openai": {
+      "annualized": 50,
+      "date": "2026-09-30",
+      "reported": "2026-10-08",
+      "source": "https://www.investing.com/news/stock-market-news/openais-annualized-revenue-20-billion-less-than-previously-signaled-ft-reports-4939854"
+    },
+    "anthropic": {
+      "quarters": [
+        {
+          "date": "2026-Q1",
+          "revenue": 4.7
+        },
+        {
+          "date": "2026-Q2",
+          "revenue": 11.6
+        },
+        {
+          "date": "2026-Q3",
+          "revenue": 16.8
+        }
+      ],
+      "reported": "2026-10-14",
+      "source": "https://www.investing.com/news/stock-market-news/anthropics-q3-revenue-surges-45-to-nearly-17-billion-4950208"
+    }
+  },
+  "reading": {
+    "noah": "https://www.noahpinion.blog/p/ai-vs-the-railroads",
+    "azeem": "https://boomorbubble.ai/",
+    "brookings": "https://www.brookings.edu/wp-content/uploads/2026/09/4c_Van-Nieuwerburgh.pdf"
+  },
+  "evSnapshot": [
+    {
+      "id": "economic-strain",
+      "name": "Economic Strain",
+      "description": "Capex/GDP",
+      "currentValue": "0.8595",
+      "status": "safe",
+      "changeValue": "17.6",
+      "methodology": "",
+      "lastUpdated": "2026-06-30T00:00:00.000Z"
+    },
+    {
+      "id": "industry-strain",
+      "name": "Industry Strain",
+      "description": "Investment/Revenue",
+      "currentValue": "3.6079",
+      "status": "caution",
+      "changeValue": "-12.9",
+      "methodology": "",
+      "lastUpdated": "2026-06-30T00:00:00.000Z"
+    },
+    {
+      "id": "revenue-growth",
+      "name": "Revenue Momentum",
+      "description": "Doubling time in years",
+      "currentValue": "0.6039",
+      "status": "safe",
+      "changeValue": "-3.8",
+      "methodology": "",
+      "lastUpdated": "2026-06-30T00:00:00.000Z"
+    },
+    {
+      "id": "valuation-heat",
+      "name": "Valuation Heat",
+      "description": "Nasdaq 100 P/E",
+      "currentValue": "27.58",
+      "status": "safe",
+      "changeValue": "-16.6",
+      "methodology": "",
+      "lastUpdated": "2026-10-15T00:00:00.000Z"
+    },
+    {
+      "id": "funding-quality",
+      "name": "Funding Quality",
+      "description": "Strength of funding sources",
+      "currentValue": "1.585",
+      "status": "caution",
+      "changeValue": "7.8",
+      "methodology": "",
+      "lastUpdated": "2026-07-31T00:00:00.000Z"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { env, waitUntil } from 'cloudflare:workers';
+import { containsReleasePeriods } from './october-metrics';
 import seedJson from '../data/seed.json';
 import sourceJson from '../data/sources.json';
 import {
@@ -41,7 +42,12 @@ async function refresh(existing: Dashboard) {
   for (const c of COMPANIES) {
     let previous = seededSources.find((s) => s.id === c.id)!;
     const saved = await read('source:' + c.id);
-    if (saved) previous = JSON.parse(saved.payload);
+    if (saved) {
+      const candidate: Source = JSON.parse(saved.payload);
+      const basePeriod = companyAt(previous, now.slice(0,10));
+      const savedPeriod = companyAt(candidate, now.slice(0,10));
+      if (savedPeriod && basePeriod && savedPeriod.end >= basePeriod.end && savedPeriod.filed >= basePeriod.filed) previous = candidate;
+    }
     try {
       const response = await fetch(
         `https://data.sec.gov/api/xbrl/companyfacts/CIK${c.cik}.json`,
@@ -104,8 +110,9 @@ async function refresh(existing: Dashboard) {
 export async function getDashboard(): Promise<Dashboard> {
   try {
     const row = await read('dashboard');
-    const dashboard: Dashboard = row ? JSON.parse(row.payload) : seed;
-    if (!row || Date.now() >= Date.parse(dashboard.nextCheckAt))
+    const cached: Dashboard | null = row ? JSON.parse(row.payload) : null;
+    const dashboard = cached && containsReleasePeriods(cached, seed) ? cached : seed;
+    if (!row || dashboard === seed || Date.now() >= Date.parse(dashboard.nextCheckAt))
       waitUntil(
         refresh(dashboard).catch((error) =>
           console.error('Dashboard refresh failed', String(error)),

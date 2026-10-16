@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import './october.css';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'AI Bubble Observatory — Markets, buildout & historical evidence',
   description:
-    'A compact AI dashboard with ten historical boom-and-bust comparisons, railroad history, experimental drawdown forecasts and updating cash-flow evidence.',
+    'Five dated lenses on AI demand, compute pricing, cash coverage, financing and valuations, with historical comparisons and source evidence reviewed October 16, 2026.',
   metadataBase: new URL(
     'https://ai-bubble-observatory.rhyslindmark.chatgpt.site',
   ),

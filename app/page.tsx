@@ -1,8 +1,6 @@
-import Dashboard from '@/components/assessment-dashboard';
+import Dashboard from '@/components/october-dashboard';
 import { getDashboard } from '@/lib/dashboard-server';
-import { getMarket } from '@/lib/market-server';
-import { getContext } from '@/lib/context-server';
 export default async function Home() {
-  const [initial, context, market] = await Promise.all([getDashboard(), getContext(), getMarket()]);
-  return <Dashboard initial={initial} context={context} market={market} />;
+  const initial = await getDashboard();
+  return <Dashboard initial={initial} />;
 }
